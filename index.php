@@ -210,16 +210,12 @@ $app_name = idx($app_info, 'name', '');
 
     <header class="clearfix">
       <?php if (isset($basic)) { ?>
-	  <p id="banner" style="background-image: url('images/header.png');"></p>
+	  <p id="picture" style="background-image: url(images/header.png);"></p>
       <p id="picture" style="background-image: url(https://graph.facebook.com/<?php echo he($user_id); ?>/picture?type=normal)"></p>
 
       <div>
         <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong></h1>
-        <p class="tagline">
-          This is your app
-          <a href="<?php echo he(idx($app_info, 'link'));?>" target="_top"><?php echo he($app_name); ?></a>
-        </p>
-
+     
         <div id="share-app">
           <p>Share your app:</p>
           <ul>
