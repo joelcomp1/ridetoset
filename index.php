@@ -109,7 +109,7 @@ $app_name = idx($app_info, 'name', '');
 <link href='stylesheets/fullcalendar.css' rel='stylesheet' />
 <link href='stylesheets/fullcalendar.print.css' rel='stylesheet' media='print' />
 <script src='javascript/jquery-1.9.1.min.js'></script>
-<script src='javascript/jquery-ui-1.10.3.custom.min.js'></script>
+<script src='javascript/jquery-ui-1.10.2.custom.min.js'></script>
 <script src='javascript/fullcalendar.min.js'></script>
 <script src='javascript/gcal.js'></script>
 
@@ -235,7 +235,7 @@ $(document).ready(function() {
 <style>
 
 	#calendar {
-		width: 900px;
+		width: 720px;
 		margin: 0 auto;
 		}
 
@@ -246,8 +246,8 @@ $(document).ready(function() {
       <p id="picture" style="background-image: url(https://graph.facebook.com/<?php echo he($user_id); ?>/picture?type=normal)"></p>
 
       <div>
-        <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong></h1>
-     
+        <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong></h1><br>
+        <h1><strong><?php echo he(idx($basic, 'gender')); ?></strong></h1>
         <div id="share-app">
           <p>Share your app:</p>
           <ul>
@@ -310,51 +310,6 @@ $(document).ready(function() {
         </ul>
       </div>
 
-      <div class="list inline">
-        <h3>Recent photos</h3>
-        <ul class="photos">
-          <?php
-            $i = 0;
-            foreach ($photos as $photo) {
-              // Extract the pieces of info we need from the requests above
-              $id = idx($photo, 'id');
-              $picture = idx($photo, 'picture');
-              $link = idx($photo, 'link');
-
-              $class = ($i++ % 4 === 0) ? 'first-column' : '';
-          ?>
-          <li style="background-image: url(<?php echo he($picture); ?>);" class="<?php echo $class; ?>">
-            <a href="<?php echo he($link); ?>" target="_top"></a>
-          </li>
-          <?php
-            }
-          ?>
-        </ul>
-      </div>
-
-      <div class="list">
-        <h3>Things you like</h3>
-        <ul class="things">
-          <?php
-            foreach ($likes as $like) {
-              // Extract the pieces of info we need from the requests above
-              $id = idx($like, 'id');
-              $item = idx($like, 'name');
-
-              // This display's the object that the user liked as a link to
-              // that object's page.
-          ?>
-          <li>
-            <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
-              <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($item); ?>">
-              <?php echo he($item); ?>
-            </a>
-          </li>
-          <?php
-            }
-          ?>
-        </ul>
-      </div>
 
       <div class="list">
         <h3>Friends using this app</h3>
