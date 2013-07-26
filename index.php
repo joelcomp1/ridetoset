@@ -226,8 +226,7 @@ $(document).ready(function() {
 				left: 'prev,next today',
 				center: 'title',
 				right: 'month,agendaWeek,agendaDay'
-			},
-			editable: true
+			}
 		});
 		
 	});
@@ -242,7 +241,7 @@ $(document).ready(function() {
 </style>
     <header class="clearfix">
       <?php if (isset($basic)) { ?>
-	  <p id="picture" style="background-image: url(images/header.png);"></p>
+	  
       <p id="picture" style="background-image: url(https://graph.facebook.com/<?php echo he($user_id); ?>/picture?type=normal)"></p>
 
       <div>
@@ -283,8 +282,9 @@ $(document).ready(function() {
     </header>
 
     <section id="get-started">
-      <p>Welcome to your Facebook app, running on <span>heroku</span>!</p>
-      <a href="https://devcenter.heroku.com/articles/facebook" target="_top" class="button">Learn How to Edit This App</a>
+      <!--p>Welcome to your Facebook app, running on <span>heroku</span>!</p>
+      <a href="https://devcenter.heroku.com/articles/facebook" target="_top" class="button">Learn How to Edit This App</a-->
+	  <p style="background-image: url(images/header.png);"></p>
     </section>
 
     <?php
