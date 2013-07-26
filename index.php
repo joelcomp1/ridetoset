@@ -283,8 +283,8 @@ $(document).ready(function() {
 
     <section id="get-started">
       <!--p>Welcome to your Facebook app, running on <span>heroku</span>!</p>
-      <a href="https://devcenter.heroku.com/articles/facebook" target="_top" class="button">Learn How to Edit This App</a-->
-	  <p style="background-image: url(images/header.png);"></p>
+      <a href="https://devcenter.heroku.com/articles/facebook" target="_top" class="button">Learn How to Edit This App</a>
+	  <p style="background-image: url(images/header.png);"></p-->
     </section>
 
     <?php
