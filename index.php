@@ -246,8 +246,13 @@ $(document).ready(function() {
       <p id="picture" style="background-image: url(https://graph.facebook.com/<?php echo he($user_id); ?>/picture?type=normal)"></p>
 
       <div>
-        <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong></h1><br>
-        <h1><strong><?php echo he(idx($basic, 'gender')); ?></strong></h1>
+        <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong><br>
+        <strong><?php echo he(idx($basic, 'gender')); ?></strong>
+		<strong><?php echo he(idx($basic, 'location')); ?></strong>
+		<strong><?php echo he(idx($basic, 'birthday')); ?></strong>
+		<strong><?php echo he(idx($basic, 'email')); ?></strong>
+		<strong><?php echo he(idx($basic, 'interested_in')); ?></strong>
+		<strong><?php echo he(idx($basic, 'relationship_status')); ?></strong></h1>
         <div id="share-app">
           <p>Share your app:</p>
           <ul>
