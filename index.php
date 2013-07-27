@@ -107,7 +107,6 @@ $app_name = idx($app_info, 'name', '');
     <meta property="fb:app_id" content="<?php echo AppInfo::appID(); ?>" />
 
 <link href='stylesheets/fullcalendar.css' rel='stylesheet' />
-<link href='stylesheets/fullcalendar.print.css' rel='stylesheet' media='print' />
 <script src='javascript/jquery-1.9.1.min.js'></script>
 <script src='javascript/jquery-ui-1.10.2.custom.min.js'></script>
 <script src='javascript/fullcalendar.min.js'></script>
