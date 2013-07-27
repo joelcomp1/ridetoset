@@ -225,9 +225,9 @@ $(document).ready(function() {
 				center: 'title',
 				right: 'month,agendaWeek,agendaDay'
 			},
-				default: 'agendaWeek',
+				defaultView: 'agendaWeek',
 				dayClick: function(date, allDay, jsEvent, view) {
-			if (allDay) {
+			if (allDay || $(jsEvent.target).is('div.fc-day-number')) {
             // Clicked on the entire day
             $('#calendar')
                 .fullCalendar('changeView', 'agendaDay'/* or 'basicDay' */)
