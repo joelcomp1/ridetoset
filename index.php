@@ -220,7 +220,6 @@ $(document).ready(function() {
 		var y = date.getFullYear();
 		
 		$('#calendar').fullCalendar({
-			theme: true,
 			header: {
 				left: 'prev,next today',
 				center: 'title',
