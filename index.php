@@ -223,9 +223,9 @@ $(document).ready(function() {
 			header: {
 				left: 'prev,next today',
 				center: 'title',
-				right: 'month,agendaWeek,agendaDay'
+				right: 'month,basicWeek,agendaDay'
 			},
-				defaultView: 'agendaWeek',
+				defaultView: 'basicWeek',
 				dayClick: function(date, allDay, jsEvent, view) {
 			if (allDay || $(jsEvent.target).is('div.fc-day-number')) {
             // Clicked on the entire day
@@ -234,13 +234,7 @@ $(document).ready(function() {
                 .fullCalendar('gotoDate',
                     date.getFullYear(), date.getMonth(), date.getDate());
             }
-			else if(view == 'agendaWeek')
-			{
-				$('#calendar')
-                .fullCalendar('changeView', 'agendaDay'/* or 'basicDay' */)
-                .fullCalendar('gotoDate',
-                    date.getFullYear(), date.getMonth(), date.getDate());
-			}
+
 
     }
 		});
