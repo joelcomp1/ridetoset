@@ -53,6 +53,19 @@ if ($user_id) {
       exit();
     }
   }
+  
+if($user_id){
+    $logoutUrl = $facebook->getLogoutUrl();
+}else{
+    $loginUrl = $facebook->getLoginUrl(array(
+        'scope'         => 'email',
+        'redirect_uri'  => 'https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
+        ));
+}
+
+if($user){
+    Echo "Email : " . $user_id['email'];
+}
 
   // This fetches some things that you like . 'limit=*" only returns * values.
   // To see the format of the data you are retrieving, use the "Graph API
@@ -62,8 +75,6 @@ if ($user_id) {
   // This fetches 4 of your friends.
   $friends = idx($facebook->api('/me/friends?limit=4'), 'data', array());
 
-  // And this returns 16 of your photos.
-  $photos = idx($facebook->api('/me/photos?limit=16'), 'data', array());
 
   // Here is an example of a FQL call that fetches all of your friends that are
   // using this app
@@ -250,8 +261,9 @@ $(document).ready(function() {
 
       <div>
         <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong><br>
-		<strong><?php echo $basic['location']; ?></strong>
+		<strong><?php echo $basic['username']; ?></strong>
 		<strong><?php echo $basic['email']; ?></strong></h1>
+		<strong><?php echo $basic['location']; ?></strong></h1>
         <div id="share-app">
           <p>Share your app:</p>
           <ul>
