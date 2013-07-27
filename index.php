@@ -227,19 +227,13 @@ $(document).ready(function() {
 			},
 				default: 'agendaWeek',
 				dayClick: function(date, allDay, jsEvent, view) {
-			$('#calendar').fullCalendar( 'changeView', 'agendaDay ' );
-       /* if (allDay) {
-            alert('Clicked on the entire day: ' + date);
-        }else{
-            alert('Clicked on the slot: ' + date);
+			if (allDay) {
+            // Clicked on the entire day
+            $('#calendar')
+                .fullCalendar('changeView', 'agendaDay'/* or 'basicDay' */)
+                .fullCalendar('gotoDate',
+                    date.getFullYear(), date.getMonth(), date.getDate());
         }
-
-        alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-
-        alert('Current view: ' + view.name);
-
-        // change the day's background color just for fun
-        $(this).css('background-color', 'red');*/
 
     }
 		});
