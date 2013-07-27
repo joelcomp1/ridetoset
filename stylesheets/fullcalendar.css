@@ -26,7 +26,9 @@ html .fc,
 	vertical-align: top;
 	}
 
-
+.fc-today th{
+background-color: yellow;
+}
 
 /* Header
 ------------------------------------------------------------------------*/

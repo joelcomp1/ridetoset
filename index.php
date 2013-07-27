@@ -237,7 +237,7 @@ $(document).ready(function() {
 
     }
 		});
-		
+		$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
 	});
     </script>
 <style>
