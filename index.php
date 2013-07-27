@@ -226,10 +226,10 @@ $(document).ready(function() {
 				center: 'title',
 				right: 'month,agendaWeek,agendaDay'
 			},
-				default: 'week',
+				default: 'agendaWeek',
 				dayClick: function(date, allDay, jsEvent, view) {
-
-        if (allDay) {
+			$('#calendar').fullCalendar( 'changeView', 'agendaDay ' );
+       /* if (allDay) {
             alert('Clicked on the entire day: ' + date);
         }else{
             alert('Clicked on the slot: ' + date);
@@ -240,7 +240,7 @@ $(document).ready(function() {
         alert('Current view: ' + view.name);
 
         // change the day's background color just for fun
-        $(this).css('background-color', 'red');
+        $(this).css('background-color', 'red');*/
 
     }
 		});
