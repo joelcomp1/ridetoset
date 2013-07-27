@@ -203,14 +203,13 @@ $app_name = idx($app_info, 'name', '');
         FB.Canvas.setAutoGrow();
       };
 
-      // Load the SDK Asynchronously
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=561802857192338";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 	  
 
 $(document).ready(function() {
@@ -277,7 +276,7 @@ $(document).ready(function() {
       <?php } else { ?>
       <div  style="text-align: center;">
         <h1>Connect with Background Actors</h1>
-        <div class="fb-login-button" data-show-faces="true" data-width="200" data-size="large" data-scope="user_likes,user_photos"></div>
+        <div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1"  data-size="large" data-scope="user_likes,user_photos"></div>
       </div>
       <?php } ?>
     </header>
