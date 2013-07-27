@@ -252,10 +252,7 @@ $(document).ready(function() {
       <div>
         <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong><br>
 		<strong><?php echo he(idx($basic, 'location')); ?></strong>
-		<strong><?php echo he(idx($basic, 'birthday')); ?></strong>
-		<strong><?php echo he(idx($basic, 'email')); ?></strong>
-		<strong><?php echo he(idx($basic, 'interested_in')); ?></strong>
-		<strong><?php echo he(idx($basic, 'relationship_status')); ?></strong></h1>
+		<strong><?php echo he(idx($basic, 'email')); ?></strong></h1>
         <div id="share-app">
           <p>Share your app:</p>
           <ul>
@@ -280,7 +277,7 @@ $(document).ready(function() {
       <?php } else { ?>
       <div>
         <h1 style="text-align: center;">Connect with Background Actors</h1>
-        <div class="fb-login-button" data-scope="user_likes,user_photos"></div>
+        <div class="fb-login-button" style="text-align:center;" data-scope="user_likes,user_photos"></div>
       </div>
       <?php } ?>
     </header>
