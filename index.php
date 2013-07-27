@@ -191,8 +191,8 @@ $app_name = idx($app_info, 'name', '');
   <body>
     <div id="fb-root"></div>
     <script type="text/javascript">
-      window.fbAsyncInit = function() {
         FB.init({
+      window.fbAsyncInit = function() {
           appId      : '<?php echo AppInfo::appID(); ?>', // App ID
           channelUrl : '//<?php echo $_SERVER["HTTP_HOST"]; ?>/channel.html', // Channel File
           status     : true, // check login status
@@ -236,7 +236,8 @@ $(document).ready(function() {
 				left: 'prev,next today',
 				center: 'title',
 				right: 'month,agendaWeek,agendaDay'
-			}
+			},
+			default: 'week'
 		});
 		
 	});
