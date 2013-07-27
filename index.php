@@ -207,7 +207,7 @@ $app_name = idx($app_info, 'name', '');
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=561802857192338";
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=614281765271673";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 	  
