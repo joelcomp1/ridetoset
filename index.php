@@ -250,8 +250,8 @@ $(document).ready(function() {
 
       <div>
         <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong><br>
-		<strong><?php echo he(idx($basic, 'location')); ?></strong>
-		<strong><?php echo he(idx($basic, 'email')); ?></strong></h1>
+		<strong><?php echo $basic['location']; ?></strong>
+		<strong><?php echo $basic['email']; ?></strong></h1>
         <div id="share-app">
           <p>Share your app:</p>
           <ul>
