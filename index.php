@@ -240,13 +240,17 @@ $(document).ready(function() {
 
 </style>
     <header class="clearfix">
+    <section id="get-started">
+      <!--p>Welcome to your Facebook app, running on <span>heroku</span>!</p>
+      <a href="https://devcenter.heroku.com/articles/facebook" target="_top" class="button">Learn How to Edit This App</a>
+	  <p style="background-image: url(images/header.png);"></p-->
+    </section>
       <?php if (isset($basic)) { ?>
 	  
       <p id="picture" style="background-image: url(https://graph.facebook.com/<?php echo he($user_id); ?>/picture?type=normal)"></p>
 
       <div>
         <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong><br>
-        <strong><?php echo he(idx($basic, 'gender')); ?></strong>
 		<strong><?php echo he(idx($basic, 'location')); ?></strong>
 		<strong><?php echo he(idx($basic, 'birthday')); ?></strong>
 		<strong><?php echo he(idx($basic, 'email')); ?></strong>
@@ -275,17 +279,13 @@ $(document).ready(function() {
       </div>
       <?php } else { ?>
       <div>
-        <h1>Welcome</h1>
+        <h1>Connect with Background Actors</h1>
         <div class="fb-login-button" data-scope="user_likes,user_photos"></div>
       </div>
       <?php } ?>
     </header>
 
-    <section id="get-started">
-      <!--p>Welcome to your Facebook app, running on <span>heroku</span>!</p>
-      <a href="https://devcenter.heroku.com/articles/facebook" target="_top" class="button">Learn How to Edit This App</a>
-	  <p style="background-image: url(images/header.png);"></p-->
-    </section>
+
 
     <?php
       if ($user_id) {
