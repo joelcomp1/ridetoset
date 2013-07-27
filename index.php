@@ -277,7 +277,7 @@ $(document).ready(function() {
       <?php } else { ?>
       <div>
         <h1 style="text-align: center;">Connect with Background Actors</h1>
-        <div class="fb-login-button" style="text-align:center;" data-scope="user_likes,user_photos"></div>
+        <div class="fb-login-button" style="text-align:center;" data-show-faces="true" size="large" data-width="200" data-max-rows="1" data-scope="user_likes,user_photos"></div>
       </div>
       <?php } ?>
     </header>
