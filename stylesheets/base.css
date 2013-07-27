@@ -7,8 +7,7 @@
 --------------------------------------------- */
 body {
   color: #999;
-  font: 14px/1.5em "Lucida Grande", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   width: 720px;
   margin: 20px;
 }

@@ -279,7 +279,7 @@ $(document).ready(function() {
       </div>
       <?php } else { ?>
       <div>
-        <h1>Connect with Background Actors</h1>
+        <h1 style="text-align: center;">Connect with Background Actors</h1>
         <div class="fb-login-button" data-scope="user_likes,user_photos"></div>
       </div>
       <?php } ?>
