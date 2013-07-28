@@ -374,7 +374,7 @@ Help info on admins/staff
 </div>	
 	
 	<div id="addshow">
-	<a href="#" onclick="popup(350, 'popup4');" class="poplight">Add Show?</a>
+	<a href="#?w=350" rel="popup4" class="poplight">Add Show</a>
 	</div>
 	<a href="#" onclick="popup(250, 'popup7');" class="poplight"><img src="../images/help.png" width="20" height="20" style="padding: 0px 0px 0px 50px;"></a>
 	<div id="popup4" class="popup_block">
