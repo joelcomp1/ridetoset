@@ -303,7 +303,7 @@ $(document).ready(function() {
 
 	//When you click on a link with class of poplight and the href starts with a # 
 	$('a.poplight[href^=#]').click(function() {
-		popUp(); //Run popOpen function on click
+		$(this).popOpen(); //Run popOpen function on click
 		return false;
 	});
 	
