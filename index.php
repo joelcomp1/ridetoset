@@ -108,8 +108,6 @@ $app_name = idx($app_info, 'name', '');
 <script src='javascript/jquery-ui-1.10.2.custom.min.js'></script>
 <script src='javascript/fullcalendar.min.js'></script>
 <script src='javascript/gcal.js'></script>
-<script src='javascript/popup.js'></script>
-<script src='javascript/imageLoad.js'></script>
 
     <script type="text/javascript">
       function logResponse(response) {
@@ -271,53 +269,30 @@ $(document).ready(function() {
 		});
 		$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
 	  
-	$.fn.popOpen = function(){
-		
-		popID = $(this).attr('rel'); //Get Popup Name
-		popURL = $(this).attr('href'); //Get Popup href to define size
-		
-		//Pull Query & Variables from href URL
-		query= popURL.split('?');
-		dim= query[1].split('&');
-		popWidth = dim[0].split('=')[1]; //Gets the first query string value
-		
-		
-		//Fade in the Popup and add close button
-		$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend();
-		
-		//Define margin for center alignment (vertical + horizontal) - we add 80 to the height/width to accomodate for the padding + border width defined in the css
-		var popMargTop = ($('#' + popID).height() + 80) / 2;
-		var popMargLeft = ($('#' + popID).width() + 80) / 2;
-		
-		//Apply Margin to Popup
-		$('#' + popID).css({ 
-			'margin-top' : -popMargTop,
-			'margin-left' : -popMargLeft
-		});
-		
-		//Fade in Background
-		$('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
-		$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer 
-		
-	};
-
-	//When you click on a link with class of poplight and the href starts with a # 
-	$('a.poplight[href^=#]').click(function() {
-		$(this).popOpen(); //Run popOpen function on click
-		return false;
-	});
-	
-	$('a.poplight[href=#?w=350]').popOpen(); //Run popOpen function once on load
-	
-	//Close Popups and Fade Layer
-	$('#fade').click( function() { //When clicking on the close or fade layer...
-	  	$('#fade , .popup_block').fadeOut(); //fade them both out
-		$('#fade').remove();
-		return false;
-	});
-
-
-	popOpen
+	//open popup
+$("#pop").click(function(){
+$("#overlay_form").fadeIn(1000);
+positionPopup();
+});
+ 
+//close popup
+$("#close").click(function(){
+$("#overlay_form").fadeOut(500);
+});
+});
+ 
+//position the popup at the center of the page
+function positionPopup(){
+if(!$("#overlay_form").is(':visible')){
+return;
+}
+$("#overlay_form").css({
+left: ($(window).width() - $('#overlay_form').width()) / 2,
+top: ($(window).width() - $('#overlay_form').width()) / 7,
+position:'absolute'
+});
+//maintain the popup at center of the page when browser resized
+$(window).bind('resize',positionPopup);
 	});
     </script>
 <style>
