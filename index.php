@@ -285,7 +285,7 @@ $(document).ready(function() {
 			
 			}
 		});
-		$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
+	//	$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
 	  
 	});
 	
