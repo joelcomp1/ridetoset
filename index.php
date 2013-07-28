@@ -269,7 +269,7 @@ $(document).ready(function() {
 		});
 		$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
 	  
-	//open popup
+//open popup
 $("#pop").click(function(){
 $("#overlay_form").fadeIn(1000);
 positionPopup();
@@ -279,9 +279,9 @@ positionPopup();
 $("#close").click(function(){
 $("#overlay_form").fadeOut(500);
 });
-});
- 
-//position the popup at the center of the page
+	});
+	
+	//position the popup at the center of the page
 function positionPopup(){
 if(!$("#overlay_form").is(':visible')){
 return;
@@ -291,9 +291,10 @@ left: ($(window).width() - $('#overlay_form').width()) / 2,
 top: ($(window).width() - $('#overlay_form').width()) / 7,
 position:'absolute'
 });
+}
+ 
 //maintain the popup at center of the page when browser resized
 $(window).bind('resize',positionPopup);
-	});
     </script>
 <style>
 
@@ -349,7 +350,7 @@ Help info on admins/staff
 </div>	
 	
 <a href="#" id="pop" >Add Show</a>
-<br />
+<br>
 <form id="overlay_form" style="display:none">
 <h2> Put your contents here..</h2>
 <label>Username: </label><input type="text" name="username" /><br /><br />
