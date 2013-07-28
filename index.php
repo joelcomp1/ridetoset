@@ -253,7 +253,7 @@ $(document).ready(function() {
             }},
 			viewDisplay: function(view) 
 			{ 
-				if(view == 'agendaDay')
+				if(view.name == 'agendaDay')
 				{
 				    /*show search box in day view*/
 					$('#searchshows').show();
@@ -264,7 +264,7 @@ $(document).ready(function() {
 					 $('#searchshows').hidden();
 				}
 			
-			}}
+			}
 		});
 		$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
 	  
