@@ -232,6 +232,7 @@ $(document).ready(function() {
                 .fullCalendar('changeView', 'agendaDay'/* or 'basicDay' */)
                 .fullCalendar('gotoDate',
                     date.getFullYear(), date.getMonth(), date.getDate());
+					$(".fc-state-highlight").removeClass("fc-state-highlight");
             }
 
 
