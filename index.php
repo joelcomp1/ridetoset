@@ -226,13 +226,7 @@ $app_name = idx($app_info, 'name', '');
 		$('#inputString').val(thisValue);
 		setTimeout("$('#suggestions').hide();", 200);
 	}  
-	  /*hide search box in week or month view*/
-	  $(".fc-button-basicweek").click(function() {
-        $('#searchshows').hidden();
-        });
-	  $(".fc-button-month").click(function() {
-        $('#searchshows').hidden();
-        });
+
 	  
 $(document).ready(function() {
 	
@@ -262,6 +256,17 @@ $(document).ready(function() {
     }
 		});
 		$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
+	  /*hide search box in week or month view*/
+	  $(".fc-button-basicweek").click(function() {
+        $('#searchshows').hidden();
+        });
+	  $(".fc-button-month").click(function() {
+        $('#searchshows').hidden();
+        });
+		/*show search box in day view*/
+	  $(".fc-button-agendaDay").click(function() {
+        $('#searchshows').show();
+        });
 	});
     </script>
 <style>
