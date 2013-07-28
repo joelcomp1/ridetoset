@@ -60,10 +60,7 @@ if ($user_id) {
   $likes = idx($facebook->api('/me/likes?limit=4'), 'data', array());
 
   // This fetches 4 of your friends.
-  $friends = idx($facebook->api('/me/friends?limit=4'), 'data', array());
-
-  // And this returns 16 of your photos.
-  $photos = idx($facebook->api('/me/photos?limit=16'), 'data', array());
+  $friends = idx($facebook->api('/me/friends?limit=8'), 'data', array());
 
   // Here is an example of a FQL call that fetches all of your friends that are
   // using this app
@@ -232,7 +229,6 @@ $(document).ready(function() {
                 .fullCalendar('changeView', 'agendaDay'/* or 'basicDay' */)
                 .fullCalendar('gotoDate',
                     date.getFullYear(), date.getMonth(), date.getDate());
-					$(".fc-state-highlight").removeClass("fc-state-highlight");
             }
 
 
@@ -298,8 +294,8 @@ $(document).ready(function() {
     <?php
       if ($user_id) {
     ?>
-
-    <section id="samples" class="clearfix">
+    <div id='calendar'></div>
+    
 
       <div class="list">
         <h3>Friends using this app</h3>
@@ -310,7 +306,7 @@ $(document).ready(function() {
               $id = idx($auf, 'uid');
               $name = idx($auf, 'name');
           ?>
-          <li>
+          <li style="float:left;">
             <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
               <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($name); ?>">
               <?php echo he($name); ?>
@@ -321,8 +317,8 @@ $(document).ready(function() {
           ?>
         </ul>
       </div>
-    </section>
-	<div id='calendar'></div>
+
+	
     <?php
       }
     ?>
