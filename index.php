@@ -240,6 +240,12 @@ $app_name = idx($app_info, 'name', '');
                 $("#addshow").lightbox_me({centered: true, onLoad: function() {
 					$("#addshow").find("input:first").focus();
 				}});
+					var input = document.getElementById("inputString");
+					var elem = document.getElementById("showname");
+					if(input.value != "Start Typing Shows here...")
+					{
+						elem.value = input.value;
+					}
 				
                 e.preventDefault();
             });
@@ -346,7 +352,7 @@ $(document).ready(function() {
     <div id='calendar'></div>
 <div id="searchshows" style="text-align:center; display:none;">
 <input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags();" 
-value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" onfocusout="this.value = this.value == '' ? this.value = 'Start Typing Shows here...' : this.value; this.value=='Start Typing Shows here...' ? this.style.color='#999' : this.style.color='#000'"/>
+value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" onfocusout="this.value = this.value == '' ? this.value = 'Start Typing Shows here...' : this.value; this.value=='Start Typing Shows here...' ? this.style.color='#000' : this.style.color='#6AA24B'"/>
 <div class="suggestionsBox" id="suggestions" style="display: none; text: font:bold 0.4em 'TeXGyreAdventor', Arial, sans-serif!important;">
 	<img src="images/upArrow.png" style="position: relative; top: -12px; left: 30px;" alt="upArrow" />
 <div class="suggestionList" id="autoSuggestionsList">
@@ -362,7 +368,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 			<div id="addshow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
                 <h1Let's add a new Show!</h1>
                 <div id="sign_up_form">
-                    <label><strong>Show Name:</strong> <input class="sprited"></label>
+                    <label><strong>Show Name:</strong> <input class="sprited" id="showname"></label>
                     <label><strong>Date:</strong> <input class="sprited" id="showdate"></label>
 					<label><strong>Call Time:</strong> <input class="sprited"></label>
                     <div id="actions">
