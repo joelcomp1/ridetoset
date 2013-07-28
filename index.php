@@ -230,12 +230,12 @@ $app_name = idx($app_info, 'name', '');
 
 	$(function() {
             function launch() {
-                 $('#sign_up').lightbox_me({centered: true, onLoad: function() { $('#sign_up').find('input:first').focus()}});
+                 $('#addshow').lightbox_me({centered: true, onLoad: function() { $('#addshow').find('input:first').focus()}});
             }
             
             $('#try-1').click(function(e) {
-                $("#sign_up").lightbox_me({centered: true, onLoad: function() {
-					$("#sign_up").find("input:first").focus();
+                $("#addshow").lightbox_me({centered: true, onLoad: function() {
+					$("#addshow").find("input:first").focus();
 				}});
 				
                 e.preventDefault();
@@ -356,7 +356,7 @@ Help info on admins/staff
 	<a href="#" onclick="popup(250, 'popup7');" class="poplight"><img src="../images/help.png" width="20" height="20" style="padding: 0px 0px 0px 50px;"></a>
 
 </div>
-<div id="sign_up" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
+<div id="addshow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
                 <h3 id="see_id" class="sprited">Can I see some ID?</h3>
                 <span>Please sign in using the form below</span>
                 <div id="sign_up_form">
