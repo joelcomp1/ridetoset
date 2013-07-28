@@ -409,6 +409,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
             </li>
           </ul>
         </div>
+		<br>
         <ul class="friends">
           <?php
             foreach ($app_using_friends as $auf) {
