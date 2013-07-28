@@ -257,11 +257,12 @@ $(document).ready(function() {
 				{
 				    /*show search box in day view*/
 					$('#searchshows').show();
+					<?php $date = 'view.start';?> /*day view so should just be the single date*/
 				}
 				else
 				{
 					/*hide search box in week or month view*/
-					 $('#searchshows').hidden();
+					 $('#searchshows').hide();
 				}
 			
 			}
