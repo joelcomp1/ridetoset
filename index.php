@@ -231,6 +231,7 @@ $app_name = idx($app_info, 'name', '');
 	$(function() {
             function launch() {
                  $('#addshow').lightbox_me({centered: true, onLoad: function() { $('#addshow').find('input:first').focus()}});
+				 $('#moreinfo').lightbox_me({centered: true, onLoad: function() { $('#moreinfo').find('input:first').focus()}});
             }
             
             $('#try-1').click(function(e) {
@@ -240,7 +241,13 @@ $app_name = idx($app_info, 'name', '');
 				
                 e.preventDefault();
             });
-            
+            $('#try-2').click(function(e) {
+                $("#moreinfo").lightbox_me({centered: true, onLoad: function() {
+					$("#moreinfo").find("input:first").focus();
+				}});
+				
+                e.preventDefault();
+            });
             
             $('table tr:nth-child(even)').addClass('stripe');
         });
@@ -339,21 +346,10 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 		&nbsp;
 	</div>
 	</div>
-<div id="popup7" class="popup_block">
-Help info on admins/staff
-<a href="#" onclick="$('#fade , .popup_block').fadeOut(); $('#fade').remove();">Close</a>
-</div>	
+
 	
 <a href="#" id="try-1" class="try sprited">Add Show</a>
-<br>
-<form id="overlay_form" style="display:none">
-<h2> Put your contents here..</h2>
-<label>Username: </label><input type="text" name="username" /><br /><br />
-<label>Password: </label><input type="text" name="password" /><br /><br />
-<input type="button" value="Login" />
-<a href="#" id="close" >Close</a>
-</form>
-	<a href="#" onclick="popup(250, 'popup7');" class="poplight"><img src="../images/help.png" width="20" height="20" style="padding: 0px 0px 0px 50px;"></a>
+	<a href="#" id="try-2" class="try sprited"><img src="../images/help.png" width="20" height="20" style="padding: 0px 0px 0px 50px;"></a>
 
 </div>
 			<div id="addshow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
@@ -368,6 +364,10 @@ Help info on admins/staff
                 </div>
                 <a id="close_x" class="close sprited" href="#">close</a>
             </div>
+			<div id="moreinfo" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
+				Help info on admins/staff
+				<a href="#" onclick="$('#fade , .popup_block').fadeOut(); $('#fade').remove();">Close</a>
+			</div>	
 <br><br>
       <div class="list" style="text-align:center;">
         <h1 style="float:inherit;">Friends using this app</h1>
