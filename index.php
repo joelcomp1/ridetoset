@@ -348,6 +348,21 @@ Help info on admins/staff
 	<a href="#" onclick="popup(250, 'popup7');" class="poplight"><img src="../images/help.png" width="20" height="20" style="padding: 0px 0px 0px 50px;"></a>
 
 </div>
+<div id="sign_up" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
+                <h3 id="see_id" class="sprited">Can I see some ID?</h3>
+                <span>Please sign in using the form below</span>
+                <div id="sign_up_form">
+                    <label><strong>Username:</strong> <input class="sprited"></label>
+                    <label><strong>Password:</strong> <input class="sprited"></label>
+                    <div id="actions">
+                        <a class="close form_button sprited" id="cancel" href="#">Cancel</a>
+                        <a class="form_button sprited" id="log_in" href="#">Sign in</a>
+                    </div>
+                </div>
+                <h3 id="left_out" class="sprited">Feeling left out?</h3>
+                <span>Don't be sad, just <a href="#">click here</a> to sign up!</span>
+                <a id="close_x" class="close sprited" href="#">close</a>
+            </div>
 <br><br>
       <div class="list" style="text-align:center;">
         <h1 style="float:inherit;">Friends using this app</h1>
