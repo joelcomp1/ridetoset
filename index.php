@@ -226,6 +226,13 @@ $app_name = idx($app_info, 'name', '');
 		$('#inputString').val(thisValue);
 		setTimeout("$('#suggestions').hide();", 200);
 	}  
+	  /*hide search box in week or month view*/
+	  $(".fc-button-basicweek").click(function() {
+        $('#searchshows').hidden();
+        });
+	  $(".fc-button-month").click(function() {
+        $('#searchshows').hidden();
+        });
 	  
 $(document).ready(function() {
 	
@@ -306,10 +313,10 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 	</div>
 	</div>
 </div>
-<br><br><br>
+<br><br>
       <div class="list" style="text-align:center;">
-        <h2>Friends using this app</h2>
-       <div id="share-app" style="float:left;">
+        <h1>Friends using this app</h1>
+       <div id="share-app">
           <!--p>Share your app:</p-->
           <ul>
             <!--li>
