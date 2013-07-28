@@ -287,6 +287,7 @@ $(document).ready(function() {
 				    /*show search box in day view*/
 					$('#searchshows').show();
 					date = view.start; /*day view so should just be the single date*/
+					alert(date.getDate());
 				}
 				else
 				{
@@ -355,8 +356,8 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 	</div>
 
 	
-<a href="#" id="try-1" class="try sprited">Add Show!</a>
-	<a href="#" id="try-2" class="try sprited"><img src="../images/help.png" style="padding: 0px 0px 0px 50px;"></a>
+<a href="#" id="try-1" class="try sprited" style="margin-left: 20px;">Add Show!</a>
+	<a href="#" id="try-2" class="try sprited"><img src="../images/help.png" style="padding: 0px 0px 0px 20px;"></a>
 
 </div>
 			<div id="addshow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
