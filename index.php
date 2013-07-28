@@ -250,23 +250,25 @@ $(document).ready(function() {
                 .fullCalendar('gotoDate',
                     date.getFullYear(), date.getMonth(), date.getDate());
 			$('#searchshows').show();
-            }
-
-
-    }
+            }},
+			viewDisplay: function(view) 
+			{ 
+				if(view == 'agendaDay')
+				{
+				    /*show search box in day view*/
+					$('#searchshows').show();
+				}
+				else
+				{
+					/*hide search box in week or month view*/
+					 $('#searchshows').hidden();
+				}
+			
+			}}
 		});
 		$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
-	  /*hide search box in week or month view*/
-	  $(".fc-button").click(function() {
-        $('#searchshows').hidden();
-        });
-	  $(".fc-button-month").click(function() {
-        $('#searchshows').hidden();
-        });
-		/*show search box in day view*/
-	  $(".fc-button-agendaDay").click(function() {
-        $('#searchshows').show();
-        });
+	  
+
 	});
     </script>
 <style>
