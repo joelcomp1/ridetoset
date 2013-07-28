@@ -348,26 +348,17 @@ Help info on admins/staff
 <a href="#" onclick="$('#fade , .popup_block').fadeOut(); $('#fade').remove();">Close</a>
 </div>	
 	
-	<div id="mainnav">
-	<a href="#?w=350" rel="popup3" class="poplight">Add Show</a>
-	</div>
+<a href="#" id="pop" >Add Show</a>
+<br />
+<form id="overlay_form" style="display:none">
+<h2> Put your contents here..</h2>
+<label>Username: </label><input type="text" name="username" /><br /><br />
+<label>Password: </label><input type="text" name="password" /><br /><br />
+<input type="button" value="Login" />
+<a href="#" id="close" >Close</a>
+</form>
 	<a href="#" onclick="popup(250, 'popup7');" class="poplight"><img src="../images/help.png" width="20" height="20" style="padding: 0px 0px 0px 50px;"></a>
-	<div id="popup3" class="popup_block">
 
-	
-	<h2 style=" padding:0px 0 0 30px!important; float:none; text-align: left;">Reset Password</h2>
-	<p id="contactArea" style=" padding:0px 0 0 30px!important; float:none; text-align: left;">
-	Enter the email address you used whne creating your account.  Hit the send button and we will send you an email with instructions to reset your password.
-	<br><br>
-	<form id="loginForm" name="loginForm" method="post" action="php/reset-password.php">
-	<b>Email</b>
-	  <input name="email" type="text" class="textfield" id="email" tabindex="1" autofocus style="color:#0000;" value="E-mail" onfocus="this.value = this.value=='E-mail' ? '' : this.value; this.style.color='#000';" onfocusout="this.value = this.value == '' ? this.value = 'E-mail' : this.value; this.value=='E-mail' ? this.style.color='#ccc' : this.style.color='#000'" />
-	&nbsp;<input type="submit" name="Submit" value="Send"  tabindex="1"/>
-
-	</form>
-	</p>
-	 
-	</div>
 </div>
 <br><br>
       <div class="list" style="text-align:center;">
