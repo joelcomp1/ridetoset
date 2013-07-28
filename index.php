@@ -109,6 +109,8 @@ $app_name = idx($app_info, 'name', '');
 <script src='javascript/fullcalendar.min.js'></script>
 <script src='javascript/gcal.js'></script>
 <script src='javascript/popup.js'></script>
+<script src='javascript/imageLoad.js'></script>
+
     <script type="text/javascript">
       function logResponse(response) {
         if (console && console.log) {
@@ -301,7 +303,7 @@ $(document).ready(function() {
 
 	//When you click on a link with class of poplight and the href starts with a # 
 	$('a.poplight[href^=#]').click(function() {
-		$(this).popOpen(); //Run popOpen function on click
+		popUp(); //Run popOpen function on click
 		return false;
 	});
 	
