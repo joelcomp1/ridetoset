@@ -248,6 +248,7 @@ $(document).ready(function() {
                 .fullCalendar('changeView', 'agendaDay'/* or 'basicDay' */)
                 .fullCalendar('gotoDate',
                     date.getFullYear(), date.getMonth(), date.getDate());
+			$('#searchshows').show();
             }
 
 
@@ -279,26 +280,7 @@ $(document).ready(function() {
 		<strong><?php echo $basic['username']; ?></strong>
 		<strong><?php echo $basic['email']; ?></strong></h1>
 		<strong><?php echo $basic['location']; ?></strong></h1>
-        <div id="share-app">
-          <p>Share your app:</p>
-          <ul>
-            <li>
-              <a href="#" class="facebook-button" id="postToWall" data-url="<?php echo AppInfo::getUrl(); ?>">
-                <span class="plus">Post to Wall</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="facebook-button speech-bubble" id="sendToFriends" data-url="<?php echo AppInfo::getUrl(); ?>">
-                <span class="speech-bubble">Send Message</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="facebook-button apprequests" id="sendRequest" data-message="Check out Ride To Set! Bringing background actors together.">
-                <span class="apprequests">Invite Friends!</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+ 
       </div>
       <?php } else { ?>
       <div  style="text-align: center;">
@@ -314,7 +296,7 @@ $(document).ready(function() {
       if ($user_id) {
     ?>
     <div id='calendar'></div>
-<div class="searchshows" style="text-align:center;">
+<div id="searchshows" style="text-align:center; display:none;">
 <input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags();" 
 value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" onfocusout="this.value = this.value == '' ? this.value = 'Start Typing Shows here...' : this.value; this.value=='Start Typing Shows here...' ? this.style.color='#999' : this.style.color='#000'"/>
 <div class="suggestionsBox" id="suggestions" style="display: none; text: font:bold 0.4em 'TeXGyreAdventor', Arial, sans-serif!important;">
@@ -324,9 +306,29 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 	</div>
 	</div>
 </div>
-
+<br><br><br>
       <div class="list" style="text-align:center;">
-        <h3>Friends using this app</h3>
+        <h2>Friends using this app</h2>
+       <div id="share-app" style="float:left;">
+          <!--p>Share your app:</p-->
+          <ul>
+            <!--li>
+              <a href="#" class="facebook-button" id="postToWall" data-url="<?php echo AppInfo::getUrl(); ?>">
+                <span class="plus">Post to Wall</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="facebook-button speech-bubble" id="sendToFriends" data-url="<?php echo AppInfo::getUrl(); ?>">
+                <span class="speech-bubble">Send Message</span>
+              </a>
+            </li-->
+            <li>
+              <a href="#" class="facebook-button apprequests" id="sendRequest" data-message="Check out Ride To Set! Bringing background actors together.">
+                <span class="apprequests">Invite Friends!</span>
+              </a>
+            </li>
+          </ul>
+        </div>
         <ul class="friends">
           <?php
             foreach ($app_using_friends as $auf) {
