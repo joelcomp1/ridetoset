@@ -238,6 +238,8 @@ $app_name = idx($app_info, 'name', '');
             
             $('#try-1').click(function(e) {
                 $("#addshow").lightbox_me({centered: true, onLoad: function() {
+					var elem = document.getElementById("showdate");
+					elem.value = date;
 					$("#addshow").find("input:first").focus();
 				}});
 				
@@ -354,14 +356,14 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 
 	
 <a href="#" id="try-1" class="try sprited">Add Show!</a>
-	<a href="#" id="try-2" class="try sprited"><img src="../images/help.png" width="20" height="20" style="padding: 0px 0px 0px 50px;"></a>
+	<a href="#" id="try-2" class="try sprited"><img src="../images/help.png" style="padding: 0px 0px 0px 50px;"></a>
 
 </div>
 			<div id="addshow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
-                <h3 id="see_id" class="sprited" >Let's add a new Show!</h3>
+                <h1Let's add a new Show!</h1>
                 <div id="sign_up_form">
                     <label><strong>Show Name:</strong> <input class="sprited"></label>
-                    <label><strong>Date:</strong> <input class="sprited" value="getDate();"></label>
+                    <label><strong>Date:</strong> <input class="sprited" id="showdate"></label>
 					<label><strong>Call Time:</strong> <input class="sprited"></label>
                     <div id="actions">
                         <a class="form_button sprited" id="log_in" href="#">Add</a>
@@ -369,7 +371,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
                 </div>
                 <a id="close_x" class="close sprited" href="#">close</a>
             </div>
-			<div id="moreinfo" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
+			<div id="moreinfo" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px; text-align:center;">
 				Don't see your show? Click the "Add Show!" button to add your show and call time for that day.
 				<a id="close_x" class="close sprited" href="#">close</a>
 			</div>	
@@ -420,6 +422,6 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
     <?php
       }
     ?>
-
+<a href="http://www.softicons.com/free-icons/toolbar-icons/childish-icons-by-double-j-design/help-icon">Icons thanks to Double-J Design</a>
   </body>
 </html>
