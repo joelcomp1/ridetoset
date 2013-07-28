@@ -108,6 +108,7 @@ $app_name = idx($app_info, 'name', '');
 <script src='javascript/jquery-ui-1.10.2.custom.min.js'></script>
 <script src='javascript/fullcalendar.min.js'></script>
 <script src='javascript/gcal.js'></script>
+<script src='javascript/jquery.lightbox_me.js'></script>
 
     <script type="text/javascript">
       function logResponse(response) {
@@ -269,32 +270,18 @@ $(document).ready(function() {
 		});
 		$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
 	  
-//open popup
-$("#pop").click(function(){
-$("#overlay_form").fadeIn(1000);
-positionPopup();
-});
- 
-//close popup
-$("#close").click(function(){
-$("#overlay_form").fadeOut(500);
+$('#try-1').click(function(e) {
+    $('#sign_up').lightbox_me({
+        centered: true, 
+        onLoad: function() { 
+            $('#sign_up').find('input:first').focus()
+            }
+        });
+    e.preventDefault();
 });
 	});
 	
-	//position the popup at the center of the page
-function positionPopup(){
-if(!$("#overlay_form").is(':visible')){
-return;
-}
-$("#overlay_form").css({
-left: ($(window).width() - $('#overlay_form').width()) / 2,
-top: ($(window).width() - $('#overlay_form').width()) / 7,
-position:'absolute'
-});
-}
- 
-//maintain the popup at center of the page when browser resized
-$(window).bind('resize',positionPopup);
+
     </script>
 <style>
 
@@ -349,7 +336,7 @@ Help info on admins/staff
 <a href="#" onclick="$('#fade , .popup_block').fadeOut(); $('#fade').remove();">Close</a>
 </div>	
 	
-<a href="#" id="pop" >Add Show</a>
+<a href="#" id="try-1" class="try sprited">Add Show</a>
 <br>
 <form id="overlay_form" style="display:none">
 <h2> Put your contents here..</h2>
