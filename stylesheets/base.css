@@ -424,6 +424,7 @@ header .tagline {
         width: 228px;
         height: 23px;
         background-position: -202px -133px;
+		text-align:center;
     }
     #left_out {
         background-position: -202px -158px;
@@ -436,11 +437,7 @@ header .tagline {
         margin-bottom: 12px;
     }
     #actions {
-        float: left;
-        position: absolute;
-        right: 0;
-        height: 31px;
-        bottom: 20px;
+        text-align:center;
     }
     a.form_button {
         float: left;

@@ -177,6 +177,8 @@ $app_name = idx($app_info, 'name', '');
   <body>
     <div id="fb-root"></div>
     <script type="text/javascript">
+	var date;
+	var show;
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '<?php echo AppInfo::appID(); ?>', // App ID
@@ -282,7 +284,7 @@ $(document).ready(function() {
 				{
 				    /*show search box in day view*/
 					$('#searchshows').show();
-					<?php $date = 'view.start';?> /*day view so should just be the single date*/
+					date = view.start; /*day view so should just be the single date*/
 				}
 				else
 				{
@@ -295,7 +297,10 @@ $(document).ready(function() {
 	//	$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
 	  
 	});
-	
+	function getDate()
+	{
+		return date;
+	}
 
     </script>
 <style>
@@ -348,15 +353,15 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 	</div>
 
 	
-<a href="#" id="try-1" class="try sprited">Add Show</a>
+<a href="#" id="try-1" class="try sprited">Add Show!</a>
 	<a href="#" id="try-2" class="try sprited"><img src="../images/help.png" width="20" height="20" style="padding: 0px 0px 0px 50px;"></a>
 
 </div>
 			<div id="addshow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
-                <h3 id="see_id" class="sprited">Let's add a new Show</h3>
+                <h3 id="see_id" class="sprited" >Let's add a new Show!</h3>
                 <div id="sign_up_form">
                     <label><strong>Show Name:</strong> <input class="sprited"></label>
-                    <label><strong>Date:</strong> <input class="sprited"></label>
+                    <label><strong>Date:</strong> <input class="sprited" value="getDate();"></label>
 					<label><strong>Call Time:</strong> <input class="sprited"></label>
                     <div id="actions">
                         <a class="form_button sprited" id="log_in" href="#">Add</a>
@@ -365,8 +370,8 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
                 <a id="close_x" class="close sprited" href="#">close</a>
             </div>
 			<div id="moreinfo" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
-				Help info on admins/staff
-				<a href="#" onclick="$('#fade , .popup_block').fadeOut(); $('#fade').remove();">Close</a>
+				Don't see your show? Click the "Add Show!" button to add your show and call time for that day.
+				<a id="close_x" class="close sprited" href="#">close</a>
 			</div>	
 <br><br>
       <div class="list" style="text-align:center;">
