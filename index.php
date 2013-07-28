@@ -301,7 +301,7 @@ $(document).ready(function() {
 
 	//When you click on a link with class of poplight and the href starts with a # 
 	$('a.poplight[href^=#]').click(function() {
-		popUp(); //Run popOpen function on click
+		$(this).popOpen(); //Run popOpen function on click
 		return false;
 	});
 	
@@ -366,6 +366,11 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 		&nbsp;
 	</div>
 	</div>
+<div id="popup7" class="popup_block">
+Help info on admins/staff
+<a href="#" onclick="$('#fade , .popup_block').fadeOut(); $('#fade').remove();">Close</a>
+</div>	
+	
 	<div id="addshow">
 	<a href="#" onclick="popup(350, 'popup4');" class="poplight">Add Show?</a>
 	</div>
@@ -389,7 +394,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 </div>
 <br><br>
       <div class="list" style="text-align:center;">
-        <h1 style="float:left;">Friends using this app</h1>
+        <h1 style="float:inherit;">Friends using this app</h1>
        <div id="share-app">
           <!--p>Share your app:</p-->
           <ul>
