@@ -373,11 +373,11 @@ Help info on admins/staff
 <a href="#" onclick="$('#fade , .popup_block').fadeOut(); $('#fade').remove();">Close</a>
 </div>	
 	
-	<div id="addshow">
-	<a href="#?w=350" rel="popup4" class="poplight">Add Show</a>
+	<div id="mainnav">
+	<a href="#?w=350" rel="popup3" class="poplight">Add Show</a>
 	</div>
 	<a href="#" onclick="popup(250, 'popup7');" class="poplight"><img src="../images/help.png" width="20" height="20" style="padding: 0px 0px 0px 50px;"></a>
-	<div id="popup4" class="popup_block">
+	<div id="popup3" class="popup_block">
 
 	
 	<h2 style=" padding:0px 0 0 30px!important; float:none; text-align: left;">Reset Password</h2>
