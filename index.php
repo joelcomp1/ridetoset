@@ -286,8 +286,8 @@ $(document).ready(function() {
 				{
 				    /*show search box in day view*/
 					$('#searchshows').show();
-					date = view.start; /*day view so should just be the single date*/
-					alert(date.getDate());
+					date = view.start.toDateString(); /*day view so should just be the single date*/
+					alert(date);
 				}
 				else
 				{
