@@ -238,8 +238,6 @@ $app_name = idx($app_info, 'name', '');
             
             $('#try-1').click(function(e) {
                 $("#addshow").lightbox_me({centered: true, onLoad: function() {
-					var elem = document.getElementById("showdate");
-					elem.value = date;
 					$("#addshow").find("input:first").focus();
 				}});
 				
@@ -287,7 +285,8 @@ $(document).ready(function() {
 				    /*show search box in day view*/
 					$('#searchshows').show();
 					date = view.start.toDateString(); /*day view so should just be the single date*/
-					alert(date);
+					var elem = document.getElementById("showdate");
+					elem.value = date;
 				}
 				else
 				{
