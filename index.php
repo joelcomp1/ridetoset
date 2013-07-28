@@ -257,7 +257,7 @@ $(document).ready(function() {
 		});
 		$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
 	  /*hide search box in week or month view*/
-	  $(".fc-button-basicweek").click(function() {
+	  $(".fc-button").click(function() {
         $('#searchshows').hidden();
         });
 	  $(".fc-button-month").click(function() {
@@ -319,7 +319,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 	</div>
 </div>
 <br><br>
-      <div class="list" style="text-align:center;">
+      <div class="list" style="text-align:center; float:left;">
         <h1>Friends using this app</h1>
        <div id="share-app">
           <!--p>Share your app:</p-->
