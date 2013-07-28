@@ -108,7 +108,7 @@ $app_name = idx($app_info, 'name', '');
 <script src='javascript/jquery-ui-1.10.2.custom.min.js'></script>
 <script src='javascript/fullcalendar.min.js'></script>
 <script src='javascript/gcal.js'></script>
-
+<script src='javascript/popup.js'></script>
     <script type="text/javascript">
       function logResponse(response) {
         if (console && console.log) {
@@ -366,7 +366,9 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 		&nbsp;
 	</div>
 	</div>
+	<div id="addshow">
 	<a href="#" onclick="popup(350, 'popup4');" class="poplight">Add Show?</a>
+	</div>
 	<div id="popup4" class="popup_block">
 
 	
