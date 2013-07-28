@@ -208,6 +208,25 @@ $app_name = idx($app_info, 'name', '');
 }(document, 'script', 'facebook-jssdk'));
 	  
 
+		function lookup(inputString) {
+		if(inputString.length == 0) {
+			// Hide the suggestion box.
+			$('#suggestions').hide();
+		} else {
+			$.post("search-shows.php", {queryString: ""+inputString+""}, function(data){
+				if(data.length >0) {
+					$('#suggestions').show();
+					$('#autoSuggestionsList').html(data);
+				}
+			});
+		}
+	} // lookup
+	
+	function fillTags(thisValue) {
+		$('#inputString').val(thisValue);
+		setTimeout("$('#suggestions').hide();", 200);
+	}  
+	  
 $(document).ready(function() {
 	
 		var date = new Date();
@@ -295,9 +314,18 @@ $(document).ready(function() {
       if ($user_id) {
     ?>
     <div id='calendar'></div>
-    
+<div class="searchshows" style="text-align:center;">
+<input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags();" 
+value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" onfocusout="this.value = this.value == '' ? this.value = 'Start Typing Shows here...' : this.value; this.value=='Start Typing Shows here...' ? this.style.color='#999' : this.style.color='#000'"/>
+<div class="suggestionsBox" id="suggestions" style="display: none; text: font:bold 0.4em 'TeXGyreAdventor', Arial, sans-serif!important;">
+	<img src="images/upArrow.png" style="position: relative; top: -12px; left: 30px;" alt="upArrow" />
+<div class="suggestionList" id="autoSuggestionsList">
+		&nbsp;
+	</div>
+	</div>
+</div>
 
-      <div class="list">
+      <div class="list" style="text-align:center;">
         <h3>Friends using this app</h3>
         <ul class="friends">
           <?php
@@ -308,7 +336,7 @@ $(document).ready(function() {
           ?>
           <li style="float:left;">
             <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
-              <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($name); ?>">
+              <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($name); ?>"><br><br>
               <?php echo he($name); ?>
             </a>
           </li>
