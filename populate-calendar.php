@@ -20,7 +20,7 @@
 	$index = 1;
 	$add_event = false;
 	var_dump($rPorg);
-//	die();
+	die();
 	while($row = mysql_fetch_assoc($rProg))
 	{	
 	
