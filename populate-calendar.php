@@ -3,7 +3,7 @@
 	//Start session
 	session_start();
 	include("AppInfo.php");
-	function clean($str) {
+;function clean($str) {
 		$str = @trim($str);
 		if(get_magic_quotes_gpc()) {
 			$str = stripslashes($str);
@@ -19,8 +19,7 @@
 	$totalPrograms[] = array();
 	$index = 1;
 	$add_event = false;
-	var_dump($rPorg);
-	die();
+		/*
 	while($row = mysql_fetch_assoc($rProg))
 	{	
 	
@@ -36,8 +35,9 @@
 		if($add_event == true)
 		{
 			$totalPrograms[$index]['id'] = $index;
-			$totalPrograms[$index]['title'] = $row['show_name'];
-			$totalPrograms[$index]['start'] = $row['call_date'];
+			$totalPrograms[$index]['title'] = "test"$row['show_name'];
+			$totalPrograms[$index]['start'] = "Wed, 18 Oct 2009 13:00:00 EST"$row['call_date'];
+			$totalPrograms[$index]['allday'] = true;
 		//	$totalPrograms[$index]['end'] = $row['date'];
 		//	$totalPrograms[$index]['url'] = "program-manager.php?programname=";
 			//$totalPrograms[$index]['url'] .= $row['programname'];
@@ -47,7 +47,17 @@
 		}
 		
 			
-	}
+	}*/
+		$totalPrograms[$index]['id'] = $index;
+			$totalPrograms[$index]['title'] = "test";//$row['show_name'];
+			$totalPrograms[$index]['start'] = "Wed, 18 Oct 2009 13:00:00 EST"$row['call_date'];
+			$totalPrograms[$index]['allday'] = true;
+		//	$totalPrograms[$index]['end'] = $row['date'];
+		//	$totalPrograms[$index]['url'] = "program-manager.php?programname=";
+			//$totalPrograms[$index]['url'] .= $row['programname'];
+		//	$totalPrograms[$index]['url'] .= "&orgname=";
+		//	$totalPrograms[$index]['url'] .= $orgname;
+			$index += 1;
 		echo json_encode(
 	
 		$totalPrograms
