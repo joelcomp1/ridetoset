@@ -19,10 +19,13 @@
 		}
 		return  mysql_escape_string($str);
 	}
-	
+	$user_id = clean($basic['username']);
+	$show_name = clean($_POST['showname']);
+	$call_time = clean($_POST['calltime']);
+	$call_date = clean($_POST['showdate']);
 
-	$qry = "INSERT INTO shows(id_inviter, id_request, status, updated_at, created_at) 
-	    				VALUES('$login','$loginRequest','REQUEST_SENT','$todaysDate','$todaysDate')";
+	$qry = "INSERT INTO shows(user_id, show_name, call_date, call_time) 
+	    				VALUES('$user_id','$show_name','$call_date','$call_time')";
 	$result = @mysql_query($qry);
 	    
 	
@@ -31,7 +34,7 @@
 			//create program part 1 Successful
 			session_regenerate_id();
 		
-			header("location: vol-manager.php?vol=$loginRequest");
+			header("location: index.php");
 			
 			session_write_close();
 			exit();

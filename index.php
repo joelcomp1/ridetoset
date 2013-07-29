@@ -334,10 +334,6 @@ $(document).ready(function() {
 
       <div>
         <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong><br>
-		<strong><?php echo $basic['username']; ?></strong>
-		<strong><?php echo $basic['email']; ?></strong></h1>
-		<strong><?php echo $basic['location']; ?></strong></h1>
- 
       </div>
       <?php } else { ?>
       <div  style="text-align: center;">
@@ -370,16 +366,12 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 </div>
 			<div id="addshow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
                 <h1Let's add a new Show!</h1>
-                <div id="sign_up_form">
+                <form id="sign_up_form" method="post" action="add-show.php">
                     <label><strong>Show Name:</strong> <input class="sprited" id="showname"></label>
                     <label><strong>Date:</strong> <input class="sprited" id="showdate"></label>
 					<label><strong>Call Time:</strong> <input id="calltime" class="time sprited" type="text"></label>
-
-
-	
-
                     <div id="actions">
-                        <a class="form_button sprited" id="log_in" href="#">Add</a>
+                        <button type="submit" >Add</a>
                     </div>
                 </div>
                 <a id="close_x" class="close sprited" href="#">close</a>
