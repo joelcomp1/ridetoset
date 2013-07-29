@@ -23,7 +23,9 @@
 	$show_name = clean($_POST['showname']);
 	$call_time = clean($_POST['calltime']);
 	$call_date = clean($_POST['showdate']);
-
+	echo $user_id;
+	echo $show_name;
+/*
 	$qry = "INSERT INTO shows(user_id, show_name, call_date, call_time) 
 	    				VALUES('$user_id','$show_name','$call_date','$call_time')";
 	$result = @mysql_query($qry);
@@ -42,5 +44,5 @@
 		die("Query failed");
 	}
 	
-	mysql_close($link);
+	mysql_close($link);*/
 ?>
