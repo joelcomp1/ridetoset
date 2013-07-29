@@ -18,6 +18,11 @@ if (substr(AppInfo::getUrl(), 0, 8) != 'https://' && $_SERVER['REMOTE_ADDR'] != 
   exit();
 }
 
+if(empty($_SERVER['CONTENT_TYPE']))
+{ 
+  $_SERVER['CONTENT_TYPE'] = "application/x-www-form-urlencoded"; 
+}
+
 // This provides access to helper functions defined in 'utils.php'
 require_once('utils.php');
 
@@ -74,7 +79,7 @@ if ($user_id) {
 $app_info = $facebook->api('/'. AppInfo::appID());
 
 $app_name = idx($app_info, 'name', '');
-
+$_SESSION['user_id'] = $basic['username'];
 ?>
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#" lang="en">

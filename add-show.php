@@ -19,7 +19,7 @@
 		}
 		return  mysql_escape_string($str);
 	}
-	$user_id = clean($basic['username']);
+	$user_id = $_SESSION['user_id'];
 	$show_name = clean($_POST['showname']);
 	$call_time = clean($_POST['calltime']);
 	$call_date = clean($_POST['showdate']);
