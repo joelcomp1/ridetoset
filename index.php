@@ -269,7 +269,7 @@ $app_name = idx($app_info, 'name', '');
             
             $('table tr:nth-child(even)').addClass('stripe');
 			
-			$('#calltime').timepicker({'step':15});
+			$('#calltime').timepicker({'step':'5', 'minTime':'5:00am'});
         });
 	
 	  
@@ -312,7 +312,8 @@ $(document).ready(function() {
 					 $('#searchshows').hide();
 				}
 			
-			}
+			},
+			events: "populate-calendar.php"
 		});
 	//	$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
 	  
@@ -357,6 +358,7 @@ $(document).ready(function() {
     <?php
       if ($user_id) {
     ?>
+	<a href="#" id="try-1" class="try sprited" style="text-align:center;">Add Show!</a>
     <div id='calendar'></div>
 <div id="searchshows" style="text-align:center; display:none;">
 <input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags();" 
@@ -369,8 +371,8 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 	</div>
 
 	
-<a href="#" id="try-1" class="try sprited" style="margin-left: 20px;">Add Show!</a>
-	<a href="#" id="try-2" class="try sprited"><img src="../images/help.png" style="padding: 0px 0px 0px 20px;"></a>
+
+	<!--a href="#" id="try-2" class="try sprited"><img src="../images/help.png" style="padding: 0px 0px 0px 20px;"></a-->
 
 </div>
 			<div id="addshow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
@@ -420,7 +422,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
               $id = idx($auf, 'uid');
               $name = idx($auf, 'name');
           ?>
-          <li style="float:left;">
+          <li style="float:left; margin-left:10px;">
             <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
               <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($name); ?>"><br><br>
               <?php echo he($name); ?>
@@ -436,6 +438,6 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
     <?php
       }
     ?>
-<a href="http://www.softicons.com/free-icons/toolbar-icons/childish-icons-by-double-j-design/help-icon">Icons thanks to Double-J Design</a>
+<!--a href="http://www.softicons.com/free-icons/toolbar-icons/childish-icons-by-double-j-design/help-icon">Icons thanks to Double-J Design</a-->
   </body>
 </html>
