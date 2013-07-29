@@ -358,6 +358,7 @@ $(document).ready(function() {
     <?php
       if ($user_id) {
     ?>
+	<input type="button" id="signup" class="try sprited" value="Add Show!">
 	<a href="#" id="try-1" class="try sprited" style="text-align:center;">Add Show!</a>
     <div id='calendar'></div>
 <div id="searchshows" style="text-align:center; display:none;">

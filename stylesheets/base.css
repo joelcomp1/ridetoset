@@ -460,3 +460,95 @@ header .tagline {
         background-position: -387px -102px;
     }
     #usage { background-position: -323px -172px; width: 67px; height: 22px;}
+	
+	
+	#submit
+{		
+    background-color: #7AB247;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#608947), to(#7AB247));
+    background-image: -webkit-linear-gradient(top, #608947, #7AB247);
+    background-image: -moz-linear-gradient(top, #608947, #7AB247);
+    background-image: -ms-linear-gradient(top, #608947, #7AB247);
+    background-image: -o-linear-gradient(top, #608947, #7AB247);
+    background-image: linear-gradient(top, #608947, #7AB247);
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    
+     -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+    
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0 #0 #0 #0;
+
+    text-align:center;
+    height: 35px;
+    padding: 0;
+    width: 120px;
+    cursor: pointer;
+    font: bold 15px Arial, Helvetica;
+    color: #0;
+}
+
+ #signup
+{		
+    background-color: #7AB247;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#608947), to(#7AB247));
+    background-image: -webkit-linear-gradient(top, #608947, #7AB247);
+    background-image: -moz-linear-gradient(top, #608947, #7AB247);
+    background-image: -ms-linear-gradient(top, #608947, #7AB247);
+    background-image: -o-linear-gradient(top, #608947, #7AB247);
+    background-image: linear-gradient(top, #608947, #7AB247);
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    
+     -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+    
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0 #0 #0 #0;
+
+    text-align:center;
+    height: 50px;
+    padding: 0;
+    width: 150px;
+    cursor: pointer;
+    font: bold 19px Arial, Helvetica;
+    color: #0;
+}
+
+#submit:hover,#submit:focus, #signup:focus, #signup:hover
+{		
+    background-color: #608947;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#7AB247), to(#608947));
+    background-image: -webkit-linear-gradient(top, #7AB247, #608947);
+    background-image: -moz-linear-gradient(top, #7AB247, #608947);
+    background-image: -ms-linear-gradient(top, #7AB247, #608947);
+    background-image: -o-linear-gradient(top, #7AB247, #608947);
+    background-image: linear-gradient(top, #7AB247, #608947);
+}	
+
+#submit:active, #signup:active
+{		
+    outline: none;
+   
+     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;		
+}
+
+#submit::-moz-focus-inner, #signup::-moz-focus-inner
+{
+  border: none;
+}
