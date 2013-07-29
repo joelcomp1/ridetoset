@@ -48,15 +48,11 @@
 		
 			
 	}*/
-		$totalPrograms[$index]['id'] = $index;
+		    $totalPrograms[$index]['id'] = $index;
 			$totalPrograms[$index]['title'] = "test";//$row['show_name'];
-			$totalPrograms[$index]['start'] = "Wed, 18 Oct 2009 13:00:00 EST"$row['call_date'];
+			$totalPrograms[$index]['start'] = "Wed, 18 Oct 2009 13:00:00 EST";//$row['call_date'];
 			$totalPrograms[$index]['allday'] = true;
-		//	$totalPrograms[$index]['end'] = $row['date'];
-		//	$totalPrograms[$index]['url'] = "program-manager.php?programname=";
-			//$totalPrograms[$index]['url'] .= $row['programname'];
-		//	$totalPrograms[$index]['url'] .= "&orgname=";
-		//	$totalPrograms[$index]['url'] .= $orgname;
+
 			$index += 1;
 		echo json_encode(
 	
