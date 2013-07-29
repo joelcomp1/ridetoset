@@ -47,6 +47,7 @@
 		
 			*/
 			$datetime = new DateTime($row['call_date']);
+			$datetime->add(new DateInterval(strtotime($row['call_time'])));
 			$totalPrograms[$index]['id'] = $index;
 			$totalPrograms[$index]['title'] = $row['show_name'];
 			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);
