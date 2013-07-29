@@ -109,7 +109,8 @@ $app_name = idx($app_info, 'name', '');
 <script src='javascript/fullcalendar.min.js'></script>
 <script src='javascript/gcal.js'></script>
 <script src='javascript/jquery.lightbox_me.js'></script>
-
+  <script type="text/javascript" src="javascript/jquery.timepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/jquery.timepicker.css" />
     <script type="text/javascript">
       function logResponse(response) {
         if (console && console.log) {
@@ -211,7 +212,7 @@ $app_name = idx($app_info, 'name', '');
 }(document, 'script', 'facebook-jssdk'));
 	  
 
-	/*	function lookup(inputString) {
+		function lookup(inputString) {
 		if(inputString.length == 0) {
 			// Hide the suggestion box.
 			$('#suggestions').hide();
@@ -228,7 +229,7 @@ $app_name = idx($app_info, 'name', '');
 	function fillTags(thisValue) {
 		$('#inputString').val(thisValue);
 		setTimeout("$('#suggestions').hide();", 200);
-	}  */
+	}  
 
 	$(function() {
             function launch() {
@@ -371,6 +372,18 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
                     <label><strong>Show Name:</strong> <input class="sprited" id="showname"></label>
                     <label><strong>Date:</strong> <input class="sprited" id="showdate"></label>
 					<label><strong>Call Time:</strong> <input class="sprited"></label>
+	<div class="example">
+		<script>
+		  $(function() {
+			$('#basicExample').timepicker();
+		  });
+		</script>
+
+		<h3>Basic Example</h3>
+		<p><input id="basicExample" type="text" class="time" /></p>
+
+		<pre class="code" data-language="javascript">$('#basicExample').timepicker();</pre>
+	</div>
                     <div id="actions">
                         <a class="form_button sprited" id="log_in" href="#">Add</a>
                     </div>
