@@ -65,7 +65,8 @@ header .tagline {
 
 #share-app {
   float: left;
-  width: 344px;
+  position:relative;
+  left:50%;
 }
 
 #share-app ul {

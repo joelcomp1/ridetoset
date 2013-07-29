@@ -352,7 +352,7 @@ $(document).ready(function() {
     <div id='calendar'></div>
 <div id="searchshows" style="text-align:center; display:none;">
 <input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags();" 
-value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" onfocusout="this.value = this.value == '' ? this.value = 'Start Typing Shows here...' : this.value; this.value=='Start Typing Shows here...' ? this.style.color='#000' : this.style.color='#6AA24B'"/>
+value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" />
 <div class="suggestionsBox" id="suggestions" style="display: none; text: font:bold 0.4em 'TeXGyreAdventor', Arial, sans-serif!important;">
 	<img src="images/upArrow.png" style="position: relative; top: -12px; left: 30px;" alt="upArrow" />
 <div class="suggestionList" id="autoSuggestionsList">
@@ -383,7 +383,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 			</div>	
 <br><br>
       <div class="list" style="text-align:center;">
-        <h1 style="float:inherit;">Friends using this app</h1>
+        <h1 style="float:left; position:relative; left: -50%;">Friends using this app</h1>
        <div id="share-app">
           <!--p>Share your app:</p-->
           <ul>
