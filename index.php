@@ -285,7 +285,7 @@ $(document).ready(function() {
 				center: 'title',
 				right: 'month,basicWeek,agendaDay'
 			},
-				defaultView: 'basicWeek',
+				defaultView: 'month',
 				dayClick: function(date, allDay, jsEvent, view) {
 			if (allDay || $(jsEvent.target).is('div.fc-day-number')) {
             // Clicked on the entire day
