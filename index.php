@@ -260,7 +260,7 @@ $app_name = idx($app_info, 'name', '');
             
             $('table tr:nth-child(even)').addClass('stripe');
 			
-			$('#basicExample').timepicker('option','step','15');
+			$('#basicExample').timepicker({'step':'15'});
         });
 	
 	  
