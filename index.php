@@ -7,7 +7,8 @@
  * Query Language). Please visit the docs at 'developers.facebook.com/docs'
  * to learn more about the resources available to you
  */
-
+	//Start session
+	session_start();
 // Provides access to app specific values such as your app id and app secret.
 // Defined in 'AppInfo.php'
 require_once('AppInfo.php');
@@ -73,13 +74,15 @@ if ($user_id) {
     'method' => 'fql.query',
     'query' => 'SELECT uid, name FROM user WHERE uid IN(SELECT uid2 FROM friend WHERE uid1 = me()) AND is_app_user = 1'
   ));
+  
+  $_SESSION['user_id'] = $basic['username'];
 }
 
 // Fetch the basic info of the app that they are using
 $app_info = $facebook->api('/'. AppInfo::appID());
 
 $app_name = idx($app_info, 'name', '');
-$_SESSION['user_id'] = $basic['username'];
+
 ?>
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#" lang="en">

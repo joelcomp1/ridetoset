@@ -1,9 +1,8 @@
 <?php
-	//Start session
-	session_start();
+
 	
 	//Include database connection details
-	include('AppInfo.php');
+	//include('AppInfo.php');
 	
 	//Array to store validation errors
 	$errmsg_arr = array();
@@ -24,6 +23,7 @@
 	$call_time = clean($_POST['calltime']);
 	$call_date = clean($_POST['showdate']);
 	var_dump( $_POST );
+	var_dump($_SESSION['user_id']);
 /*
 	$qry = "INSERT INTO shows(user_id, show_name, call_date, call_time) 
 	    				VALUES('$user_id','$show_name','$call_date','$call_time')";
