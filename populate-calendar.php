@@ -50,7 +50,7 @@
 			$totalPrograms[$index]['id'] = $index;
 			$totalPrograms[$index]['title'] = $row['show_name'];
 			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);
-			$totalPrograms[$index]['end'] = DateTime('2013-7-28 23:59:59');
+		//	$totalPrograms[$index]['end'] = DateTime('2013-7-28 23:59:59');
 
 
 			$index += 1;
