@@ -8,6 +8,7 @@
 body {
   color: #999;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
   width: 720px;
   margin: 20px;
 }
