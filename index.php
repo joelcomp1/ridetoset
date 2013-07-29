@@ -259,6 +259,10 @@ $app_name = idx($app_info, 'name', '');
             });
             
             $('table tr:nth-child(even)').addClass('stripe');
+			
+
+			$('#calltime').timepicker('step': '15', );
+
         });
 	
 	  
@@ -371,20 +375,16 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
                 <div id="sign_up_form">
                     <label><strong>Show Name:</strong> <input class="sprited" id="showname"></label>
                     <label><strong>Date:</strong> <input class="sprited" id="showdate"></label>
-					<label><strong>Call Time:</strong> <input class="sprited"></label>
-	<div class="example">
-		<script>
-		  $(function() {
-			$('#basicExample').timepicker();
-		  });
-		</script>
+					<label><strong>Call Time:</strong> <input id="calltime" class="time sprited" type="text"></label>
+					<pre class="code" data-language="javascript">$('#calltime').timepicker();</pre>
 
-		<h3>Basic Example</h3>
-		<p><input id="basicExample" type="text" class="time" /></p>
 
-		<pre class="code" data-language="javascript">$('#basicExample').timepicker();</pre>
-	</div>
-                    <div id="actions">
+	
+	
+
+	
+
+        <div id="actions">
                         <a class="form_button sprited" id="log_in" href="#">Add</a>
                     </div>
                 </div>
