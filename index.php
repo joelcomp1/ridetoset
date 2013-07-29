@@ -261,7 +261,7 @@ $app_name = idx($app_info, 'name', '');
             $('table tr:nth-child(even)').addClass('stripe');
 			
 
-			$('#calltime').timepicker('step': '15', );
+			$('#calltime').timepicker('step': '15');
 
         });
 	
