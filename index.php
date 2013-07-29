@@ -68,7 +68,7 @@ if ($user_id) {
 
   // This fetches 4 of your friends.
   $friends = idx($facebook->api('/me/friends?limit=8'), 'data', array());
-
+  $_SESSION['friends'] = idx($facebook->api('/me/friends'), 'data', array());
   // Here is an example of a FQL call that fetches all of your friends that are
   // using this app
   $app_using_friends = $facebook->api(array(
@@ -361,7 +361,7 @@ $(document).ready(function() {
 	<div style="text-align:center;">
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
-	<!--a href="#" id="try-1" class="try sprited" style="text-align:center;">Add Show!</a-->
+	<br>
     <div id='calendar'></div>
 <div id="searchshows" style="text-align:center; display:none;">
 <input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags();" 
