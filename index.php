@@ -211,7 +211,7 @@ $app_name = idx($app_info, 'name', '');
 }(document, 'script', 'facebook-jssdk'));
 	  
 
-		function lookup(inputString) {
+	/*	function lookup(inputString) {
 		if(inputString.length == 0) {
 			// Hide the suggestion box.
 			$('#suggestions').hide();
@@ -228,7 +228,7 @@ $app_name = idx($app_info, 'name', '');
 	function fillTags(thisValue) {
 		$('#inputString').val(thisValue);
 		setTimeout("$('#suggestions').hide();", 200);
-	}  
+	}  */
 
 	$(function() {
             function launch() {
@@ -354,7 +354,7 @@ $(document).ready(function() {
 <input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags();" 
 value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" />
 <div class="suggestionsBox" id="suggestions" style="display: none; text: font:bold 0.4em 'TeXGyreAdventor', Arial, sans-serif!important;">
-	<img src="images/upArrow.png" style="position: relative; top: -12px; left: 30px;" alt="upArrow" />
+	<img src="images/upArrow.png" style="position: relative; top: -12px; left: 0px;" alt="upArrow" />
 <div class="suggestionList" id="autoSuggestionsList">
 		&nbsp;
 	</div>
@@ -383,7 +383,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 			</div>	
 <br><br>
       <div class="list" style="text-align:center;">
-        <h1 style="float:left; position:relative; left: -50%;">Friends using this app</h1>
+        <h1 style="float:left; position:relative;">Friends using this app</h1>
        <div id="share-app">
           <!--p>Share your app:</p-->
           <ul>
