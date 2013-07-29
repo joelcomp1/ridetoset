@@ -19,11 +19,11 @@
 	$totalPrograms[] = array();
 	$index = 1;
 	$add_event = false;
-		/*
+		
 	while($row = mysql_fetch_assoc($rProg))
 	{	
 	
-		foreach(clean($_SESSION['friends']) as $value)
+	/*	foreach(clean($_SESSION['friends']) as $value)
 		{
 		 if(idx($basic, 'userid') == $row['user_id'])
 		 {
@@ -35,9 +35,8 @@
 		if($add_event == true)
 		{
 			$totalPrograms[$index]['id'] = $index;
-			$totalPrograms[$index]['title'] = "test"$row['show_name'];
+			$totalPrograms[$index]['title'] = $row['show_name'];
 			$totalPrograms[$index]['start'] = "Wed, 18 Oct 2009 13:00:00 EST"$row['call_date'];
-			$totalPrograms[$index]['allday'] = true;
 		//	$totalPrograms[$index]['end'] = $row['date'];
 		//	$totalPrograms[$index]['url'] = "program-manager.php?programname=";
 			//$totalPrograms[$index]['url'] .= $row['programname'];
@@ -46,14 +45,16 @@
 			$index += 1;
 		}
 		
+			*/
 			
-	}*/
-		    $totalPrograms[$index]['id'] = $index;
-			$totalPrograms[$index]['title'] = "test";//$row['show_name'];
-			$totalPrograms[$index]['start'] = "Wed, 18 Oct 2009 13:00:00 EST";//$row['call_date'];
-			$totalPrograms[$index]['allday'] = true;
+			$totalPrograms[$index]['id'] = $index;
+			$totalPrograms[$index]['title'] = $row['show_name']
+			$totalPrograms[$index]['start'] = "29 July 2013 13:00:00 EST";//$row['call_date'];
+
 
 			$index += 1;
+	}
+	
 		echo json_encode(
 	
 		$totalPrograms
