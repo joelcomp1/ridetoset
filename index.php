@@ -375,9 +375,9 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 			<div id="addshow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
                 <h1Let's add a new Show!</h1>
                 <form id="sign_up_form" method="post" action="add-show.php">
-                    <label><strong>Show Name:</strong> <input class="sprited" id="showname"></label>
-                    <label><strong>Date:</strong> <input class="sprited" id="showdate"></label>
-					<label><strong>Call Time:</strong> <input id="calltime" class="time sprited" type="text"></label>
+                    <label><strong>Show Name:</strong> <input class="sprited" id="showname" name="showname" ></label>
+                    <label><strong>Date:</strong> <input class="sprited" id="showdate" name="showdate"></label>
+					<label><strong>Call Time:</strong> <input id="calltime" class="time sprited"  name="calltime" type="text"></label>
                     <div id="actions">
                         <button type="submit" >Add</a>
                     </div>
