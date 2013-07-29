@@ -48,7 +48,7 @@
 			*/
 			
 			$totalPrograms[$index]['id'] = $index;
-			$totalPrograms[$index]['title'] = $row['show_name']
+			$totalPrograms[$index]['title'] = $row['show_name'];
 			$totalPrograms[$index]['start'] = "29 July 2013 13:00:00 EST";//$row['call_date'];
 
 
