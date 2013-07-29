@@ -1,9 +1,9 @@
 <?php
 
-	
-	//Include database connection details
-	//include('AppInfo.php');
 	session_start();
+	//Include database connection details
+	include('AppInfo.php');
+	
 	//Array to store validation errors
 	$errmsg_arr = array();
 	
