@@ -18,7 +18,7 @@
 		}
 		return  mysql_escape_string($str);
 	}
-	$user_id = $_SESSION['user_id'];
+	$user_id = clean($_SESSION['user_id']);
 	$show_name = clean($_POST['showname']);
 	$call_time = clean($_POST['calltime']);
 	$call_date = clean($_POST['showdate']);
@@ -39,7 +39,7 @@
 			session_write_close();
 			exit();
 	}else {
-		die("Query failed");
+		die($result);
 	}
 	
 	mysql_close($link);
