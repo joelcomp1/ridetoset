@@ -8,6 +8,7 @@
 .fc {
 	direction: ltr;
 	text-align: left;
+	font-weight:normal;
 	}
 	
 .fc table {
