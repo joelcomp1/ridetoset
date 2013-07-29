@@ -390,7 +390,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 			</div>	
 <br><br>
       <div class="list" style="text-align:center;">
-        <h1 style="float:left; position:relative;">Friends using this app</h1>
+        <h1 style="float:left; position:relative; left: 40%;">Friends using this app</h1>
        <div id="share-app">
           <!--p>Share your app:</p-->
           <ul>

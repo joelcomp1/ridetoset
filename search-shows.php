@@ -30,7 +30,7 @@
 				// YOU NEED TO ALTER THE QUERY TO MATCH YOUR DATABASE.
 				// eg: SELECT yourColumnName FROM yourTable WHERE yourColumnName LIKE '$queryString%' LIMIT 10
 				
-				$query = mysql_query("SELECT tag FROM tags WHERE tag LIKE '$queryString%' LIMIT 25");
+				$query = mysql_query("SELECT show_name FROM shows WHERE show_name LIKE '$queryString%' LIMIT 25");
 
 				if($query) {
 			
@@ -41,7 +41,7 @@
 						// The onClick function fills the textbox with the result.
 						
 						// YOU MUST CHANGE: $result->value to $result->your_colum
-	         			echo '<li onClick="fillTags(\''.$result->tag.'\');">'.$result->tag.'</li>';
+	         			echo '<li onClick="fillTags(\''.$result->show_name.'\');">'.$result->show_name.'</li>';
 	         		}
 				} else {
 					echo 'ERROR: There was a problem with the query.';
