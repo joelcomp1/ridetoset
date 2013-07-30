@@ -31,13 +31,13 @@ function clean($str) {
 	
 		foreach($facebook as $value)
 		{
-		 if(idx($value, 'uid') == $row['user_id'])
-		 {
-			$add_event = true;
-			break;
-		 }
+		 //if(idx($value, 'uid') == $row['user_id'])
+		 //{
+		//	$add_event = true;
+		//	break;
+		// }
 		
-		}
+		//}
 		if($add_event == true)
 		{
 			$concat = $row['call_date'] . ' ' . $row['call_time'];
@@ -51,10 +51,10 @@ function clean($str) {
 			$totalPrograms[$index]['allDay'] = false;
 			$totalPrograms[$index]['end'] =  $endtime->format(DateTime::ISO8601);
 			$totalPrograms[$index]['url'] = "index.php?showname=";
-			$totalPrograms[$index]['url'] .= $add_event;
+			$totalPrograms[$index]['url'] .= idx($value, 'uid');
 
 			$index += 1;
-		}
+		//}
 		
 			
 
