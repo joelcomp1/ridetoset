@@ -10,7 +10,7 @@
 	
 	//Validation error flag
 	$errflag = false;
-	 
+	$add_event = false;
 	$facebook = $_SESSION['facebook']; 
 
 		// Is there a posted query string?
@@ -37,22 +37,32 @@
 					// While there are results loop through them - fetching an Object (i like PHP5 btw!).
 					while ($result = mysql_fetch_object($query)) {
 	
-					//foreach($facebook as $value)
-					//{
-					//	if(idx($value, 'username') == $result->user_id ||
-					//	$result->user_id == clean($_SESSION['user_id']))
-					//	{
+					foreach($facebook as $value)
+					{
+						if(idx($value, 'username') == $result->user_id ||
+						$result->user_id == clean($_SESSION['user_id']))
+						{
+							$add_event = true;
+							break;
+						}
+						else
+						{				
+							$add_event = false;
+						}
+		
+					}
+					if($add_event == true)
+					{
 							// Format the results, im using <li> for the list, you can change it.
 							// The onClick function fills the textbox with the result.
 							$_SESSION['showName'] = $result->show_name;
 							// YOU MUST CHANGE: $result->value to $result->your_colum
 							echo '<li onClick="fillTags(\''.$result->show_name.'\');">'.$result->show_name.'</li>';
-		
-						//}
-					//}
-	
+					}
+						
+					}
 
-	         		}
+	         		
 				} else {
 					echo 'ERROR: There was a problem with the query.';
 				}
