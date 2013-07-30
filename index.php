@@ -345,7 +345,7 @@ $(document).ready(function() {
 		margin: 0 auto;
 		}
 	#daycalendar {
-		width: 498px;
+		width: 400px;
 		margin: 0 auto;
 		}
 
