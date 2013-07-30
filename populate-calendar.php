@@ -25,7 +25,7 @@
 	
 		foreach(clean($_SESSION['friends']) as $value)
 		{
-		 if(idx($basic, 'userid') == $row['user_id'])
+		 if(idx($value, 'userid') == $row['user_id'])
 		 {
 			$add_event = true;
 			break;
