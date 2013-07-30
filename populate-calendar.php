@@ -4,18 +4,11 @@
 	session_start();
 	include("AppInfo.php");
 	
-require_once('sdk/src/facebook.php');
-
-$facebook = new Facebook(array(
-  'appId'  => AppInfo::appID(),
-  'secret' => AppInfo::appSecret(),
-  'sharedSession' => true,
-  'trustForwarded' => true,
-));
+$facebook = $_SESSION['facebook'];
 		
 		
 $user_id = $facebook->getUser();
-if ($user_id) {
+/*if ($user_id) {
   try {
     // Fetch the viewer's basic information
     $basic = $facebook->api('/me');
@@ -33,8 +26,8 @@ if ($user_id) {
     'query' => 'SELECT uid, name FROM user WHERE uid IN(SELECT uid2 FROM friend WHERE uid1 = me()) AND is_app_user = 1'
   ));
 
-}
-;function clean($str) {
+}*/
+function clean($str) {
 		$str = @trim($str);
 		if(get_magic_quotes_gpc()) {
 			$str = stripslashes($str);
@@ -55,7 +48,7 @@ if ($user_id) {
 	while($row = mysql_fetch_assoc($rProg))
 	{	
 	
-		foreach($app_using_friends as $value)
+		/*foreach($app_using_friends as $value)
 		{
 		 if(idx($value, 'uid') == $row['user_id'])
 		 {
@@ -63,7 +56,7 @@ if ($user_id) {
 			break;
 		 }
 		
-		}
+		}*/
 	/*	if($add_event == true)
 		{
 			$totalPrograms[$index]['id'] = $index;
@@ -90,7 +83,7 @@ if ($user_id) {
 			$totalPrograms[$index]['allDay'] = false;
 			$totalPrograms[$index]['end'] =  $endtime->format(DateTime::ISO8601);
 			$totalPrograms[$index]['url'] = "index.php?showname=";
-			$totalPrograms[$index]['url'] .= $add_event;
+			$totalPrograms[$index]['url'] .= $user_id;
 
 			$index += 1;
 	}
