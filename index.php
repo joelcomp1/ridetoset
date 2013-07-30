@@ -316,6 +316,19 @@ $(document).ready(function() {
 			},
 			events: "populate-calendar.php"
 		});
+		
+		
+		$('#daycalendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'agendaDay'
+			},
+				defaultView: 'agendaDay',
+			events: "populate-calendar-day.php"
+		});
+		
+		
 	//	$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
 	  
 	});
@@ -362,9 +375,7 @@ $(document).ready(function() {
 	<div style="text-align:center;">
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
-	<br>
-    <div id='calendar'></div>
-<div id="searchshows" style="text-align:center; display:none;">
+	<div id="searchshows" style="text-align:center; display:none;">
 <input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags();" 
 value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" />
 <div class="suggestionsBox" id="suggestions" style="display: none; text: font:bold 0.4em 'TeXGyreAdventor', Arial, sans-serif!important;">
@@ -373,14 +384,24 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 		&nbsp;
 	</div>
 	</div>
+	<input type="button" id="try-2" class="try sprited" value="Go">
 
 	
 
 	<!--a href="#" id="try-2" class="try sprited"><img src="../images/help.png" style="padding: 0px 0px 0px 20px;"></a-->
 
 </div>
+	<br>
+    <div id='calendar'></div>
+
+			<div id="specificShow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
+                <h1><?php echo $_SESSION['showName']; ?></h1>
+                 <div id='daycalendar'></div>
+                </div>
+	
+	
 			<div id="addshow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
-                <h1Let's add a new Show!</h1>
+                <h1>Let's add a new Show!</h1>
                 <form id="sign_up_form" method="post" action="add-show.php">
                     <label><strong>Show Name:</strong> <input class="sprited" id="showname" name="showname" ></label>
                     <label><strong>Date:</strong> <input class="sprited" id="showdate" name="showdate"></label>
@@ -388,7 +409,8 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
                     <div id="actions">
                         <button type="submit" >Add</a>
                     </div>
-                </div>
+					</form>
+               
                 <a id="close_x" class="close sprited" href="#">close</a>
             </div>
 			<div id="moreinfo" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px; text-align:center;">
