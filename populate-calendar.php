@@ -6,27 +6,7 @@
 	
 $facebook = $_SESSION['facebook'];
 		
-		
-//$user_id = $facebook->getUser();
-/*if ($user_id) {
-  try {
-    // Fetch the viewer's basic information
-    $basic = $facebook->api('/me');
-  } catch (FacebookApiException $e) {
-    // If the call fails we check if we still have a user. The user will be
-    // cleared if the error is because of an invalid accesstoken
-    if (!$facebook->getUser()) {
-      header('Location: '. AppInfo::getUrl($_SERVER['REQUEST_URI']));
-      exit();
-    }
-  }
-
-  $app_using_friends = $facebook->api(array(
-    'method' => 'fql.query',
-    'query' => 'SELECT uid, name FROM user WHERE uid IN(SELECT uid2 FROM friend WHERE uid1 = me()) AND is_app_user = 1'
-  ));
-
-}*/
+	
 function clean($str) {
 		$str = @trim($str);
 		if(get_magic_quotes_gpc()) {
@@ -48,15 +28,15 @@ function clean($str) {
 	while($row = mysql_fetch_assoc($rProg))
 	{	
 	
-		/*foreach($app_using_friends as $value)
+		foreach($facebook as $value)
 		{
-		 if(idx($value, 'uid') == $row['user_id'])
+		 /*if(idx($value, 'uid') == $row['user_id'])
 		 {
 			$add_event = true;
 			break;
-		 }
+		 }*/
 		
-		}*/
+		}
 	/*	if($add_event == true)
 		{
 			$totalPrograms[$index]['id'] = $index;
