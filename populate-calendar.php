@@ -40,17 +40,15 @@ if ($user_id) {
     'method' => 'fql.query',
     'query' => 'SELECT uid, name FROM user WHERE uid IN(SELECT uid2 FROM friend WHERE uid1 = me()) AND is_app_user = 1'
   ));
-  $_SESSION['facebook'] = $facebook;
-  
-  $_SESSION['user_id'] = $basic['username'];
+
 }
 		
 	while($row = mysql_fetch_assoc($rProg))
 	{	
 	
-		foreach(clean($_SESSION['friends']) as $value)
+		foreach($app_using_friends as $value)
 		{
-		 if(idx($value, 'userid') == $row['user_id'])
+		 if(idx($value, 'uid') == $row['user_id'])
 		 {
 			$add_event = true;
 			break;
