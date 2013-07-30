@@ -394,7 +394,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 	<br>
     <div id='calendar'></div>
 
-			<div id="specificShow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px;">
+			<div id="specificShow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px; background-color:white;">
                 <h1><?php echo $_SESSION['showName']; ?></h1>
                  <div id='daycalendar'></div>
                 </div>
