@@ -3,7 +3,8 @@
 	//Start session
 	session_start();
 	include("AppInfo.php");
-	
+	include('utils.php');
+
 $facebook = $_SESSION['facebook'];
 		
 	
