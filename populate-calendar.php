@@ -48,7 +48,7 @@
 			*/
 			$datetime = new DateTime($row['call_date']);
 			//$time = new DateTime($row['call_time']);
-			$dateConvert =  date('H:i:s', strtotime($row['call_time']))
+			$dateConvert =  date('H:i:s', strtotime($row['call_time']));
 			//$datetime->add(new DateInterval($dateConvert));
 			$totalPrograms[$index]['id'] = $index;
 			$totalPrograms[$index]['title'] = $row['show_name'];
