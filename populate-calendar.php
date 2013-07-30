@@ -30,24 +30,16 @@ function clean($str) {
 	
 		foreach($facebook as $value)
 		{
-		 /*if(idx($value, 'uid') == $row['user_id'])
+		 if(idx($value, 'uid') == $row['user_id'])
 		 {
 			$add_event = true;
 			break;
-		 }*/
+		 }
 		
 		}
 	/*	if($add_event == true)
 		{
-			$totalPrograms[$index]['id'] = $index;
-			$totalPrograms[$index]['title'] = $row['show_name'];
-			$totalPrograms[$index]['start'] = "Wed, 18 Oct 2009 13:00:00 EST"$row['call_date'];
-		//	$totalPrograms[$index]['end'] = $row['date'];
-		//	$totalPrograms[$index]['url'] = "program-manager.php?programname=";
-			//$totalPrograms[$index]['url'] .= $row['programname'];
-		//	$totalPrograms[$index]['url'] .= "&orgname=";
-		//	$totalPrograms[$index]['url'] .= $orgname;
-			$index += 1;
+
 		}
 		
 			*/
@@ -63,7 +55,7 @@ function clean($str) {
 			$totalPrograms[$index]['allDay'] = false;
 			$totalPrograms[$index]['end'] =  $endtime->format(DateTime::ISO8601);
 			$totalPrograms[$index]['url'] = "index.php?showname=";
-			$totalPrograms[$index]['url'] .= sizeof($facebook);
+			$totalPrograms[$index]['url'] .= $add_event;
 
 			$index += 1;
 	}
