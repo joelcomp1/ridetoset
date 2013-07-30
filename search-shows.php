@@ -39,8 +39,8 @@
 	
 					foreach($facebook as $value)
 					{
-						if(idx($value, 'username') == $result['user_id'] ||
-						$result['user_id'] == clean($_SESSION['user_id']))
+						if(idx($value, 'username') == $result->user_id ||
+						$result->user_id == clean($_SESSION['user_id']))
 						{
 							// Format the results, im using <li> for the list, you can change it.
 							// The onClick function fills the textbox with the result.
