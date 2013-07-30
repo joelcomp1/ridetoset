@@ -63,7 +63,7 @@
 							// The onClick function fills the textbox with the result.
 							$_SESSION['showName'] = $result->show_name;
 							// YOU MUST CHANGE: $result->value to $result->your_colum
-							echo '<li onClick="fillTags(\''.$result->user_id.'\');">'.$result->user_id.'</li>';
+							echo '<li onClick="fillTags(\''.$result->show_name.'\');">'.$result->show_name.'</li>';
 					}
 						
 					}
