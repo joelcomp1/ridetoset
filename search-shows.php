@@ -37,19 +37,19 @@
 					// While there are results loop through them - fetching an Object (i like PHP5 btw!).
 					while ($result = mysql_fetch_object($query)) {
 	
-					foreach($facebook as $value)
-					{
-						if(idx($value, 'username') == $result->user_id ||
-						$result->user_id == clean($_SESSION['user_id']))
-						{
+					//foreach($facebook as $value)
+					//{
+					//	if(idx($value, 'username') == $result->user_id ||
+					//	$result->user_id == clean($_SESSION['user_id']))
+					//	{
 							// Format the results, im using <li> for the list, you can change it.
 							// The onClick function fills the textbox with the result.
 							$_SESSION['showName'] = $result->show_name;
 							// YOU MUST CHANGE: $result->value to $result->your_colum
 							echo '<li onClick="fillTags(\''.$result->show_name.'\');">'.$result->show_name.'</li>';
 		
-						}
-					}
+						//}
+					//}
 	
 
 	         		}
