@@ -3,23 +3,15 @@
 	//Start session
 	session_start();
 	include("AppInfo.php");
-;function clean($str) {
-		$str = @trim($str);
-		if(get_magic_quotes_gpc()) {
-			$str = stripslashes($str);
-		}
-		return  mysql_escape_string($str);
-	}
-	$orgname = clean($_SESSION['ORG_NAME']);
+	
+require_once('sdk/src/facebook.php');
 
-	$qProg = "SELECT * FROM shows";
-
-    $rProg = mysql_query($qProg);
-
-	$totalPrograms[] = array();
-	$index = 1;
-	$add_event = false;
-	$facebook = $_SESSION['facebook'];
+$facebook = new Facebook(array(
+  'appId'  => AppInfo::appID(),
+  'secret' => AppInfo::appSecret(),
+  'sharedSession' => true,
+  'trustForwarded' => true,
+));
 		
 		
 $user_id = $facebook->getUser();
@@ -42,6 +34,23 @@ if ($user_id) {
   ));
 
 }
+;function clean($str) {
+		$str = @trim($str);
+		if(get_magic_quotes_gpc()) {
+			$str = stripslashes($str);
+		}
+		return  mysql_escape_string($str);
+	}
+	$orgname = clean($_SESSION['ORG_NAME']);
+
+	$qProg = "SELECT * FROM shows";
+
+    $rProg = mysql_query($qProg);
+
+	$totalPrograms[] = array();
+	$index = 1;
+	$add_event = false;
+	
 		
 	while($row = mysql_fetch_assoc($rProg))
 	{	
