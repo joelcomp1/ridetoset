@@ -51,7 +51,7 @@ function clean($str) {
 			$totalPrograms[$index]['allDay'] = false;
 			$totalPrograms[$index]['end'] =  $endtime->format(DateTime::ISO8601);
 			$totalPrograms[$index]['url'] = "index.php?showname=";
-			$totalPrograms[$index]['url'] .= idx($value, 'uid');
+			$totalPrograms[$index]['url'] .= idx($value, 'username');
 
 			$index += 1;
 		}
