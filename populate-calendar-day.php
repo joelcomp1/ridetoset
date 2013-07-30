@@ -15,9 +15,9 @@ function clean($str) {
 		}
 		return  mysql_escape_string($str);
 	}
-	$orgname = clean($_SESSION['ORG_NAME']);
+    $show_name = clean($_SESSION['show_name']);
 
-	$qProg = "SELECT * FROM shows";
+	$qProg = "SELECT * FROM shows where show_name='$show_name'";
 
     $rProg = mysql_query($qProg);
 

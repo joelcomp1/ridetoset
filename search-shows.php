@@ -62,7 +62,7 @@
 							// Format the results, im using <li> for the list, you can change it.
 							// The onClick function fills the textbox with the result.
 							?> <script> document.getElementById("header_show_name").innerHTML = <?php echo json_encode($result->show_name); ?>;</script><?php
-							
+							$_SESSION['show_name'] = $result->show_name; 
 							// YOU MUST CHANGE: $result->value to $result->your_colum
 							echo '<li onClick="fillTags(\''.$result->show_name.'\');">'.$result->show_name.'</li>';
 					}
