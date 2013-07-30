@@ -52,7 +52,7 @@
 			//$datetime->add(new DateInterval($dateConvert));
 			$totalPrograms[$index]['id'] = $index;
 			$totalPrograms[$index]['title'] = $row['show_name'];
-			$totalPrograms[$index]['start'] = $dateConvert;
+			$totalPrograms[$index]['start'] = $datetime;
 		//	$totalPrograms[$index]['end'] = DateTime('2013-7-28 23:59:59');
 			$totalPrograms[$index]['url'] = "index.php?showname=";
 			$totalPrograms[$index]['url'] .= $dateConvert;
