@@ -75,7 +75,7 @@ if ($user_id) {
     'method' => 'fql.query',
     'query' => 'SELECT uid, name FROM user WHERE uid IN(SELECT uid2 FROM friend WHERE uid1 = me()) AND is_app_user = 1'
   ));
-  $_SESSION['facebook'] = $facebook;
+  $_SESSION['facebook'] = $app_using_friends;
   
   $_SESSION['user_id'] = $basic['username'];
 }

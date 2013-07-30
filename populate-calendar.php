@@ -83,7 +83,7 @@ function clean($str) {
 			$totalPrograms[$index]['allDay'] = false;
 			$totalPrograms[$index]['end'] =  $endtime->format(DateTime::ISO8601);
 			$totalPrograms[$index]['url'] = "index.php?showname=";
-			$totalPrograms[$index]['url'] .= $user_id;
+			$totalPrograms[$index]['url'] .= sizeof($facebook);
 
 			$index += 1;
 	}
