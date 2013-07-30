@@ -7,7 +7,7 @@
 $facebook = $_SESSION['facebook'];
 		
 		
-$user_id = $facebook->getUser();
+//$user_id = $facebook->getUser();
 /*if ($user_id) {
   try {
     // Fetch the viewer's basic information
