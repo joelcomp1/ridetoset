@@ -38,8 +38,8 @@ function clean($str) {
 		// }
 		
 		//}
-		if($add_event == true)
-		{
+		//if($add_event == true)
+		//{
 			$concat = $row['call_date'] . ' ' . $row['call_time'];
 			$datetimeoldformat = date("Y/m/d g:i", strtotime($concat)); 
 			$datetime = new DateTime($datetimeoldformat);
@@ -54,7 +54,7 @@ function clean($str) {
 			$totalPrograms[$index]['url'] .= idx($value, 'uid');
 
 			$index += 1;
-		//}
+		}
 		
 			
 
