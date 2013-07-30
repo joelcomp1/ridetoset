@@ -53,10 +53,13 @@
 			$concat = $row['call_date'] . ' ' . $row['call_time'];
 			$datetimeoldformat = date("Y/m/d g:i", strtotime($concat)); 
 			$datetime = new DateTime($datetimeoldformat);
+			$endtime = $datetime;
+			$endtime->modify("+10 minutes");
 			$totalPrograms[$index]['id'] = $index;
 			$totalPrograms[$index]['title'] = $row['show_name'];
 			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);
-		//	$totalPrograms[$index]['end'] = DateTime('2013-7-28 23:59:59');
+			$totalPrograms[$index]['allday'] = false;
+			$totalPrograms[$index]['end'] =  $endtime;
 			$totalPrograms[$index]['url'] = "index.php?showname=";
 			$totalPrograms[$index]['url'] .= $datetime->format(DateTime::ISO8601);
 
