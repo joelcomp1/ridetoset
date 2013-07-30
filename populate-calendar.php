@@ -23,7 +23,7 @@
 	while($row = mysql_fetch_assoc($rProg))
 	{	
 	
-	/*	foreach(clean($_SESSION['friends']) as $value)
+		foreach(clean($_SESSION['friends']) as $value)
 		{
 		 if(idx($basic, 'userid') == $row['user_id'])
 		 {
@@ -32,7 +32,7 @@
 		 }
 		
 		}
-		if($add_event == true)
+	/*	if($add_event == true)
 		{
 			$totalPrograms[$index]['id'] = $index;
 			$totalPrograms[$index]['title'] = $row['show_name'];
@@ -46,22 +46,19 @@
 		}
 		
 			*/
-		///	$datetime = new DateTime($row['call_date']);
-			//$timeonly = date('H:i:s', strtotime($row['call_time']));
-		//	$datetime->add(new DateInterval(
-			//$datetime->add(new DateInterval());
+
 			$concat = $row['call_date'] . ' ' . $row['call_time'];
 			$datetimeoldformat = date("Y/m/d g:i", strtotime($concat)); 
 			$datetime = new DateTime($datetimeoldformat);
 			$endtime = new DateTime($datetimeoldformat);
-			$endtime->modify("+10 minutes");
+			$endtime->modify("+30 minutes");
 			$totalPrograms[$index]['id'] = $index;
 			$totalPrograms[$index]['title'] = $row['show_name'];
 			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);
 			$totalPrograms[$index]['allDay'] = false;
 			$totalPrograms[$index]['end'] =  $endtime->format(DateTime::ISO8601);
 			$totalPrograms[$index]['url'] = "index.php?showname=";
-			$totalPrograms[$index]['url'] .= $datetime->format(DateTime::ISO8601);
+			$totalPrograms[$index]['url'] .= $add_event;
 
 			$index += 1;
 	}
