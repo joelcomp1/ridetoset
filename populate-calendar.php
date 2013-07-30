@@ -31,10 +31,15 @@ function clean($str) {
 	
 		foreach($facebook as $value)
 		{
-		 if(idx($value, 'username') == $row['user_id'])
+		 if(idx($value, 'username') == $row['user_id'] ||
+		 $row['user_id'] == clean($_SESSION['user_id']))
 		 {
 			$add_event = true;
 			break;
+		 }
+		 else
+		 {
+			$add_event = false;
 		 }
 		
 		}
