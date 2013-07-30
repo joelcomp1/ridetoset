@@ -47,7 +47,8 @@
 		
 			*/
 			$datetime = new DateTime($row['call_date']);
-			//$datetime->add(new DateInterval(date('H:i:s', strtotime($row['call_time']))));
+			$dateConvert =  date('H:i:s', strtotime($row['call_time']))
+			$datetime->add(new DateInterval($dateConvert));
 			$totalPrograms[$index]['id'] = $index;
 			$totalPrograms[$index]['title'] = $row['show_name'];
 			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);
