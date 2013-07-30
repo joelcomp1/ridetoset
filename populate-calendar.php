@@ -46,9 +46,13 @@
 		}
 		
 			*/
-			$datetime = new DateTime($row['call_date']);
-			$timeonly = date('H:i:s', strtotime($row['call_time']));
+		///	$datetime = new DateTime($row['call_date']);
+			//$timeonly = date('H:i:s', strtotime($row['call_time']));
+		//	$datetime->add(new DateInterval(
 			//$datetime->add(new DateInterval());
+			$concat = $row['call_date'] . ' ' . $row['call_time'];
+			$datetimeoldformat = date("Y/m/d g:i", strtotime($concat)); 
+			$datetime = new DateTime($datetimeoldformat);
 			$totalPrograms[$index]['id'] = $index;
 			$totalPrograms[$index]['title'] = $row['show_name'];
 			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);
