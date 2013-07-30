@@ -47,12 +47,12 @@
 		
 			*/
 			$datetime = new DateTime($row['call_date']);
-			$time = new DateTime($row['call_time']);
+			//$time = new DateTime($row['call_time']);
 			$dateConvert =  date('H:i:s', strtotime($row['call_time']))
 			//$datetime->add(new DateInterval($dateConvert));
 			$totalPrograms[$index]['id'] = $index;
 			$totalPrograms[$index]['title'] = $time;
-			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);
+			$totalPrograms[$index]['start'] = $dateConvert;
 		//	$totalPrograms[$index]['end'] = DateTime('2013-7-28 23:59:59');
 			$totalPrograms[$index]['url'] = "index.php?showname=";
 			$totalPrograms[$index]['url'] .= $row['show_name'];
