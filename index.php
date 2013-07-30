@@ -244,7 +244,7 @@ $app_name = idx($app_info, 'name', '');
 	$(function() {
             function launch() {
                  $('#addshow').lightbox_me({centered: true, onLoad: function() { $('#addshow').find('input:first').focus()}});
-				 $('#moreinfo').lightbox_me({centered: true, onLoad: function() { $('#moreinfo').find('input:first').focus()}});
+				 $('#specificShow').lightbox_me({centered: true, onLoad: function() { $('#specificShow').find('input:first').focus()}});
             }
             
             $('#try-1').click(function(e) {
@@ -261,8 +261,8 @@ $app_name = idx($app_info, 'name', '');
                 e.preventDefault();
             });
             $('#try-2').click(function(e) {
-                $("#moreinfo").lightbox_me({centered: true, onLoad: function() {
-					$("#moreinfo").find("input:first").focus();
+                $("#specificShow").lightbox_me({centered: true, onLoad: function() {
+					$("#specificShow").find("input:first").focus();
 				}});
 				
                 e.preventDefault();
@@ -407,16 +407,17 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
                     <label><strong>Date:</strong> <input class="sprited" id="showdate" name="showdate"></label>
 					<label><strong>Call Time:</strong> <input id="calltime" class="time sprited"  name="calltime" type="text"></label>
                     <div id="actions">
-                        <button type="submit" >Add</a>
+                  
+						<input type="submit" id="try-2" class="try sprited" value="Go">
                     </div>
 					</form>
                
                 <a id="close_x" class="close sprited" href="#">close</a>
             </div>
-			<div id="moreinfo" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px; text-align:center;">
+			<!--div id="moreinfo" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px; text-align:center;">
 				Don't see your show? Click the "Add Show!" button to add your show and call time for that day.
 				<a id="close_x" class="close sprited" href="#">close</a>
-			</div>	
+			</div-->	
 <br><br>
       <div class="list" style="text-align:center;">
         <h1 style="float:left; position:relative; left: 40%;">Friends using this app</h1>
