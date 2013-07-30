@@ -344,6 +344,11 @@ $(document).ready(function() {
 		width: 720px;
 		margin: 0 auto;
 		}
+	#daycalendar {
+		width: 498px;
+		margin: 0 auto;
+		}
+
 
 </style>
     <header class="clearfix">
@@ -384,7 +389,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 		&nbsp;
 	</div>
 	</div>
-	<input type="button" id="try-2" class="try sprited" value="Go" onclick="$(#daycalendar).fullCalendar('refetchEvents');">
+	<input type="button" id="try-2" class="try sprited" value="Go" onclick="$('#daycalendar').fullCalendar('refetchEvents');">
 
 	
 

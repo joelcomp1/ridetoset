@@ -17,7 +17,7 @@ function clean($str) {
 	}
     $show_name = clean($_SESSION['show_name']);
 
-	$qProg = 'SELECT * FROM shows where show_name='.$show_name.'';
+	$qProg = 'SELECT * FROM shows where show_name="test"';
 
     $rProg = mysql_query($qProg);
 
