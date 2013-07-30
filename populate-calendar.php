@@ -53,7 +53,7 @@
 			$concat = $row['call_date'] . ' ' . $row['call_time'];
 			$datetimeoldformat = date("Y/m/d g:i", strtotime($concat)); 
 			$datetime = new DateTime($datetimeoldformat);
-			$endtime = $datetime;
+			$endtime = new DateTime($datetimeoldformat);
 			$endtime->modify("+10 minutes");
 			$totalPrograms[$index]['id'] = $index;
 			$totalPrograms[$index]['title'] = $row['show_name'];
