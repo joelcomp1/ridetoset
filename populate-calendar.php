@@ -19,7 +19,7 @@
 	$totalPrograms[] = array();
 	$index = 1;
 	$add_event = false;
-	$facebook = $_SESSION['facebook']
+	$facebook = $_SESSION['facebook'];
 		
 		
 $user_id = $facebook->getUser();
