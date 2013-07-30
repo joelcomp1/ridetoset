@@ -31,15 +31,15 @@ function clean($str) {
 	
 		foreach($facebook as $value)
 		{
-		 //if(idx($value, 'uid') == $row['user_id'])
-		 //{
-		//	$add_event = true;
-		//	break;
-		// }
+		 if(idx($value, 'username') == $row['user_id'])
+		 {
+			$add_event = true;
+			break;
+		 }
 		
-		//}
-		//if($add_event == true)
-		//{
+		}
+		if($add_event == true)
+		{
 			$concat = $row['call_date'] . ' ' . $row['call_time'];
 			$datetimeoldformat = date("Y/m/d g:i", strtotime($concat)); 
 			$datetime = new DateTime($datetimeoldformat);
