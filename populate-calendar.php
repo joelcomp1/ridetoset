@@ -54,6 +54,7 @@ function clean($str) {
 			$totalPrograms[$index]['url'] .= idx($value, 'username');
 
 			$index += 1;
+			$add_event = false;
 		}
 		
 			
