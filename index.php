@@ -380,7 +380,8 @@ $(document).ready(function() {
     ?>
 	<?php
 	if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
-		echo '<div id="errors" style="text-align:center;">';
+		echo '<div id="errors" style="text-align:center; font-color:red;">';
+		echo '<h1>Add Show Failed due to:</h1>';
 		echo '<ul class="err">';
 		foreach($_SESSION['ERRMSG_ARR'] as $msg) {
 			echo '<li>',$msg,'</li>'; 
