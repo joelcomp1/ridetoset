@@ -378,6 +378,18 @@ $(document).ready(function() {
     <?php
       if ($user_id) {
     ?>
+	<?php
+	if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+		echo '<div id="errors" style="text-align:center;">';
+		echo '<ul class="err">';
+		foreach($_SESSION['ERRMSG_ARR'] as $msg) {
+			echo '<li>',$msg,'</li>'; 
+		}
+		echo '</ul>';
+		echo '</div>';
+		unset($_SESSION['ERRMSG_ARR']);
+	}
+?>
 	<div style="text-align:center;">
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
@@ -423,18 +435,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
                   
 						<input type="submit" id="try-2" class="try sprited" value="Go">
                     </div>
-<?php
-	if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
-		echo '<div id="errors" style="text-align:center;">';
-		echo '<ul class="err">';
-		foreach($_SESSION['ERRMSG_ARR'] as $msg) {
-			echo '<li>',$msg,'</li>'; 
-		}
-		echo '</ul>';
-		echo '</div>';
-		unset($_SESSION['ERRMSG_ARR']);
-	}
-?>
+
 					</form>
                
                 <a id="close_x" class="close sprited" href="#">close</a>

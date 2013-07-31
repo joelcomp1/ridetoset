@@ -30,16 +30,16 @@
 			$errflag = true;
 		}
 		if($call_time == '') {
-			$call_date[] = 'Call Date Missing';
+			$errmsg_arr[] = 'Call Date Missing';
 			$errflag = true;
 		}
 		if($call_date == '') {
-			$call_time[] = 'Call Time Missing';
+			$errmsg_arr[] = 'Call Time Missing';
 			$errflag = true;
 		}
 
 
-		if($login != '') {
+		if($show_name != '') {
 			$qry = "SELECT * FROM shows WHERE show_name='$show_name'";
 			$result = mysql_query($qry);
 			if($result) {
