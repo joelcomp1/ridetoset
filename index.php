@@ -275,7 +275,7 @@ $app_name = idx($app_info, 'name', '');
 			
 			$('#calltime').timepicker({'step':'5', 'minTime':'5:00am'});
 			$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
-			$( "#showdate" ).datepicker();
+			$( "#datepicker" ).datepicker();
         });
 	
 	  
@@ -435,6 +435,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
                 <form id="sign_up_form" method="post" action="add-show.php">
                     <label><strong>Show Name:</strong> <input class="sprited" id="showname" name="showname" ></label>
                     <label><strong>Date:</strong> <input class="sprited" type="text" id="showdate" name="showdate"></label>
+					<p>Date: <input type="text" id="datepicker" size="30" /></p>
 					<label><strong>Call Time:</strong> <input id="calltime" class="time sprited"  name="calltime" type="text"></label>
                     <div id="actions">
                   
