@@ -121,6 +121,9 @@ $app_name = idx($app_info, 'name', '');
 <script src='javascript/jquery.lightbox_me.js'></script>
   <script type="text/javascript" src="javascript/jquery.timepicker.js"></script>
   <link rel="stylesheet" type="text/css" href="stylesheets/jquery.timepicker.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script type="text/javascript">
       function logResponse(response) {
         if (console && console.log) {
@@ -272,7 +275,7 @@ $app_name = idx($app_info, 'name', '');
 			
 			$('#calltime').timepicker({'step':'5', 'minTime':'5:00am'});
 			$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
-			//$( "#showdate" ).datepicker();
+			$( "#showdate" ).datepicker();
         });
 	
 	  
