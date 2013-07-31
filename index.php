@@ -276,7 +276,7 @@ $app_name = idx($app_info, 'name', '');
 			
 			$('#calltime').timepicker({'step':'5', 'minTime':'5:00am'});
 			$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
-			  $( "#datepicker" ).datepicker( "option", "dateFormat", "D d MM yy");
+			  $( "#showdate" ).datepicker({dateFormat: "D d MM yy"});
 
         });
 	
