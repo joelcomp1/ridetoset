@@ -272,6 +272,7 @@ $app_name = idx($app_info, 'name', '');
 			
 			$('#calltime').timepicker({'step':'5', 'minTime':'5:00am'});
 			$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
+			$( "#showdate" ).datepicker();
         });
 	
 	  
@@ -380,14 +381,14 @@ $(document).ready(function() {
     ?>
 	<?php
 	if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
-		echo '<div id="errors" style="text-align:center; font-color:red;">';
+		echo '<div id="errors" style="text-align:center; color:red;">';
 		echo '<h1>Add Show Failed due to:</h1>';
 		echo '<ul class="err">';
 		foreach($_SESSION['ERRMSG_ARR'] as $msg) {
 			echo '<li>',$msg,'</li>'; 
 		}
 		echo '</ul>';
-		echo '</div>';
+		echo '</div><br>';
 		unset($_SESSION['ERRMSG_ARR']);
 	}
 ?>
