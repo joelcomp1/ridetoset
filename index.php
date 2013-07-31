@@ -114,6 +114,9 @@ $app_name = idx($app_info, 'name', '');
     <meta property="fb:app_id" content="<?php echo AppInfo::appID(); ?>" />
 
 <link href='stylesheets/fullcalendar.css' rel='stylesheet' />
+  <link rel="stylesheet" href="javascript/jquery-ui.css" />
+  <script src="javascript/jquery-1.9.1.js"></script>
+  <script src="javascript/jquery-ui.js"></script>
 <!--script src='javascript/jquery-1.9.1.min.js'></script>
 <script src='javascript/jquery-ui-1.10.2.custom.min.js'></script-->
 <script src='javascript/fullcalendar.min.js'></script>
@@ -121,9 +124,7 @@ $app_name = idx($app_info, 'name', '');
 <script src='javascript/jquery.lightbox_me.js'></script>
   <script type="text/javascript" src="javascript/jquery.timepicker.js"></script>
   <link rel="stylesheet" type="text/css" href="stylesheets/jquery.timepicker.css" />
-  <link rel="stylesheet" href="javascript/jquery-ui.css" />
-  <script src="javascript/jquery-1.9.1.js"></script>
-  <script src="javascript/jquery-ui.js"></script>
+
     <script type="text/javascript">
       function logResponse(response) {
         if (console && console.log) {
