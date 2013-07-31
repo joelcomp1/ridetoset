@@ -345,8 +345,8 @@ $(document).ready(function() {
 		margin: 0 auto;
 		}
 	#daycalendar {
-		width: 400px;
-		margin: 0 auto;
+		width: 500px;
+		margin: 20px auto;
 		}
 
 
@@ -402,6 +402,13 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 			<div id="specificShow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px; background-color:white; text-align:center;">
                 <h1 id="header_show_name"></h1><br>
                  <div id='daycalendar'></div>
+				<form id="add_time_to_show" method="post" action="add-show.php">
+    					<label><strong>Call Time:</strong> <input id="calltime" class="time sprited"  name="calltime" type="text"></label>
+                    <div id="actions">
+						<input type="submit" id="try-2" class="try sprited" value="Add">
+                    </div>
+					</form>
+				 
                 </div>
 	
 	
