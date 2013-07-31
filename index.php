@@ -271,6 +271,7 @@ $app_name = idx($app_info, 'name', '');
             $('table tr:nth-child(even)').addClass('stripe');
 			
 			$('#calltime').timepicker({'step':'5', 'minTime':'5:00am'});
+			$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
         });
 	
 	  
@@ -402,8 +403,8 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 			<div id="specificShow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px; background-color:white; text-align:center;">
                 <h1 id="header_show_name"></h1><br>
                  <div id='daycalendar'></div>
-				<form id="add_time_to_show" method="post" action="add-show.php">
-    					<label><strong>Call Time:</strong> <input id="calltime" class="time sprited"  name="calltime" type="text"></label>
+				<form id="add_time_to_show" method="post" action="add-time.php">
+    					<label><strong>Call Time:</strong> <input id="calltimeinday" class="time sprited"  name="calltimeinday" type="text"></label>
                     <div id="actions">
 						<input type="submit" id="try-2" class="try sprited" value="Add">
                     </div>
@@ -422,6 +423,18 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
                   
 						<input type="submit" id="try-2" class="try sprited" value="Go">
                     </div>
+<?php
+	if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+		echo '<div id="errors" style="text-align:center;">';
+		echo '<ul class="err">';
+		foreach($_SESSION['ERRMSG_ARR'] as $msg) {
+			echo '<li>',$msg,'</li>'; 
+		}
+		echo '</ul>';
+		echo '</div>';
+		unset($_SESSION['ERRMSG_ARR']);
+	}
+?>
 					</form>
                
                 <a id="close_x" class="close sprited" href="#">close</a>

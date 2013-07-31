@@ -23,6 +23,52 @@
 	$call_time = clean($_POST['calltime']);
 	$call_date = clean($_POST['showdate']);
 	
+	
+
+		if($show_name == '') {
+			$errmsg_arr[] = 'Show Name Missing';
+			$errflag = true;
+		}
+		if($call_time == '') {
+			$call_date[] = 'Call Date Missing';
+			$errflag = true;
+		}
+		if($call_date == '') {
+			$call_time[] = 'Call Time Missing';
+			$errflag = true;
+		}
+
+
+		if($login != '') {
+			$qry = "SELECT * FROM shows WHERE show_name='$show_name'";
+			$result = mysql_query($qry);
+			if($result) {
+				if(mysql_num_rows($result) > 0) {
+					
+				}
+				@mysql_free_result($result);
+			}
+			else {
+				die("Query failed");
+			}
+		}
+		if($errflag) {
+	
+		//These are just to help the user if there is a fail, they will be unset later
+		/*$_SESSION['FIRST_NAME'] = $firstName;
+		$_SESSION['LAST_NAME'] = $lastName;
+		$_SESSION['POSITION_IN_ORG'] = $posInOrg;
+		$_SESSION['PHONE_PART_1'] = $phoneAreaCode;
+		$_SESSION['PHONE_PART_2'] = $phonePart2;
+		$_SESSION['PHONE_PART_3'] = $phonePart3;*/
+
+		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
+	
+		header("location: index.php");
+		
+		exit();
+	}
+	
 
 	$qry = "INSERT INTO shows(user_id, show_name, call_date, call_time) 
 	    				VALUES('$user_id','$show_name','$call_date','$call_time')";
