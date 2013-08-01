@@ -325,7 +325,7 @@ $(document).ready(function() {
 			},
 			events: "populate-calendar.php",
 			  eventClick: function(calEvent, jsEvent, view) {
-
+				document.getElementById("header_show_name").innerHTML = calEvent.title;
 				$('#try-2').trigger('click');
 
 			}
