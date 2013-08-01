@@ -43,7 +43,10 @@
 			$errflag = true;
 		}
 
-
+		$errmsg_arr[] = $call_date;
+			$errmsg_arr[] = date('D d MM yy');
+			$errflag = true;
+			
 		if($show_name != '') {
 			$qry = "SELECT * FROM shows WHERE show_name='$show_name'";
 			$result = mysql_query($qry);
