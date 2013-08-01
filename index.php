@@ -332,14 +332,14 @@ $(document).ready(function() {
 		});
 		
 		
-		$('#daycalendar').fullCalendar({
+		$('#daycalendar').fullCalendar('gotoDate', currentDate,{
 			header: {
 				left: 'prev,next today',
 				center: 'title',
 				right: 'agendaDay'
 			},
 			defaultView: "agendaDay",
-			gotoDate, "currentDate",
+			
 			events: "populate-calendar-day.php"
 		});
 		
