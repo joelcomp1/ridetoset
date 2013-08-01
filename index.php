@@ -332,7 +332,7 @@ $(document).ready(function() {
 		});
 		
 		
-		$('#daycalendar').fullCalendar('gotoDate', currentDate,{
+		$('#daycalendar').fullCalendar({
 			header: {
 				left: 'prev,next today',
 				center: 'title',
@@ -344,7 +344,7 @@ $(document).ready(function() {
 		});
 		
 		
-
+	   $('#daycalendar').fullCalendar('gotoDate', currentDate);
 	  
 	});
 	function getDate()
