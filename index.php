@@ -327,15 +327,7 @@ $(document).ready(function() {
 		});
 		
 		
-		$('#daycalendar').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'agendaDay'
-			},
-				defaultView: 'agendaDay',
-			events: "populate-calendar-day.php"
-		});
+
 		
 		
 	//	$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
@@ -411,7 +403,15 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 		&nbsp;
 	</div>
 	</div>
-	<input type="button" id="try-2" class="try sprited" value="Go" onclick="$('#daycalendar').fullCalendar('refetchEvents'); " style="display: none;">
+	<input type="button" id="try-2" class="try sprited" value="Go" onclick="		$('#daycalendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'agendaDay'
+			},
+				defaultView: 'agendaDay',
+			events: "populate-calendar-day.php"
+		});" style="display: none;">
 
 	
 
