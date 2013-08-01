@@ -339,6 +339,7 @@ $(document).ready(function() {
 				right: 'agendaDay'
 			},
 			defaultView: "agendaDay",
+			gotoDate, "currentDate",
 			events: "populate-calendar-day.php"
 		});
 		
