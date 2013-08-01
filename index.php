@@ -410,7 +410,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 				right: 'agendaDay'
 			},
 				defaultView: 'agendaDay',
-			events: "populate-calendar-day.php"
+			events: 'populate-calendar-day.php'
 		});" style="display: none;">
 
 	
