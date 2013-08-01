@@ -323,7 +323,12 @@ $(document).ready(function() {
 				}
 			
 			},
-			events: "populate-calendar.php"
+			events: "populate-calendar.php",
+			  eventClick: function(calEvent, jsEvent, view) {
+
+				$('#try-2').trigger('click');
+
+			}
 		});
 		
 		
@@ -337,7 +342,7 @@ $(document).ready(function() {
 		});
 		
 		
-	//	$('#calendar').fullCalendar('getDate').addClass("fc-state-highlight");
+
 	  
 	});
 	function getDate()
