@@ -37,7 +37,7 @@
 			$errmsg_arr[] = 'Call Date Missing';
 			$errflag = true;
 		}
-		else if(strtotime($call_date) < strtotime(date('D d M Y')))
+		else if(strtotime($call_date) < strtotime(date('D M d Y')))
 		{
 			$errmsg_arr[] = 'Date is in the past.';
 			$errflag = true;
