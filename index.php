@@ -338,7 +338,7 @@ $(document).ready(function() {
 				center: 'title',
 				right: 'agendaDay'
 			},
-			default: "agendaDay"
+			default: "agendaDay",
 			events: "populate-calendar-day.php"
 		});
 		
