@@ -243,6 +243,8 @@ $app_name = idx($app_info, 'name', '');
 	function fillTags(thisValue) {
 		$('#inputString').val(thisValue);
 		setTimeout("$('#suggestions').hide();", 200);
+		$('#try-2').show();
+		
 	}  
 
 	$(function() {
@@ -409,7 +411,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 		&nbsp;
 	</div>
 	</div>
-	<input type="button" id="try-2" class="try sprited" value="Go" onclick="$('#daycalendar').fullCalendar('refetchEvents');">
+	<input type="button" id="try-2" class="try sprited" value="Go" onclick="$('#daycalendar').fullCalendar('refetchEvents'); " style="display: none;">
 
 	
 
@@ -437,7 +439,6 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
                 <form id="sign_up_form" method="post" action="add-show.php">
                     <label><strong>Show Name:</strong> <input class="sprited" id="showname" name="showname" ></label>
                     <label><strong>Date:</strong> <input class="sprited" type="text" id="showdate" name="showdate"></label>
-					<p>Date: <input type="text" id="datepicker" size="30" /></p>
 					<label><strong>Call Time:</strong> <input id="calltime" class="time sprited"  name="calltime" type="text"></label>
                     <div id="actions">
                   
