@@ -294,21 +294,21 @@ $(document).ready(function() {
 			header: {
 				left: 'prev,next today',
 				center: 'title',
-				right: 'month,basicWeek,agendaDay'
+				right: 'month,basicWeek,basicDay'
 			},
 				defaultView: 'month',
 				dayClick: function(date, allDay, jsEvent, view) {
 			if (allDay || $(jsEvent.target).is('div.fc-day-number')) {
             // Clicked on the entire day
             $('#calendar')
-                .fullCalendar('changeView', 'agendaDay'/* or 'basicDay' */)
+                .fullCalendar('changeView', 'basicDay'/* or 'basicDay' */)
                 .fullCalendar('gotoDate',
                     date.getFullYear(), date.getMonth(), date.getDate());
 			$('#searchshows').show();
             }},
 			viewDisplay: function(view) 
 			{ 
-				if(view.name == 'agendaDay')
+				if(view.name == 'basicDay')
 				{
 				    /*show search box in day view*/
 					$('#searchshows').show();
@@ -338,6 +338,7 @@ $(document).ready(function() {
 				center: 'title',
 				right: 'agendaDay'
 			},
+			default: "agendaDay"
 			events: "populate-calendar-day.php"
 		});
 		
