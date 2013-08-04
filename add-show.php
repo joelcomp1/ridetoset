@@ -58,13 +58,6 @@
 		}
 		if($errflag) {
 	
-		//These are just to help the user if there is a fail, they will be unset later
-		/*$_SESSION['FIRST_NAME'] = $firstName;
-		$_SESSION['LAST_NAME'] = $lastName;
-		$_SESSION['POSITION_IN_ORG'] = $posInOrg;
-		$_SESSION['PHONE_PART_1'] = $phoneAreaCode;
-		$_SESSION['PHONE_PART_2'] = $phonePart2;
-		$_SESSION['PHONE_PART_3'] = $phonePart3;*/
 
 		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 	
