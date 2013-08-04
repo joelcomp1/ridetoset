@@ -45,7 +45,7 @@ function clean($str) {
 		
 		
 		/*see if event already exists*/
-		foreach($totalPrograms as $show)
+		foreach($totalPrograms as &$show)
 		{
 			if($show['title'] == $row['show_name'])
 			{
@@ -60,9 +60,9 @@ function clean($str) {
 				{
 					$firstTime = date_format($datetime->format(DateTime::ISO8601), 'H:i:s');
 					$secondTime = date_format($show['start'],  'H:i:s');
-					if(firstTime >= $secondTime)
+					if(firstTime <= $secondTime)
 					{
-						$add_event = false;
+						//$add_event = false;
 					}
 					else
 					{
