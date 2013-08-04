@@ -62,7 +62,7 @@ function clean($str) {
 					$secondTime = date_format($show['start'],  'H:i:s');
 					if(firstTime <= $secondTime)
 					{
-						//$add_event = false;
+						$add_event = false;
 					}
 					else
 					{
