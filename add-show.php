@@ -82,6 +82,10 @@
 			session_write_close();
 			exit();
 	}else {
+	echo 	$user_id;
+	echo 	$show_name;
+	echo 	$call_time;
+	echo 	$call_date;
 	    var_dump($result);
 		die("Query failed");
 	}
