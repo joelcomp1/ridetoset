@@ -55,7 +55,6 @@ function clean($str) {
 				$firstDate = date_format($show['start'], 'Ymd');
 				$secondDate = date_format($datetime->format(DateTime::ISO8601), 'Ymd');
 				/*see if the existing show is later or eariler*/
-				$row['show_name'] = "MATCH";
 				if($firstDate == $secondDate)
 				{
 					$firstTime = date_format($datetime->format(DateTime::ISO8601), 'H:i:s');
