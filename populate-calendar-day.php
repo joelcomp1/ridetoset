@@ -51,7 +51,7 @@ function clean($str) {
 			$endtime = new DateTime($datetimeoldformat);
 			$endtime->modify("+30 minutes");
 			$totalPrograms[$index]['id'] = $index;
-			$totalPrograms[$index]['title'] = $row['show_name'];
+			$totalPrograms[$index]['title'] = $show_name;
 			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);
 			$totalPrograms[$index]['allDay'] = false;
 			$totalPrograms[$index]['end'] =  $endtime->format(DateTime::ISO8601);
