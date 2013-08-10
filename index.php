@@ -445,7 +445,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 	<br>
     <div id='calendar'></div>
 
-			<div id="specificShow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px; background-color:white; text-align:center;">
+			<div id="specificShow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px; ">
                 <h1 id="header_show_name"></h1><br>
                  <div id='daycalendar'></div>
 				<form id="add_time_to_show" method="post" action="add-time.php">

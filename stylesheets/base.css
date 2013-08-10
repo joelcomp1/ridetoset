@@ -388,7 +388,7 @@ header .tagline {
 
 /*------------------POPUPS------------------------*/
 
-  #addshow, #moreinfo, #specificShow{
+  #addshow, #moreinfo{
         -moz-border-radius: 6px;
         background: #eef2f7;
         -webkit-border-radius: 6px;
@@ -400,6 +400,20 @@ header .tagline {
         position: relative;
         display: none;
     }
+	#specificShow{
+        -moz-border-radius: 6px;
+        background: #eef2f7;
+        -webkit-border-radius: 6px;
+        border: 1px solid #536376;
+        -webkit-box-shadow: rgba(0,0,0,.6) 0px 2px 12px;
+        -moz-box-shadow:  rgba(0,0,0,.6) 0px 2px 12px;;
+        padding: 14px 22px;
+        width: 550px;
+        position: relative;
+        display: none;
+    }
+	
+	
     #addshow, #moreinfo, #sign_up_form, #specificShow {
         margin-top: 13px;
     }
