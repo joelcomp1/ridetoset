@@ -388,7 +388,7 @@ header .tagline {
 
 /*------------------POPUPS------------------------*/
 
-  #addshow, #moreinfo {
+  #addshow, #moreinfo, #specificShow{
         -moz-border-radius: 6px;
         background: #eef2f7;
         -webkit-border-radius: 6px;
@@ -400,17 +400,17 @@ header .tagline {
         position: relative;
         display: none;
     }
-    #addshow, #moreinfo, #sign_up_form {
+    #addshow, #moreinfo, #sign_up_form, #specificShow {
         margin-top: 13px;
     }
-    #addshow label , #moreinfo label{
+    #addshow label , #moreinfo label, #specificShow label{
         display: block;
         margin-bottom: 10px; 
         color: #536376;
         font-size: .9em;
     }
   
-    #addshow label input , #moreinfo label input{
+    #addshow label input , #moreinfo label input , #specificShow label input{
         display: block;
         width: 393px;
         height: 31px;
