@@ -36,9 +36,8 @@
 				// YOU NEED TO ALTER THE QUERY TO MATCH YOUR DATABASE.
 				// eg: SELECT yourColumnName FROM yourTable WHERE yourColumnName LIKE '$queryString%' LIMIT 10
 				
-				$query = mysql_query("SELECT show_name, user_id,
-                        ROW_NUMBER() OVER(PARTITION BY show_name ORDER BY user_id) rn FROM shows WHERE show_name LIKE '$queryString%' LIMIT 25");
-
+				$query = mysql_query("SELECT DISTINCT show_name, user_id FROM shows WHERE show_name LIKE '$queryString%' LIMIT 25");
+				$totalPrograms[] = array();
 				if($query) {
 			
 					// While there are results loop through them - fetching an Object (i like PHP5 btw!).
@@ -50,6 +49,8 @@
 						$result->user_id == clean($_SESSION['user_id']))
 						{
 							$add_event = true;
+							$totalPrograms[$index]['id'] = $user_id;
+							$index += 1;
 							break;
 						}
 						else
@@ -57,6 +58,15 @@
 							$add_event = false;
 						}
 		
+					}
+					
+					foreach($totalPrograms as &$show)
+					{
+						if($show['user_id'] == $result->user_id)
+						{
+							$add_event = false;
+							break;
+						}
 					}
 					if($add_event == true)
 					{
