@@ -360,7 +360,6 @@ header .tagline {
 /*Suggestion box */
 
 	.suggestionsBox{
-		
 		right: 30px;
 		width: 200px;
 		background-color: #212427;
@@ -371,7 +370,7 @@ header .tagline {
 	}
 	
 	.suggestionList,   {
-		margin: 0px;
+		margin-left: 50px;
 		padding: 0px;
 	}
 	
