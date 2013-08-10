@@ -325,6 +325,8 @@ $(document).ready(function() {
 			},
 			events: "populate-calendar.php",
 			  eventClick: function(calEvent, jsEvent, view) {
+			  $('#daycalendar').show();
+			  $('#timewhosgoing').hide();	
 				document.getElementById("header_show_name").innerHTML = calEvent.title;
 				 jQuery.ajax({
 				url: 'session-start.php',
@@ -363,6 +365,8 @@ $(document).ready(function() {
 				 $('#daycalendar').hide();
 				document.getElementById("header_show_time").innerHTML = calEvent.start;
 					$('#timewhosgoing').show();	
+					$('#add_time_to_show').hide();	
+					
 				
 
 			}
