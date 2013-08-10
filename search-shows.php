@@ -36,7 +36,8 @@
 				// YOU NEED TO ALTER THE QUERY TO MATCH YOUR DATABASE.
 				// eg: SELECT yourColumnName FROM yourTable WHERE yourColumnName LIKE '$queryString%' LIMIT 10
 				
-				$query = mysql_query("SELECT DISTINCT show_name, user_id FROM shows WHERE show_name LIKE '$queryString%' LIMIT 25");
+				$query = mysql_query("SELECT show_name, user_id,
+                        ROW_NUMBER() OVER(PARTITION BY show_name ORDER BY user_id) rn FROM shows WHERE show_name LIKE '$queryString%' LIMIT 25");
 
 				if($query) {
 			
