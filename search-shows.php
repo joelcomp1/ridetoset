@@ -49,7 +49,7 @@
 						$result->user_id == clean($_SESSION['user_id']))
 						{
 							$add_event = true;
-							$totalPrograms[$index]['id'] = $user_id;
+							$totalPrograms[$index]['id'] = $result->show_name;
 							$index += 1;
 							break;
 						}
@@ -62,7 +62,7 @@
 					
 					foreach($totalPrograms as $show)
 					{
-						if($show['id'] == $result->user_id)
+						if($show['id'] == $result->show_name)
 						{
 							$add_event = false;
 							break;
