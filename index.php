@@ -341,6 +341,9 @@ $(document).ready(function() {
 				}
     });
 				$('#try-2').trigger('click');
+				  $(".ui-datepicker a").each(function(index, elem) {
+						$(elem).attr("onclick", "$(this).closest(\".ui-datepicker\").fadeOut(\"fast\");");
+					});
 
 			}
 		});
