@@ -371,11 +371,10 @@ $(document).ready(function() {
 					type: 'GET',
 					dataType: 'text/html',
 					success: function(data, textStatus, xhr) {
-					alert("IT worked");
-						  //$('#pageContent').html(''); // remove what was before
-						// $('#pageContent').fadeOut("slow");
-						 // $('#pageContent').html(data);
-						 // $('#pageContent').fadeIn("slow");
+						 $('#pageContent').html(''); // remove what was before
+						 $('#pageContent').fadeOut("slow");
+						 $('#pageContent').html(data);
+						 $('#pageContent').fadeIn("slow");
 					},
 					error: function(xhr, textStatus, errorThrown) {
 						console.log(textStatus.reponseText);
