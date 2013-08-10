@@ -62,13 +62,9 @@ function clean($str) {
 					$add_event = false;
 					if(firstTime <= $secondTime)
 					{
-						
 						$show['start'] = $datetime->format(DateTime::ISO8601);
 					}
-					else
-					{
-						
-					}					
+										
 				}
 			}
 		}
