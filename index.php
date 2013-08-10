@@ -358,7 +358,14 @@ $(document).ready(function() {
 			},
 			defaultView: "agendaDay",
 			
-			events: "populate-calendar-day.php"
+			events: "populate-calendar-day.php",
+			eventClick: function(calEvent, jsEvent, view) {
+				 $('#daycalendar').hide();
+				document.getElementById("header_show_time").innerHTML = calEvent.start;
+					$('#timewhosgoing').show();	
+				
+
+			}
 		});
 		
 		
@@ -454,6 +461,14 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 						<input type="submit" id="try-2" class="try sprited" value="Add">
                     </div>
 					</form>
+					<div id='timewhosgoing' style="display:none;">
+						<h2 id="header_show_time"></h2><br>
+					<form id="im_going" method="post" action="add-going.php">
+                    <div id="actions">
+						<input type="submit" id="try-2" class="try sprited" value="I'm Going!">
+                    </div>
+					</form>
+					</div>
 				 
                 </div>
 	
