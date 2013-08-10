@@ -340,10 +340,11 @@ $(document).ready(function() {
 					console.log(textStatus.reponseText);
 				}
     });
-				$('#try-2').trigger('click');
-				  $(".ui-datepicker a").each(function(index, elem) {
+	  $(".ui-datepicker a").each(function(index, elem) {
 						$(elem).attr("onclick", "$(this).closest(\".ui-datepicker\").fadeOut(\"fast\");");
 					});
+				$('#try-2').trigger('click');
+				
 
 			}
 		});
