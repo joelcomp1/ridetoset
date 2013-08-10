@@ -369,9 +369,7 @@ $(document).ready(function() {
 				jQuery.ajax({
 					url: 'whos-going.php',
 					type: 'GET',
-					data: {
-						txt: calEvent.title,
-						},
+					data: {	},
 					dataType : 'json',
 					success: function(data, textStatus, xhr) {
 						  $('#pageContent').html(''); // remove what was before
