@@ -60,9 +60,9 @@
 		
 					}
 					
-					foreach($totalPrograms as &$show)
+					foreach($totalPrograms as $show)
 					{
-						if($show['user_id'] == $result->user_id)
+						if($show['id'] == $result->user_id)
 						{
 							$add_event = false;
 							break;
