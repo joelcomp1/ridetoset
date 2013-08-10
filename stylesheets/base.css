@@ -360,8 +360,8 @@ header .tagline {
 /*Suggestion box */
 
 	.suggestionsBox{
-	
-		width: 200px;
+		z-index: 999;
+		
 		background-color: #212427;
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
