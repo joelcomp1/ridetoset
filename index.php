@@ -366,7 +366,23 @@ $(document).ready(function() {
 				document.getElementById("header_show_time").innerHTML = calEvent.start;
 					$('#timewhosgoing').show();	
 					$('#add_time_to_show').hide();	
-					
+				jQuery.ajax({
+					url: 'whos-going.php',
+					type: 'GET',
+					data: {
+						txt: calEvent.title,
+						},
+					dataType : 'json',
+					success: function(data, textStatus, xhr) {
+						  $('#pageContent').html(''); // remove what was before
+						  $('#pageContent').fadeOut("slow");
+						  $('#pageContent').html(data);
+						  $('#pageContent').fadeIn("slow");
+					},
+					error: function(xhr, textStatus, errorThrown) {
+						console.log(textStatus.reponseText);
+					}
+				});
 				
 
 			}
@@ -466,12 +482,20 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
                     </div>
 					</form>
 					<div id='timewhosgoing' style="display:none;">
+					
 						<h2 id="header_show_time"></h2><br>
-					<form id="im_going" method="post" action="add-going.php">
-                    <div id="actions">
-						<input type="submit" id="try-2" class="try sprited" value="I'm Going!">
-                    </div>
-					</form>
+						<label><strong>Who's Going:</strong></label>
+						<div id="pageContent"></div>
+							<form id="im_going" method="post" action="add-going.php">
+							<div id="actions">
+								<input type="submit" id="imgoing" class="try sprited" value="I'm Going!">
+							</div>
+							</form>
+							<form id="im_out" method="post" action="not-going.php" style="display:none;">
+							<div id="actions">
+								<input type="submit" id="imout" class="try sprited" value="I'm Out!">
+							</div>
+							</form>
 					</div>
 				 
                 </div>
