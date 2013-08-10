@@ -326,7 +326,20 @@ $(document).ready(function() {
 			events: "populate-calendar.php",
 			  eventClick: function(calEvent, jsEvent, view) {
 				document.getElementById("header_show_name").innerHTML = calEvent.title;
-				jQuery('#div_session_write').load('session_start.php?session_name=calEvent.title');
+				 jQuery.ajax({
+				url: 'session-start.php',
+				type: 'POST',
+				data: {
+					txt: calEvent.title,
+				},
+				dataType : 'json',
+				success: function(data, textStatus, xhr) {
+					console.log(data); // do with data e.g success message
+				},
+				error: function(xhr, textStatus, errorThrown) {
+					console.log(textStatus.reponseText);
+				}
+    });
 				$('#try-2').trigger('click');
 
 			}
