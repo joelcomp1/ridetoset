@@ -326,6 +326,7 @@ $(document).ready(function() {
 			events: "populate-calendar.php",
 			  eventClick: function(calEvent, jsEvent, view) {
 				document.getElementById("header_show_name").innerHTML = calEvent.title;
+				jQuery('#div_session_write').load('session_start.php?session_name=calEvent.title');
 				$('#try-2').trigger('click');
 
 			}
