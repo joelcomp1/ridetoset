@@ -49,7 +49,7 @@
 						$result->user_id == clean($_SESSION['user_id']))
 						{
 							$add_event = true;
-							$totalPrograms[$index]['id'] = $result->show_name;
+							
 							$index += 1;
 							break;
 						}
@@ -75,6 +75,7 @@
 							// The onClick function fills the textbox with the result.
 							?> <script> document.getElementById("header_show_name").innerHTML = <?php echo json_encode($result->show_name); ?>;</script><?php
 							$_SESSION['show_name'] = $result->show_name; 
+							$totalPrograms[$index]['id'] = $result->show_name;
 							// YOU MUST CHANGE: $result->value to $result->your_colum
 							echo '<li onClick="fillTags(\''.$result->show_name.'\');">'.$result->show_name.'</li>';
 					}
