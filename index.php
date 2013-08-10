@@ -369,8 +369,7 @@ $(document).ready(function() {
 				jQuery.ajax({
 					url: 'whos-going.php',
 					type: 'GET',
-					data: {	},
-					dataType : 'json',
+					dataType: 'text/html',
 					success: function(data, textStatus, xhr) {
 					alert("IT worked");
 						  //$('#pageContent').html(''); // remove what was before

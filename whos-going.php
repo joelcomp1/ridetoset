@@ -43,7 +43,15 @@
 						}
 		
 					}
-					
+					?>
+					<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
+  <head>
+    <meta charset="utf-8" />
+	</head>
+	</body>
+	asdfasd
+	<?php>
 					if($add_event == true)
 					{
 							// Format the results, im using <li> for the list, you can change it.
@@ -65,3 +73,5 @@
 			
 
 ?>
+</body>
+</html>
