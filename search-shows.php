@@ -68,6 +68,7 @@
 							break;
 						}
 					}
+					
 					if($add_event == true)
 					{
 							// Format the results, im using <li> for the list, you can change it.

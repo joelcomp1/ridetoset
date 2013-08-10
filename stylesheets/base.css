@@ -361,6 +361,7 @@ header .tagline {
 
 	.suggestionsBox{
 		position: relative;
+		right: 30px;
 		margin: 10px 0px 0px 0px;
 		width: 200px;
 		background-color: #212427;
