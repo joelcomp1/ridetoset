@@ -65,7 +65,7 @@ function clean($str) {
 					}
 					else
 					{
-						$show['start'] = $datetime->format(DateTime::ISO8601);
+						//$show['start'] = $datetime->format(DateTime::ISO8601);
 					}					
 				}
 			}
