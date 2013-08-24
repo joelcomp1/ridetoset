@@ -35,7 +35,7 @@
 	</head>
 	</body>
 	asdfasd<br>
-	<p id="picture" style="background-image: url(https://graph.facebook.com/
+	
 	<?php
 		
 					foreach($facebook as $value)
@@ -44,7 +44,7 @@
 						$result->user_id == clean($_SESSION['user_id']))
 						{
 							$add_event = true;
-							echo he($user_id);
+							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/' + he($user_id) + '/picture?type=normal)"></p>';
 							$index += 1;
 							break;
 						}
@@ -62,7 +62,7 @@
 					
 					
 ?>
-/picture?type=normal)"></p>
+
 							<form id="im_going" method="post" action="add-going.php">
 							<div id="actions">
 								<input type="submit" id="imgoing" class="try sprited" value="I'm Going!">
