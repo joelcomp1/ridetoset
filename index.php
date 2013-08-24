@@ -269,27 +269,6 @@ $app_name = idx($app_info, 'name', '');
             $('#try-2').click(function(e) {
                 $("#specificShow").lightbox_me({centered: true, onLoad: function() {
 					$("#specificShow").find("input:first").focus();
-	$('#daycalendar').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'agendaDay'
-			},
-			defaultView: "agendaDay",
-			
-			events: "populate-calendar-day.php",
-			eventClick: function(calEvent, jsEvent, view) {
-				 $('#daycalendar').hide();
-				document.getElementById("header_show_time").innerHTML = calEvent.start;
-					$('#timewhosgoing').show();	
-					$('#add_time_to_show').hide();	
-		
-				$.get('whos-going.php', function (data) {  
-            $('#pageContent').html(data);
-        });
-
-			}
-		});
 					$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
 				}});
 				
@@ -374,7 +353,27 @@ $(document).ready(function() {
 		});
 		
 		
-	
+		$('#daycalendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'agendaDay'
+			},
+			defaultView: "agendaDay",
+			
+			events: "populate-calendar-day.php",
+			eventClick: function(calEvent, jsEvent, view) {
+				 $('#daycalendar').hide();
+				document.getElementById("header_show_time").innerHTML = calEvent.start;
+					$('#timewhosgoing').show();	
+					$('#add_time_to_show').hide();	
+		
+				$.get('whos-going.php', function (data) {  
+            $('#pageContent').html(data);
+        });
+
+			}
+		});
 			
 			
 
