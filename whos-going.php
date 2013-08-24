@@ -55,7 +55,7 @@
     <meta charset="utf-8" />
 	</head>
 	</body>
-	<br><br><br>
+	<div style="clear:both;">
 	
 	<?php
 		
@@ -64,17 +64,37 @@
 						if(idx($value, 'username') == $result->user_id ||
 						$result->user_id == clean($_SESSION['user_id']))
 						{
-							$add_event = true;
-							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:64px; height:64px; margin-right: 0px; clear: both;; background-position: center 25%;background-repeat: no-repeat;background-size: 64px;"></p>';
-							echo  idx($value, 'name');
-							echo '<input type="button" id="sendMessage" value="Send Message" />';
+					?>
+ <script type="text/javascript">
+ 
+        FB.init({
+          appId      : '<?php echo AppInfo::appID(); ?>', // App ID
+          channelUrl : '//<?php echo $_SERVER["HTTP_HOST"]; ?>/channel.html', // Channel File
+          status     : true, // check login status
+          cookie     : true, // enable cookies to allow the server to access the session
+          xfbml      : true // parse XFBML
+        });
+   
+  $(document).ready(function() {
+    $('#sendMessage').click(function() {
+        FB.ui({
+            method: 'send',
+			id: jQuery.parseJSON( ' + <?php echo idx($value, 'uid'); ?> + ' ) ,
+            name: 'Ride to Set',
+            link: 'https://apps.facebook.com/ridetoset/',
+        });
+    });
+});
+	  </script>
+					<?php
+					
+							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:64px; height:64px; margin-right: 0px; float:left; background-position: center 25%;background-repeat: no-repeat;background-size: 64px;"></p>';
+							echo  '<strong>'.idx($value, 'name').'</strong>';
+							echo '<input type="button" id="sendMessage" value="Send Message" /></div>';
 							$index += 1;
 							break;
 						}
-						else
-						{				
-							$add_event = false;
-						}
+			
 		
 					}
 					}
