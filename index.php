@@ -438,7 +438,18 @@ $(document).ready(function() {
       <?php } ?>
     </header>
 
+ <script src="http://connect.facebook.net/en_US/all.js"></script>
+    <div id="fb-root"></div>
+    <script>
+      // assume we are already logged in
+      FB.init({appId: '123050457758183', xfbml: true, cookie: true});
 
+      FB.ui({
+          method: 'send',
+          name: 'Facebook Dialogs',
+          link: 'https://developers.facebook.com/docs/reference/dialogs/'
+          });
+     </script>
 
     <?php
       if ($user_id) {
