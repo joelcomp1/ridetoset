@@ -31,17 +31,29 @@
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
   <head>
-  <script>
-      // assume we are already logged in
-	  function test()
-	  {
-       FB.ui({
+  <script type="text/javascript">
+	var date;
+	var show;
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '<?php echo AppInfo::appID(); ?>', // App ID
+          channelUrl : '//<?php echo $_SERVER["HTTP_HOST"]; ?>/channel.html', // Channel File
+          status     : true, // check login status
+          cookie     : true, // enable cookies to allow the server to access the session
+          xfbml      : true // parse XFBML
+        });
+
+
+		  FB.ui({
           method: 'send',
           name: 'Facebook Dialogs',
-          link: 'https://developers.facebook.com/docs/reference/dialogs/'
+          link: 'https://developers.facebook.com/docs/reference/dialogs/',
+		  to: 'Joel Millage';
           });
-		  }
-     </script>
+	
+        FB.Canvas.setAutoGrow();
+      };
+	  </script>
     <meta charset="utf-8" />
 	</head>
 	</body>

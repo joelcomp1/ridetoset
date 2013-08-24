@@ -214,12 +214,12 @@ $app_name = idx($app_info, 'name', '');
           window.location = window.location;
         });
 
-		  FB.ui({
+	  FB.ui({
           method: 'send',
           name: 'Facebook Dialogs',
-          link: 'https://developers.facebook.com/docs/reference/dialogs/'
-          });
-	
+          link: 'https://developers.facebook.com/docs/reference/dialogs/',
+		  to: 'Joel Millage';
+          });		
         FB.Canvas.setAutoGrow();
       };
 
