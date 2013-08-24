@@ -41,8 +41,7 @@
 		
 					foreach($facebook as $value)
 					{
-						if(idx($value, 'username') == $result->user_id ||
-						$result->user_id == clean($_SESSION['user_id']))
+						if(idx($value, 'username') == $result->user_id)
 						{
 					?>
  <script type="text/javascript">
@@ -72,13 +71,23 @@
 							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:64px; height:64px; margin-right: 20px; float:left; background-position: center 25%;background-repeat: no-repeat;background-size: 64px;"></p>';
 							echo  '<div style="float:left;"><h2><strong>'.idx($value, 'name').'</strong></h2>';
 							echo '<input type="button" id="sendMessage" value="Send Message" /></div></div>';
-							$index += 1;
 							break;
+						}
+						else if($result->user_id == clean($_SESSION['user_id'])
+						{
+						
+						
 						}
 			
 		
 					}
+					    if($result->user_id == clean($_SESSION['user_id'])
+						{
+							echo '<div style="clear:both; font-weight: bold;">Your Going!</div>';
+					
+						}
 					}
+					
 				}							
 				else {
 					echo 'ERROR: There was a problem with the query.';
