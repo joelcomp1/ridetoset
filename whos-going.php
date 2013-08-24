@@ -17,7 +17,7 @@
 	//Validation error flag
 	$errflag = false;
 	$add_event = false;
-	$facebook = $_SESSION['facebook']; 
+	/*$facebook = $_SESSION['facebook']; 
 
 		    $show_name = clean($_SESSION['show_name']);
 			$query = mysql_query("SELECT * FROM shows WHERE show_name='$show_name'");
@@ -42,7 +42,7 @@
 							$add_event = false;
 						}
 		
-					}
+					}*/
 					?>
 					<!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
@@ -51,7 +51,7 @@
 	</head>
 	</body>
 	asdfasd
-	<?php>
+	<!--?php>
 					if($add_event == true)
 					{
 							// Format the results, im using <li> for the list, you can change it.
@@ -72,6 +72,6 @@
 				
 			
 
-?>
+?-->
 </body>
 </html>
