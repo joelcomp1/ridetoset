@@ -268,8 +268,8 @@ $app_name = idx($app_info, 'name', '');
             });
             $('#try-2').click(function(e) {
                 $("#specificShow").lightbox_me({centered: true, onLoad: function() {
-						//$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
 					$("#specificShow").find("input:first").focus();
+					$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
 				}});
 				
                 e.preventDefault();
