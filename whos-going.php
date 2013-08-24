@@ -48,7 +48,6 @@
           method: 'send',
           name: 'Facebook Dialogs',
           link: 'https://developers.facebook.com/docs/reference/dialogs/',
-		  to: 'Joel Millage';
           });
 	
         FB.Canvas.setAutoGrow();
