@@ -36,7 +36,7 @@
 	</body>
 	asdfasd
 	<?php
-		echo "<br><br>" + $show_name;
+		echo $_SESSION['show_name'];
 					foreach($facebook as $value)
 					{
 						if(idx($value, 'username') == $result->user_id ||

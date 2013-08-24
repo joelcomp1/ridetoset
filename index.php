@@ -270,6 +270,7 @@ $app_name = idx($app_info, 'name', '');
                 $("#specificShow").lightbox_me({centered: true, onLoad: function() {
 					$("#specificShow").find("input:first").focus();
 					$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
+					$('#daycalendar').fullCalendar('gotoDate', currentDate);
 				}});
 				
                 e.preventDefault();
@@ -393,7 +394,7 @@ $(document).ready(function() {
 					}
 				});*/
 		
-	   $('#daycalendar').fullCalendar('gotoDate', currentDate);
+	   
 	  
 	});
 	function getDate()
