@@ -44,9 +44,10 @@
 						$result->user_id == clean($_SESSION['user_id']))
 						{
 							$add_event = true;
-							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:36px; height:36px; margin-right: 10px;"></p>';
+							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:32px; height:32px; margin-right: 10px; float:left; background-position: center 25%;background-repeat: no-repeat;background-size: 32px;"></p>';
 							echo  idx($value, 'name');
 							echo $show_name;
+							echo '<a href="https://www.facebook.com/dialog/send?app_id='.AppInfo::appID().'&to='.idx($value, 'username').'">Send Message</a>';
 							$index += 1;
 							break;
 						}
