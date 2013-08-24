@@ -82,7 +82,7 @@
 					    if($result->user_id == clean($_SESSION['user_id']))
 						{
 							echo '<div style="clear:both; font-weight: bold;">Your Going!</div>';
-					
+							break;
 						}
 					}
 					
