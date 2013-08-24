@@ -79,7 +79,7 @@
     $('#sendMessage').click(function() {
         FB.ui({
             method: 'send',
-			id: jQuery.parseJSON( ' + <?php echo idx($value, 'uid'); ?> + ' ) ,
+			id: <?php echo idx($value, 'uid'); ?>,
             name: 'Ride to Set',
             link: 'https://apps.facebook.com/ridetoset/',
         });
@@ -88,9 +88,9 @@
 	  </script>
 					<?php
 					
-							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:64px; height:64px; margin-right: 0px; float:left; background-position: center 25%;background-repeat: no-repeat;background-size: 64px;"></p>';
-							echo  '<strong>'.idx($value, 'name').'</strong>';
-							echo '<input type="button" id="sendMessage" value="Send Message" /></div>';
+							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:64px; height:64px; margin-right: 20px; float:left; background-position: center 25%;background-repeat: no-repeat;background-size: 64px;"></p>';
+							echo  '<div style="float:left;"><h2><strong>'.idx($value, 'name').'</strong></h2>';
+							echo '<input type="button" id="sendMessage" value="Send Message" /></div></div>';
 							$index += 1;
 							break;
 						}
