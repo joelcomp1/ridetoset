@@ -31,6 +31,17 @@
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
   <head>
+  <script>
+      // assume we are already logged in
+	  function test()
+	  {
+       FB.ui({
+          method: 'send',
+          name: 'Facebook Dialogs',
+          link: 'https://developers.facebook.com/docs/reference/dialogs/'
+          });
+		  }
+     </script>
     <meta charset="utf-8" />
 	</head>
 	</body>
@@ -47,7 +58,7 @@
 							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:64px; height:64px; margin-right: 10px; float:left; background-position: center 25%;background-repeat: no-repeat;background-size: 64px;"></p>';
 							echo  idx($value, 'name');
 							echo $show_name;
-							echo '<a href="https://www.facebook.com/dialog/send?app_id='.AppInfo::appID().'&link=https://apps.facebook.com/ridetoset&to='.idx($value, 'username').'">Send Message</a>';
+							echo '<a onclick="test();"'>Send Message</a>';
 							$index += 1;
 							break;
 						}
