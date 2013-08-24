@@ -489,16 +489,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 						<h2 id="header_show_time"></h2><br>
 						<label><strong>Who's Going:</strong></label>
 						<div id="pageContent"></div>
-							<form id="im_going" method="post" action="add-going.php">
-							<div id="actions">
-								<input type="submit" id="imgoing" class="try sprited" value="I'm Going!">
-							</div>
-							</form>
-							<form id="im_out" method="post" action="not-going.php" style="display:none;">
-							<div id="actions">
-								<input type="submit" id="imout" class="try sprited" value="I'm Out!">
-							</div>
-							</form>
+						
 					</div>
 				 
                 </div>
