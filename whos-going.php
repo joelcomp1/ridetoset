@@ -55,7 +55,7 @@
     <meta charset="utf-8" />
 	</head>
 	</body>
-	<div style="clear:both;">
+	<div style="clear:both; font-weight: bold;">
 	
 	<?php
 		
@@ -79,7 +79,7 @@
     $('#sendMessage').click(function() {
         FB.ui({
             method: 'send',
-			id: <?php echo idx($value, 'uid'); ?>,
+			to: <?php echo idx($value, 'uid'); ?>,
             name: 'Ride to Set',
             link: 'https://apps.facebook.com/ridetoset/',
         });
@@ -105,7 +105,7 @@
 					
 					
 ?>
-
+<div style="clear:both;"></div>
 							<form id="im_going" method="post" action="add-going.php">
 							<div id="actions">
 								<input type="submit" id="imgoing" class="try sprited" value="I'm Going!">
