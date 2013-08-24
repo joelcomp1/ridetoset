@@ -367,14 +367,14 @@ $(document).ready(function() {
 					$('#timewhosgoing').show();	
 					$('#add_time_to_show').hide();	
 		
-				
+				$.get('whos-going.php', function (data) {  
+            $('#pageContent').html(data);
+        });
 
 			}
 		});
 			
-			$.get('whos-going.php', function (data) {  
-            $('#pageContent').html(data);
-        });
+			
 
 
 			/*jQuery.ajax({
