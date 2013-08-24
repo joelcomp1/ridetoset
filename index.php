@@ -268,6 +268,7 @@ $app_name = idx($app_info, 'name', '');
             });
             $('#try-2').click(function(e) {
                 $("#specificShow").lightbox_me({centered: true, onLoad: function() {
+						$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
 					$("#specificShow").find("input:first").focus();
 				}});
 				
@@ -277,7 +278,7 @@ $app_name = idx($app_info, 'name', '');
             $('table tr:nth-child(even)').addClass('stripe');
 			
 			$('#calltime').timepicker({'step':'5', 'minTime':'5:00am'});
-			$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
+			
 			  $( "#showdate" ).datepicker({dateFormat: "D M d yy", minDate: 0});
 
         });
