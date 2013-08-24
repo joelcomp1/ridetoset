@@ -214,12 +214,7 @@ $app_name = idx($app_info, 'name', '');
           window.location = window.location;
         });
 
-	  FB.ui({
-          method: 'send',
-          name: 'Facebook Dialogs',
-          link: 'https://developers.facebook.com/docs/reference/dialogs/',
-		 
-          });		
+		
         FB.Canvas.setAutoGrow();
       };
 
@@ -445,7 +440,8 @@ $(document).ready(function() {
     </header>
 
     <div id="fb-root"></div>
-
+	<a href="https://www.facebook.com/dialog/send?%20app_id=123050457758183%20&link=http://www.nytimes.com/2011/06/15/arts/people-argue-just-to-win-scholars-assert.html%20&redirect_uri=https://www.bancsabadell.com/cs/Satellite/SabAtl/">
+	Test </a>
     <?php
       if ($user_id) {
     ?>
