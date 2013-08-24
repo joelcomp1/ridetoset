@@ -31,27 +31,7 @@
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
   <head>
-  <script type="text/javascript">
  
-        FB.init({
-          appId      : '<?php echo AppInfo::appID(); ?>', // App ID
-          channelUrl : '//<?php echo $_SERVER["HTTP_HOST"]; ?>/channel.html', // Channel File
-          status     : true, // check login status
-          cookie     : true, // enable cookies to allow the server to access the session
-          xfbml      : true // parse XFBML
-        });
-   
-  $(document).ready(function() {
-    $('#sendMessage').click(function() {
-        FB.ui({
-            method: 'send',
-			id: 123,
-            name: 'Ride to Set',
-            link: 'https://apps.facebook.com/ridetoset/',
-        });
-    });
-});
-	  </script>
     <meta charset="utf-8" />
 	</head>
 	</body>
