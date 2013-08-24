@@ -65,9 +65,8 @@
 						$result->user_id == clean($_SESSION['user_id']))
 						{
 							$add_event = true;
-							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:64px; height:64px; margin-right: 10px; float:left; background-position: center 25%;background-repeat: no-repeat;background-size: 64px;"></p>';
+							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:64px; height:64px; margin-right: 0px; clear: both;; background-position: center 25%;background-repeat: no-repeat;background-size: 64px;"></p>';
 							echo  idx($value, 'name');
-							echo $show_name;
 							echo '<input type="button" id="sendMessage" value="Send Message" />';
 							$index += 1;
 							break;
