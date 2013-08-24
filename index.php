@@ -371,7 +371,13 @@ $(document).ready(function() {
 
 			}
 		});
-				jQuery.ajax({
+			
+			$.get('whos-going.php', function (data) {  
+            $('#pageContent').text(data);
+        });
+
+
+			/*jQuery.ajax({
 					url: 'whos-going.php',
 					type: 'GET',
 					dataType: 'text/html',
@@ -384,7 +390,7 @@ $(document).ready(function() {
 					error: function(xhr, textStatus, errorThrown) {
 						console.log(textStatus.reponseText);
 					}
-				});
+				});*/
 		
 	   $('#daycalendar').fullCalendar('gotoDate', currentDate);
 	  
