@@ -34,9 +34,9 @@
     <meta charset="utf-8" />
 	</head>
 	</body>
-	asdfasd
+	asdfasd<br>
 	<?php
-		echo $_SESSION['show_name'];
+		echo $result->user_id;
 					foreach($facebook as $value)
 					{
 						if(idx($value, 'username') == $result->user_id ||

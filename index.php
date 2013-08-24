@@ -270,7 +270,7 @@ $app_name = idx($app_info, 'name', '');
                 $("#specificShow").lightbox_me({centered: true, onLoad: function() {
 					$("#specificShow").find("input:first").focus();
 					$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
-					$('#daycalendar').fullCalendar('gotoDate', currentDate);
+					
 				}});
 				
                 e.preventDefault();
@@ -368,6 +368,7 @@ $(document).ready(function() {
 				document.getElementById("header_show_time").innerHTML = calEvent.start;
 					$('#timewhosgoing').show();	
 					$('#add_time_to_show').hide();	
+					$('#daycalendar').fullCalendar('gotoDate', calEvent.start);
 		
 				$.get('whos-going.php', function (data) {  
             $('#pageContent').html(data);
