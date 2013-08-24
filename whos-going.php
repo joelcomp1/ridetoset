@@ -22,7 +22,8 @@
 		    $show_name = clean($_SESSION['show_name']);
 			$query = mysql_query("SELECT * FROM shows WHERE show_name='$show_name'");
 				
-				if($query) {
+				if($query) 
+				{
 			
 					// While there are results loop through them - fetching an Object (i like PHP5 btw!).
 					while ($result = mysql_fetch_object($query)) {
@@ -44,7 +45,10 @@
 		
 					}
 					}
-					}
+				}							
+				else {
+					echo 'ERROR: There was a problem with the query.';
+				}
 					?>
 					<!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
@@ -53,7 +57,7 @@
 	</head>
 	</body>
 	asdfasd
-	<!--?php>
+	<?php>
 					if($add_event == true)
 					{
 							// Format the results, im using <li> for the list, you can change it.
@@ -62,12 +66,9 @@
 							echo '<p>' + $result->user_id + '</p>';
 					}
 						
-					}
+					
 
-	         		
-				} else {
-					echo 'ERROR: There was a problem with the query.';
-				}
+	         
 				
 
 
