@@ -44,7 +44,7 @@
 						$result->user_id == clean($_SESSION['user_id']))
 						{
 							$add_event = true;
-							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. he($value['username']) . '/picture?type=normal)"></p>';
+							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. $value['id'] . '/picture?type=normal)"></p>';
 							$index += 1;
 							break;
 						}
