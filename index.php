@@ -438,10 +438,6 @@ $(document).ready(function() {
       </div>
       <?php } ?>
     </header>
-
-    <div id="fb-root"></div>
-	<a href="https://www.facebook.com/dialog/send?%20app_id=614281765271673&link=http://www.nytimes.com/2011/06/15/arts/people-argue-just-to-win-scholars-assert.html%20&redirect_uri=https://www.bancsabadell.com/cs/Satellite/SabAtl/">
-	Test </a>
     <?php
       if ($user_id) {
     ?>

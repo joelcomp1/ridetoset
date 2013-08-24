@@ -32,9 +32,7 @@
 <html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
   <head>
   <script type="text/javascript">
-	var date;
-	var show;
-      window.fbAsyncInit = function() {
+ 
         FB.init({
           appId      : '<?php echo AppInfo::appID(); ?>', // App ID
           channelUrl : '//<?php echo $_SERVER["HTTP_HOST"]; ?>/channel.html', // Channel File
@@ -42,16 +40,16 @@
           cookie     : true, // enable cookies to allow the server to access the session
           xfbml      : true // parse XFBML
         });
-
-
-		  FB.ui({
-          method: 'send',
-          name: 'Facebook Dialogs',
-          link: 'https://developers.facebook.com/docs/reference/dialogs/',
-          });
-	
-        FB.Canvas.setAutoGrow();
-      };
+   
+  $(document).ready(function() {
+    $('#sendMessage').click(function() {
+        FB.ui({
+            method: 'send',
+            name: 'People Argue Just to Win',
+            link: 'http://www.nytimes.com/2011/06/15/arts/people-argue-just-to-win-scholars-assert.html',
+        });
+    });
+});
 	  </script>
     <meta charset="utf-8" />
 	</head>
@@ -69,7 +67,7 @@
 							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:64px; height:64px; margin-right: 10px; float:left; background-position: center 25%;background-repeat: no-repeat;background-size: 64px;"></p>';
 							echo  idx($value, 'name');
 							echo $show_name;
-							echo '<a onclick="test();"'>Send Message</a>';
+							echo '<input type="button" id="sendMessage" value="Send Message" />';
 							$index += 1;
 							break;
 						}
