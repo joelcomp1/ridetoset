@@ -55,6 +55,7 @@ function clean($str) {
 			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);
 			$totalPrograms[$index]['allDay'] = false;
 			$totalPrograms[$index]['end'] =  $endtime->format(DateTime::ISO8601);
+			$totalPrograms[$index]['currentTimezone'] = "America/Los_Angeles";
 	
 
 			$index += 1;

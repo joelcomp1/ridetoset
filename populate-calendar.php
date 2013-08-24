@@ -81,6 +81,8 @@ function clean($str) {
 			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);
 			$totalPrograms[$index]['allDay'] = false;
 			$totalPrograms[$index]['end'] =  $endtime->format(DateTime::ISO8601);
+			$totalPrograms[$index]['currentTimezone'] = "America/Los_Angeles";
+			currentTimezone
 			/*$totalPrograms[$index]['url'] = "index.php?showname=";
 			$totalPrograms[$index]['url'] .= idx($value, 'username');
 */
