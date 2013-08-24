@@ -218,7 +218,7 @@ $app_name = idx($app_info, 'name', '');
           method: 'send',
           name: 'Facebook Dialogs',
           link: 'https://developers.facebook.com/docs/reference/dialogs/',
-		  to: 'joelcomp1';
+		 
           });		
         FB.Canvas.setAutoGrow();
       };
