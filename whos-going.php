@@ -45,8 +45,9 @@
     $('#sendMessage').click(function() {
         FB.ui({
             method: 'send',
-            name: 'People Argue Just to Win',
-            link: 'http://www.nytimes.com/2011/06/15/arts/people-argue-just-to-win-scholars-assert.html',
+			id: 123,
+            name: 'Ride to Set',
+            link: 'https://apps.facebook.com/ridetoset/',
         });
     });
 });
@@ -54,7 +55,7 @@
     <meta charset="utf-8" />
 	</head>
 	</body>
-	<br>
+	<br><br><br>
 	
 	<?php
 		

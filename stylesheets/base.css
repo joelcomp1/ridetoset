@@ -460,7 +460,7 @@ header .tagline {
     #usage { background-position: -323px -172px; width: 67px; height: 22px;}
 	
 	
-	#try-1,#try-2, #try-3,#imgoing
+	#try-1,#try-2, #try-3,#imgoing, #sendmessage
 {		
     background-color: #7AB247;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#608947), to(#7AB247));
@@ -496,7 +496,7 @@ header .tagline {
  
 
 
-#try-1:hover,#try-1:focus, #try-2:focus, #try-2:hover, #try-3:focus,#imgoing:hover, #imgoing:focus , #try-3:hover
+#try-1:hover,#try-1:focus, #try-2:focus, #try-2:hover, #try-3:focus,#imgoing:hover, #imgoing:focus , #try-3:hover, #sendmessage:hover, #sendmessage:focus
 {		
     background-color: #608947;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#7AB247), to(#608947));
@@ -507,7 +507,7 @@ header .tagline {
     background-image: linear-gradient(top, #7AB247, #608947);
 }	
 
-#try-1:active, #try-2:active,#imgoing:active , #try-3:active
+#try-1:active, #try-2:active,#imgoing:active , #try-3:active, #sendmessage:active
 {		
     outline: none;
    
@@ -516,7 +516,7 @@ header .tagline {
      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;		
 }
 
-#try-1::-moz-focus-inner, #try-2::-moz-focus-inner,  #try-3::-moz-focus-inner, #imgoing::-moz-focus-inner
+#try-1::-moz-focus-inner, #try-2::-moz-focus-inner,  #try-3::-moz-focus-inner, #imgoing::-moz-focus-inner, #sendmessage::-moz-focus-inner
 {
   border: none;
 }
