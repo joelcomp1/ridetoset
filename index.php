@@ -366,6 +366,11 @@ $(document).ready(function() {
 				document.getElementById("header_show_time").innerHTML = calEvent.start;
 					$('#timewhosgoing').show();	
 					$('#add_time_to_show').hide();	
+		
+				
+
+			}
+		});
 				jQuery.ajax({
 					url: 'whos-going.php',
 					type: 'GET',
@@ -380,11 +385,6 @@ $(document).ready(function() {
 						console.log(textStatus.reponseText);
 					}
 				});
-				
-
-			}
-		});
-		
 		
 	   $('#daycalendar').fullCalendar('gotoDate', currentDate);
 	  
