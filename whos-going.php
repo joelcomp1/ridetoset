@@ -80,6 +80,7 @@
         FB.ui({
             method: 'send',
 			to: <?php echo idx($value, 'uid'); ?>,
+			picture: "images/1000495_399941060126133_1713927865_n.png",
             name: 'Ride to Set',
             link: 'https://apps.facebook.com/ridetoset/',
         });
