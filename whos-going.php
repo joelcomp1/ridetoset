@@ -27,7 +27,16 @@
 			
 					// While there are results loop through them - fetching an Object (i like PHP5 btw!).
 					while ($result = mysql_fetch_object($query)) {
-	
+	?>
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
+  <head>
+    <meta charset="utf-8" />
+	</head>
+	</body>
+	asdfasd
+	<?php
+		echo "<br>" + $result->user_id;
 					foreach($facebook as $value)
 					{
 						if(idx($value, 'username') == $result->user_id ||
@@ -49,22 +58,8 @@
 				else {
 					echo 'ERROR: There was a problem with the query.';
 				}
-					?>
-					<!DOCTYPE html>
-<html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
-  <head>
-    <meta charset="utf-8" />
-	</head>
-	</body>
-	asdfasd
-	<?php
-					if($add_event == true)
-					{
-							// Format the results, im using <li> for the list, you can change it.
-							// The onClick function fills the textbox with the result.
-							// YOU MUST CHANGE: $result->value to $result->your_colum
-							echo '<p>' + $query + '</p>';
-					}
+					
+					
 ?>
 							<form id="im_going" method="post" action="add-going.php">
 							<div id="actions">
