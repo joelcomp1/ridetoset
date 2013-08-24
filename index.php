@@ -373,7 +373,7 @@ $(document).ready(function() {
 		});
 			
 			$.get('whos-going.php', function (data) {  
-            $('#pageContent').text(data);
+            $('#pageContent').html(data);
         });
 
 
