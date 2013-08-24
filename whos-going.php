@@ -44,8 +44,9 @@
 						$result->user_id == clean($_SESSION['user_id']))
 						{
 							$add_event = true;
-							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:36px height:36px; margin-right: 10px;"></p>';
+							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:36px; height:36px; margin-right: 10px;"></p>';
 							echo  idx($value, 'name');
+							echo $show_name;
 							$index += 1;
 							break;
 						}
