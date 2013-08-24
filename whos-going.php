@@ -73,14 +73,12 @@
 							echo '<input type="button" id="sendMessage" value="Send Message" /></div></div>';
 							break;
 						}
-						else if($result->user_id == clean($_SESSION['user_id'])
-						{
 						
 						
 						}
 			
 		
-					}
+					
 					    if($result->user_id == clean($_SESSION['user_id'])
 						{
 							echo '<div style="clear:both; font-weight: bold;">Your Going!</div>';
