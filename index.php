@@ -490,7 +490,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 					<div id='timewhosgoing' style="display:none;">
 					
 						<h2 id="header_show_time"></h2><br>
-						<label><strong>Who's Going:</strong></label>
+						<label><b>Who's Going:</b></label>
 						<div id="pageContent"></div>
 						
 					</div>
