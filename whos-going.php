@@ -63,10 +63,10 @@
 							// Format the results, im using <li> for the list, you can change it.
 							// The onClick function fills the textbox with the result.
 							// YOU MUST CHANGE: $result->value to $result->your_colum
-							echo '<p>' + $result->user_id + '</p>';
+							echo '<p>' + $query + '</p>';
 					}
 ?>
-	<form id="im_going" method="post" action="add-going.php">
+							<form id="im_going" method="post" action="add-going.php">
 							<div id="actions">
 								<input type="submit" id="imgoing" class="try sprited" value="I'm Going!">
 							</div>
