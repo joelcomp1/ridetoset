@@ -95,7 +95,26 @@ PhpConsole::start(true, true, dirname(__FILE__));
 						{
 					//	debug($result->user_id);
 							echo '<div style="clear:both; font-weight: bold;">Your Going!</div>';
+							?>
+							
+							<form id="im_out" method="post" action="not-going.php">
+							<div id="actions">
+								<input type="submit" id="imout" class="try sprited" value="I'm Out!">
+							</div>
+							</form>
+							<?php
 							break;
+						}
+						else
+						{
+						?>
+						<div style="clear:both;"></div>
+							<form id="im_going" method="post" action="add-going.php">
+							<div id="actions">
+								<input type="submit" id="imgoing" class="try sprited" value="I'm Going!">
+							</div>
+							</form>
+						<?php
 						}
 					}
 					
@@ -106,16 +125,6 @@ PhpConsole::start(true, true, dirname(__FILE__));
 					
 					
 ?>
-<div style="clear:both;"></div>
-							<form id="im_going" method="post" action="add-going.php">
-							<div id="actions">
-								<input type="submit" id="imgoing" class="try sprited" value="I'm Going!">
-							</div>
-							</form>
-							<form id="im_out" method="post" action="not-going.php" style="display:none;">
-							<div id="actions">
-								<input type="submit" id="imout" class="try sprited" value="I'm Out!">
-							</div>
-							</form>
+
 </body>
 </html>
