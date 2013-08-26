@@ -23,7 +23,7 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	$add_event = false;
 	$facebook = $_SESSION['facebook']; 
 	$dateFromCal = clean($_GET['date']);
-	//$dt = DateTime::createFromFormat("D M d Y H:i:s T", dateFromCal);
+	//$dt = DateTime::createFromFormat("D M d Y H:i:s +", dateFromCal);
 	//$ts = $dt->getTimestamp();
 	//$dt->setTimestamp(strtotime($dateFromCal));
 
