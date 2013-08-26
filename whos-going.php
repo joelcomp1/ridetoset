@@ -23,8 +23,8 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	$add_event = false;
 	$facebook = $_SESSION['facebook']; 
 	$dateFromCal = clean($_GET['date']);
-    $dt = new DateTime();
-    $dt->setTimestamp($dateFromCal);
+    $dt = new DateTime($dateFromCal);
+ //   $dt->setTimestamp($dateFromCal);
 
         //just for the fun: what would it be in UTC?
      $would_be = $dt->format('D M d Y');
