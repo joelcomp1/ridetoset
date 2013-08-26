@@ -50,11 +50,11 @@ function clean($str) {
 			if($show['title'] == $row['show_name'])
 			{
 				$concat = $row['call_date'] . ' ' . $row['call_time'];
-				$datetimeoldformat = date("Y/m/d g:i", strtotime($concat)); 
+				$datetimeoldformat = date("Y/m/d", strtotime($concat)); 
 				$datetime = new DateTime($datetimeoldformat);
 				$firstDate = date_format($show['start'], 'Ymd');
 				$secondDate = date_format($datetime->format(DateTime::ISO8601), 'Ymd');
-				/*see if the existing show is later or eariler
+				see if the existing show is later or eariler
 				if($firstDate == $secondDate)
 				{
 					$firstTime = date_format($datetime->format(DateTime::ISO8601), 'H:i:s');
@@ -65,7 +65,7 @@ function clean($str) {
 						$show['start'] = $datetime->format(DateTime::ISO8601);
 					}
 										
-				}*/
+				}
 			}
 		}
 		
@@ -77,7 +77,7 @@ function clean($str) {
 			$endtime = new DateTime($datetimeoldformat);
 			$endtime->modify("+30 minutes");
 			$totalPrograms[$index]['id'] = $index;
-			$totalPrograms[$index]['title'] = $firstDate;
+			$totalPrograms[$index]['title'] = $row['show_name'];
 			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);
 			$totalPrograms[$index]['allDay'] = false;
 			$totalPrograms[$index]['end'] =  $endtime->format(DateTime::ISO8601);
