@@ -24,7 +24,7 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	$facebook = $_SESSION['facebook']; 
 	$dateFromCal = clean($_GET['date']);
 	$date = date('D M d Y', strtotime($dateFromCal));
-	debug(strtotime($dateFromCal));
+	debug($dateFromCal);
 	debug($date);
 		    $show_name = clean($_SESSION['show_name']);
 			$query = mysql_query("SELECT * FROM shows WHERE show_name='$show_name'");
