@@ -30,7 +30,7 @@ function clean($str) {
 	
 		foreach($facebook as $value)
 		{
-		/* if(idx($value, 'username') == $row['user_id'] ||
+		 if(idx($value, 'username') == $row['user_id'] ||
 		 $row['user_id'] == clean($_SESSION['user_id']))
 		 {
 			$add_event = true;
@@ -39,8 +39,8 @@ function clean($str) {
 		 else
 		 {
 			$add_event = false;
-		 }*/
-		$add_event = true;
+		 }
+		
 		}
 		
 		
@@ -54,7 +54,7 @@ function clean($str) {
 				$datetime = new DateTime($datetimeoldformat);
 				$firstDate = date_format($show['start'], 'Ymd');
 				$secondDate = date_format($datetime->format(DateTime::ISO8601), 'Ymd');
-				/*see if the existing show is later or eariler*/
+				/*see if the existing show is later or eariler
 				if($firstDate == $secondDate)
 				{
 					$firstTime = date_format($datetime->format(DateTime::ISO8601), 'H:i:s');
@@ -65,7 +65,7 @@ function clean($str) {
 						$show['start'] = $datetime->format(DateTime::ISO8601);
 					}
 										
-				}
+				}*/
 			}
 		}
 		
