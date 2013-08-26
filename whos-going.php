@@ -28,7 +28,7 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	debug($dateFromCal);
 	//$dt = DateTime::createFromFormat("D M d Y H:i:s", dateFromCal);
 	//$ts = $dt->getTimestamp();
-	$dt = date('D M d Y', strtotime($dateFromCal);
+	$dt = date('D M d Y', strtotime($dateFromCal));
 	debug($dt);
 	
 		    $show_name = clean($_SESSION['show_name']);
