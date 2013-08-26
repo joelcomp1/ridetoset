@@ -5,6 +5,10 @@
 	//Include database connection details
 	include("AppInfo.php");
 	include('utils.php');
+	require_once('PhpConsole.php');
+PhpConsole::start(true, true, dirname(__FILE__));
+
+
 	//Array to store validation errors
 	$errmsg_arr = array();
 	function clean($str) {
@@ -81,6 +85,7 @@
 					
 					    if($result->user_id == clean($_SESSION['user_id']))
 						{
+						debug($result->user_id);
 							echo '<div style="clear:both; font-weight: bold;">Your Going!</div>';
 							break;
 						}

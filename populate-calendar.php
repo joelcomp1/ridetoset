@@ -60,10 +60,6 @@ function clean($str) {
 				$firstDate = date_format(new DateTime($show['start']), 'Ymd');
 				$secondDate = date_format($datetime, 'Ymd');
 				/*see if the existing show is later or eariler*/
-				debug("First Date");
-				debug($firstDate);
-				debug("Second Date");
-				debug($secondDate);
 				if($firstDate == $secondDate)
 				{
 					
