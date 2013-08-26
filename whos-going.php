@@ -23,7 +23,7 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	$add_event = false;
 	$facebook = $_SESSION['facebook']; 
 	$dateFromCal = clean($_GET['date']);
-	$date = date('D M d Y', strtotime($dateFromCal));
+	$date = date('D M d Y', $dateFromCal);
 	debug($dateFromCal);
 	debug($date);
 		    $show_name = clean($_SESSION['show_name']);
