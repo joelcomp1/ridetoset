@@ -26,14 +26,14 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	debug($dateFromCal);
 	$dateFromCal = substr($dateFromCal, 0, strpos($dateFromCal, "GMT"));
 	debug($dateFromCal);
-	$dt = DateTime::createFromFormat("D M d Y H:i:s", dateFromCal);
+	//$dt = DateTime::createFromFormat("D M d Y H:i:s", dateFromCal);
 	//$ts = $dt->getTimestamp();
-	//$dt->setTimestamp(strtotime($dateFromCal));
+	$dt = strtotime($dateFromCal);
 
         //just for the fun: what would it be in UTC?
-     $would_be = $dt->format('D M d Y');
+    // $would_be = $dt->format('D M d Y');
 	
-	debug($would_be);
+	debug($dt);
 	
 		    $show_name = clean($_SESSION['show_name']);
 			$query = mysql_query("SELECT * FROM shows WHERE show_name='$show_name' and call_date='$would_be'");
