@@ -329,7 +329,13 @@ $(document).ready(function() {
 			events: "populate-calendar.php",
 			  eventClick: function(calEvent, jsEvent, view) {
 			  $('#daycalendar').show();
-			  $('#timewhosgoing').hide();	
+			  $('#timewhosgoing').hide();
+			  var date = new Date(calEvent.start);
+				$('#daycalendar')
+                .fullCalendar('changeView', 'agendaDay'/* or 'basicDay' */)
+                .fullCalendar('gotoDate',
+                    date.getFullYear(), date.getMonth(), date.getDate());
+					
 				document.getElementById("header_show_name").innerHTML = calEvent.title;
 				 jQuery.ajax({
 				url: 'session-start.php',
