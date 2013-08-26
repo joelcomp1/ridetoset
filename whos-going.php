@@ -23,15 +23,16 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	$add_event = false;
 	$facebook = $_SESSION['facebook']; 
 	$dateFromCal = clean($_GET['date']);
-	$dt = DateTime::createFromFormat("D M d Y H:i:s +", dateFromCal);
+	debug($dateFromCal);
+	$dt = DateTime::createFromFormat("D M d Y H:i:s *", dateFromCal);
 	//$ts = $dt->getTimestamp();
 	//$dt->setTimestamp(strtotime($dateFromCal));
 
         //just for the fun: what would it be in UTC?
      $would_be = $dt->format('D M d Y');
 	
-	//debug($would_be);
-	debug($dateFromCal);
+	debug($would_be);
+	
 		    $show_name = clean($_SESSION['show_name']);
 			$query = mysql_query("SELECT * FROM shows WHERE show_name='$show_name' and call_date='$would_be'");
 				
