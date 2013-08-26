@@ -24,7 +24,7 @@ function clean($str) {
 	$index = 1;
 	$add_event = false;
 	
-		
+		$test = 0;
 	while($row = mysql_fetch_assoc($rProg))
 	{	
 	
@@ -50,16 +50,17 @@ function clean($str) {
 			if($show['title'] == $row['show_name'])
 			{
 				$concat = $row['call_date'] . ' ' . $row['call_time'];
-				$datetimeoldformat = date("Y/m/d H:i:s", strtotime($concat)); 
+				$datetimeoldformat = date("Y/m/d g:i", strtotime($concat)); 
 				$datetime = new DateTime($datetimeoldformat);
 				$firstDate = date_format($show['start'], 'Ymd');
 				$secondDate = date_format($datetime->format(DateTime::ISO8601), 'Ymd');
 				/*see if the existing show is later or eariler*/
 				if($firstDate == $secondDate)
 				{
+					$test = $secondDate;
 					$firstTime = date_format($datetime->format(DateTime::ISO8601), 'H:i:s');
 					$secondTime = date_format($show['start'],  'H:i:s');
-					$add_event = false;
+					//$add_event = false;
 					if(firstTime <= $secondTime)
 					{
 						$show['start'] = $datetime->format(DateTime::ISO8601);
@@ -77,7 +78,7 @@ function clean($str) {
 			$endtime = new DateTime($datetimeoldformat);
 			$endtime->modify("+30 minutes");
 			$totalPrograms[$index]['id'] = $index;
-			$totalPrograms[$index]['title'] = $row['show_name'];
+			$totalPrograms[$index]['title'] = $test;
 			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);
 			$totalPrograms[$index]['allDay'] = false;
 			$totalPrograms[$index]['end'] =  $endtime->format(DateTime::ISO8601);
