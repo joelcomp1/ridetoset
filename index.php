@@ -371,7 +371,7 @@ $(document).ready(function() {
 					$('#add_time_to_show').hide();	
 					$('#daycalendar').fullCalendar('gotoDate', calEvent.start);
 		
-				$.get('whos-going.php', { date: calEvent.start;}, function (data) {  
+				$.get('whos-going.php', { date: calEvent.start}, function (data) {  
             $('#pageContent').html(data);
         });
 
