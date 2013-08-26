@@ -58,7 +58,7 @@ function clean($str) {
 				$datetimeoldformat = date("Y/m/d g:i", strtotime($concat)); 
 				$datetime = new DateTime($datetimeoldformat);
 				$firstDate = date_format(new DateTime($show['start']), 'Ymd');
-				$secondDate = date_format($datetime->format(DateTime::ISO8601), 'Ymd');
+				$secondDate = date_format($datetime, 'Ymd');
 				/*see if the existing show is later or eariler*/
 				debug("First Date");
 				debug($firstDate);
