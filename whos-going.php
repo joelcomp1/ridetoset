@@ -24,8 +24,9 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	$facebook = $_SESSION['facebook']; 
 	$dateFromCal = $_GET['date'];
 	$date = date('D M d Y', strtotime($dateFromCal));
+	debug($date);
 		    $show_name = clean($_SESSION['show_name']);
-			$query = mysql_query("SELECT * FROM shows WHERE show_name='$show_name' and call_date='$date'");
+			$query = mysql_query("SELECT * FROM shows WHERE show_name='$show_name'");
 				
 				if($query) 
 				{
@@ -86,7 +87,7 @@ PhpConsole::start(true, true, dirname(__FILE__));
 					
 					    if($result->user_id == clean($_SESSION['user_id']))
 						{
-						debug($result->user_id);
+					//	debug($result->user_id);
 							echo '<div style="clear:both; font-weight: bold;">Your Going!</div>';
 							break;
 						}
