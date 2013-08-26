@@ -330,11 +330,11 @@ $(document).ready(function() {
 			  eventClick: function(calEvent, jsEvent, view) {
 			  $('#daycalendar').show();
 			  $('#timewhosgoing').hide();
-			  var date = new Date(calEvent.start);
+			  var newdate = new Date(calEvent.start);
 				$('#daycalendar')
                 .fullCalendar('changeView', 'agendaDay'/* or 'basicDay' */)
                 .fullCalendar('gotoDate',
-                    date.getFullYear(), date.getMonth(), date.getDate());
+                    newdate.getFullYear(), newdate.getMonth(), newdate.getDate());
 					
 				document.getElementById("header_show_name").innerHTML = calEvent.title;
 				 jQuery.ajax({
