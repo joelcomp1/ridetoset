@@ -27,12 +27,10 @@ PhpConsole::start(true, true, dirname(__FILE__));
     $dt->setTimestamp($dateFromCal);
 
         //just for the fun: what would it be in UTC?
-     $dt->setTimezone(new DateTimeZone("UTC"));
-     $would_be = $dt->format('Y-m-d H:i:sP');
+     $would_be = $dt->format('D M d Y');
 	debug($would_be);
-	debug($date);
 		    $show_name = clean($_SESSION['show_name']);
-			$query = mysql_query("SELECT * FROM shows WHERE show_name='$show_name'");
+			$query = mysql_query("SELECT * FROM shows WHERE show_name='$show_name' and call_date='$would_be'");
 				
 				if($query) 
 				{
