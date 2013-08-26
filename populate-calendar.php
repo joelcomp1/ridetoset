@@ -6,7 +6,7 @@
 	include('utils.php');
 require_once('PhpConsole.php');
 PhpConsole::start(true, true, dirname(__FILE__));
-debug('debug message');
+
 
 
 
@@ -62,6 +62,7 @@ function clean($str) {
 				/*see if the existing show is later or eariler*/
 				if($firstDate == $secondDate)
 				{
+					debug($firstDate);
 					$firstTime = date_format($datetime->format(DateTime::ISO8601), 'H:i:s');
 					$secondTime = date_format($show['start'],  'H:i:s');
 					//$add_event = false;
