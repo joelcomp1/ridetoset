@@ -54,7 +54,7 @@ function clean($str) {
 				$datetime = new DateTime($datetimeoldformat);
 				$firstDate = date_format($show['start'], 'Ymd');
 				$secondDate = date_format($datetime->format(DateTime::ISO8601), 'Ymd');
-				see if the existing show is later or eariler
+				/*see if the existing show is later or eariler*/
 				if($firstDate == $secondDate)
 				{
 					$firstTime = date_format($datetime->format(DateTime::ISO8601), 'H:i:s');
@@ -81,7 +81,6 @@ function clean($str) {
 			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);
 			$totalPrograms[$index]['allDay'] = false;
 			$totalPrograms[$index]['end'] =  $endtime->format(DateTime::ISO8601);
-			
 			/*$totalPrograms[$index]['url'] = "index.php?showname=";
 			$totalPrograms[$index]['url'] .= idx($value, 'username');
 */
