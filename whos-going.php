@@ -23,12 +23,13 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	$add_event = false;
 	$facebook = $_SESSION['facebook']; 
 	$dateFromCal = clean($_GET['date']);
-    $dt = new DateTime();
-	$dt->setTimestamp(strtotime($dateFromCal));
+	$dt = DateTime::createFromFormat("Y d M H:i T", dateFromCal);
+	$ts = $dt->getTimestamp();
+	//$dt->setTimestamp(strtotime($dateFromCal));
 
         //just for the fun: what would it be in UTC?
      $would_be = $dt->format('D M d Y');
-	 debug(strtotime($dateFromCal));
+	
 	debug($would_be);
 	debug($dateFromCal);
 		    $show_name = clean($_SESSION['show_name']);
