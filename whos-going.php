@@ -28,15 +28,11 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	debug($dateFromCal);
 	//$dt = DateTime::createFromFormat("D M d Y H:i:s", dateFromCal);
 	//$ts = $dt->getTimestamp();
-	$dt = strtotime($dateFromCal);
-
-        //just for the fun: what would it be in UTC?
-    // $would_be = $dt->format('D M d Y');
-	
+	$dt = date('D M d Y', strtotime($dateFromCal);
 	debug($dt);
 	
 		    $show_name = clean($_SESSION['show_name']);
-			$query = mysql_query("SELECT * FROM shows WHERE show_name='$show_name' and call_date='$would_be'");
+			$query = mysql_query("SELECT * FROM shows WHERE show_name='$show_name' and call_date='$dt'");
 				
 				if($query) 
 				{
