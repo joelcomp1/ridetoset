@@ -330,7 +330,9 @@ $(document).ready(function() {
 			  eventClick: function(calEvent, jsEvent, view) {
 			  $('#daycalendar').show();
 			  $('#timewhosgoing').hide();
-			  var newdate = new Date(calEvent.start);
+			  var s = calEvent.start;
+			  s = s.substring(0, s.indexOf('GMT'));
+			  var newdate = new Date(s);
 				$('#daycalendar')
                 .fullCalendar('changeView', 'agendaDay'/* or 'basicDay' */)
                 .fullCalendar('gotoDate',
