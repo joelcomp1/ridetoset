@@ -22,9 +22,10 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	$errflag = false;
 	$add_event = false;
 	$facebook = $_SESSION['facebook']; 
-
+	$dateFromCal = $_GET['date'];
+	$date = date('D M d Y', strtotime($dateFromCal));
 		    $show_name = clean($_SESSION['show_name']);
-			$query = mysql_query("SELECT * FROM shows WHERE show_name='$show_name'");
+			$query = mysql_query("SELECT * FROM shows WHERE show_name='$show_name' and call_date='$date'");
 				
 				if($query) 
 				{
