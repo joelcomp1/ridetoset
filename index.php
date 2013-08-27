@@ -60,6 +60,31 @@ if ($user_id) {
       exit();
     }
   }
+  if(!$me) {
+    // here we redirect for authentication:
+    // This is the code you should be looking at:
+    $url =   "https://graph.facebook.com/oauth/authorize?"
+            ."client_id=$appid&"
+            ."redirect_uri=http://apps.facebook.com/APP_SLUG/&"
+            ."scope=user_location";
+    ?>
+    <!doctype html>
+    <html xmlns:fb="http://www.facebook.com/2008/fbml">
+        <head>
+            <title>Göngum til góðs</title>
+            <meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
+            <script language=javascript>window.open('<?php echo $url ?>', '_parent', '')</script>
+        </head>
+
+        <body>
+            Loading...
+        </body>
+    </html>
+
+    <?php
+    exit;
+} else {
+}
 
   // This fetches some things that you like . 'limit=*" only returns * values.
   // To see the format of the data you are retrieving, use the "Graph API
