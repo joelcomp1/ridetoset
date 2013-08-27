@@ -270,8 +270,8 @@ $app_name = idx($app_info, 'name', '');
             $('#try-2').click(function(e) {
                 $("#specificShow").lightbox_me({centered: true, onLoad: function() {
 					$("#specificShow").find("input:first").focus();
-					$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
 					$('#daycalendar').fullCalendar('render');
+					$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
 
 					
 				}});
