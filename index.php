@@ -60,7 +60,7 @@ if ($user_id) {
       exit();
     }
   }
-  if(!$me) {
+  if(!$basic) {
     // here we redirect for authentication:
     // This is the code you should be looking at:
     $url =   "https://graph.facebook.com/oauth/authorize?"
