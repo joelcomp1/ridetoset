@@ -65,7 +65,7 @@ if ($user_id) {
     // This is the code you should be looking at:
     $url =   "https://graph.facebook.com/oauth/authorize?"
             ."client_id=$appid&"
-            ."redirect_uri=http://apps.facebook.com/APP_SLUG/&"
+            ."redirect_uri=http://apps.facebook.com/ridetoset/&"
             ."scope=user_location";
     ?>
     <!doctype html>
