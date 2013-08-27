@@ -395,7 +395,7 @@ $(document).ready(function() {
 				document.getElementById("header_show_time").innerHTML = formatAMPM(d);
 				s = s.substring(0, s.indexOf(d.getHours()));
 				document.getElementById("header_show_time").innerHTML = s;
-				document.getElementById("header_show_time").innerHTML += "  ";
+				document.getElementById("header_show_time").innerHTML += " at ";
 				document.getElementById("header_show_time").innerHTML += formatAMPM(d);
 					$('#timewhosgoing').show();	
 					$('#add_time_to_show').hide();	
@@ -518,7 +518,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 					<div id='timewhosgoing' style="display:none;">
 					
 						<h2 id="header_show_time" style="font-weight: bold;"></h2><br>
-						<label style="font-weight: bold;"><b>Who's Going:</b></label>
+						<label style="font-weight: bold; font-size: 26px;"><b>Who's Going:</b></label>
 						<div id="pageContent"></div>
 						
 					</div>
