@@ -75,9 +75,9 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	  </script>
 					<?php
 					
-							echo '<p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:64px; height:64px; margin-right: 20px; float:left; background-position: center 25%;background-repeat: no-repeat;background-size: 64px;"></p>';
+							echo '<div style="text-align:center; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 18px;"><p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:64px; height:64px; margin-right: 20px; float:left; background-position: center 25%;background-repeat: no-repeat;background-size: 64px;"></p>';
 							echo  '<div style="float:left;"><h2><strong>'.idx($value, 'name').'</strong></h2>';
-							echo '<input type="button" id="sendMessage" value="Send Message" /></div></div>';
+							echo '<input type="button" id="sendMessage" value="Send Message" /></div></div></div>';
 							break;
 						}
 						
@@ -89,7 +89,7 @@ PhpConsole::start(true, true, dirname(__FILE__));
 					    if($result->user_id == clean($_SESSION['user_id']))
 						{
 					//	debug($result->user_id);
-							echo '<div style="clear:both; font-weight: bold;">Your Going!</div>';
+							echo '<div style="clear:both; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: bold;">Your Going!</div>';
 							?>
 							
 							<form id="im_out" method="post" action="not-going.php">
