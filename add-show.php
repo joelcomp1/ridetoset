@@ -22,7 +22,8 @@
 	$show_name = clean($_POST['showname']);
 	$call_time = clean($_POST['calltime']);
 	$call_date = clean($_POST['showdate']);
-	
+	$call_city = clean($_POST['city']);
+	$call_state = clean($_POST['state']);
 	
 
 		if($show_name == '') {
@@ -31,6 +32,14 @@
 		}
 		if($call_time == '') {
 			$errmsg_arr[] = 'Call Time Missing';
+			$errflag = true;
+		}
+		if($call_city == '') {
+			$errmsg_arr[] = 'City Missing';
+			$errflag = true;
+		}
+		if($call_state == 'Select a State') {
+			$errmsg_arr[] = 'State Missing';
 			$errflag = true;
 		}
 		if($call_date == '') {
@@ -67,8 +76,8 @@
 	}
 	
 
-	$qry = "INSERT INTO shows(user_id, show_name, call_date, call_time) 
-	    				VALUES('$user_id','$show_name','$call_date','$call_time')";
+	$qry = "INSERT INTO shows(user_id, show_name, call_date, call_time, city, state) 
+	    				VALUES('$user_id','$show_name','$call_date','$call_time', '$call_city', '$call_state')";
 	$result = @mysql_query($qry);
 	    
 	
