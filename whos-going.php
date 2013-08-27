@@ -76,8 +76,8 @@ PhpConsole::start(true, true, dirname(__FILE__));
 					<?php
 					
 							echo '<div id="imagegoing"><p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:64px; height:64px; margin-right: 20px; float:left; background-position: center 25%;background-repeat: no-repeat;background-size: 64px;"></p>';
-							echo  '<div style="float:left;"><h2><strong>'.idx($value, 'name').'</strong></h2>';
-							echo '<input type="button" id="sendMessage" value="Send Message" /></div></div></div>';
+							echo  '<h2><strong>'.idx($value, 'name').'</strong></h2>';
+							echo '<input type="button" id="sendMessage" value="Send Message" /></div></div>';
 							break;
 						}
 						
