@@ -481,7 +481,7 @@ header .tagline {
 			font-size: 18px;
 	
 	}
-	#try-1,#try-2, #try-3,#imgoing, #imout, #sendMessage
+	#try-1,#try-2, #try-3,#imgoing, #imout
 {		
     background-color: #7AB247;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#608947), to(#7AB247));
@@ -515,7 +515,38 @@ header .tagline {
 }
 
  
+#sendMessage
+{		
+    background-color: #7AB247;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#608947), to(#7AB247));
+    background-image: -webkit-linear-gradient(top, #608947, #7AB247);
+    background-image: -moz-linear-gradient(top, #608947, #7AB247);
+    background-image: -ms-linear-gradient(top, #608947, #7AB247);
+    background-image: -o-linear-gradient(top, #608947, #7AB247);
+    background-image: linear-gradient(top, #608947, #7AB247);
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    
+     -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+    
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0 #0 #0 #0;
 
+    text-align:center;
+    height: 25px;
+    padding: 0;
+    width: 120px;
+    cursor: pointer;
+    font: bold 15px Arial, Helvetica;
+    color: #0;
+}
 
 #try-1:hover,#try-1:focus, #try-2:focus, #try-2:hover, #try-3:focus,#imgoing:hover, #imgoing:focus , #imout:hover, #imout:focus, #try-3:hover, #sendMessage:hover, #sendMessage:focus
 {		
