@@ -474,7 +474,13 @@ header .tagline {
     }
     #usage { background-position: -323px -172px; width: 67px; height: 22px;}
 	
+	#imagegoing
+	{
+			text-align:center; 
+			font-family: 'Helvetica Neue", Arial, sans-serif; 
+			font-size: 18px;
 	
+	}
 	#try-1,#try-2, #try-3,#imgoing, #imout, #sendmessage
 {		
     background-color: #7AB247;
