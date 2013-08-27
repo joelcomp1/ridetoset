@@ -92,7 +92,7 @@ PhpConsole::start(true, true, dirname(__FILE__));
 							echo '<div style="clear:both; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: bold;">Your Going!</div>';
 							?>
 							
-							<form id="im_out" method="post" action="not-going.php">
+							<form id="im_out" method="post" action="not-going.php" style="margin-top: 20px;">
 							<div id="actions">
 								<input type="submit" id="imout" class="try sprited" value="I'm Out!">
 							</div>
@@ -104,7 +104,7 @@ PhpConsole::start(true, true, dirname(__FILE__));
 						{
 						?>
 						<div style="clear:both;"></div>
-							<form id="im_going" method="post" action="add-going.php">
+							<form id="im_going" method="post" action="add-going.php" style="margin-top: 20px;">
 							<div id="actions">
 								<input type="submit" id="imgoing" class="try sprited" value="I'm Going!">
 							</div>
