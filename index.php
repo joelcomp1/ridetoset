@@ -330,7 +330,8 @@ $(document).ready(function() {
 			  eventClick: function(calEvent, jsEvent, view) {
 			  $('#daycalendar').show();
 			  $('#timewhosgoing').hide();
-			  var s = calEvent.start;
+			  var d = calEvent.start;
+			  var s = d.toString();
 			  s = s.substring(0, s.indexOf('GMT'));
 			  var newdate = new Date(s);
 				$('#daycalendar')
