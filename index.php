@@ -335,7 +335,8 @@ $(document).ready(function() {
 			  $('#timewhosgoing').hide();
 			  var s = new String (calEvent.start);
 			  s = s.substring(0, s.indexOf('GMT'));
-				
+			$('#daycalendar').fullCalendar('gotoDate', calEvent.start);
+
 					
 				document.getElementById("header_show_name").innerHTML = calEvent.title;
 				 jQuery.ajax({
