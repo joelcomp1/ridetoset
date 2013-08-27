@@ -332,11 +332,10 @@ $(document).ready(function() {
 			  $('#timewhosgoing').hide();
 			  var s = new String (calEvent.start);
 			  s = s.substring(0, s.indexOf('GMT'));
-			  var newdate = new Date(s);
 				$('#daycalendar')
                 .fullCalendar('changeView', 'agendaDay'/* or 'basicDay' */)
                 .fullCalendar('gotoDate',
-                    newdate.getFullYear(), newdate.getMonth(), newdate.getDate());
+                    2013, 8, 6);
 					
 				document.getElementById("header_show_name").innerHTML = calEvent.title;
 				 jQuery.ajax({
