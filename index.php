@@ -61,27 +61,7 @@ if ($user_id) {
     }
   }
  
-    // here we redirect for authentication:
-    // This is the code you should be looking at:
-    $url =   "https://graph.facebook.com/oauth/authorize?"
-            ."client_id=$appid&"
-            ."redirect_uri=http://apps.facebook.com/ridetoset/&"
-            ."scope=user_location";
-    ?>
-    <!doctype html>
-    <html xmlns:fb="http://www.facebook.com/2008/fbml">
-        <head>
-            <title>Göngum til góðs</title>
-            <meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
-            <script language=javascript>window.open('<?php echo $url ?>', '_parent', '')</script>
-        </head>
-
-        <body>
-            Loading...
-        </body>
-    </html>
-
-    <?php
+  
   
 
   // This fetches some things that you like . 'limit=*" only returns * values.
@@ -96,11 +76,13 @@ if ($user_id) {
   // using this app
   $app_using_friends = $facebook->api(array(
     'method' => 'fql.query',
-    'query' => 'SELECT uid, name, username, user_location FROM user WHERE uid IN(SELECT uid2 FROM friend WHERE uid1 = me()) AND is_app_user = 1'
+    'query' => 'SELECT uid, name, username FROM user WHERE uid IN(SELECT uid2 FROM friend WHERE uid1 = me()) AND is_app_user = 1'
   ));
   $_SESSION['facebook'] = $app_using_friends;
   
   $_SESSION['user_id'] = $basic['username'];
+  
+  $_SESSION['user_location'] = $basic['user_location'];
 
 }
 
@@ -487,7 +469,7 @@ $(document).ready(function() {
       <p id="picture" style="background-image: url(https://graph.facebook.com/<?php echo he($user_id); ?>/picture?type=normal)"></p>
 
       <div>
-        <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong><br>
+        <h1>Welcome, <strong><?php echo he(idx($basic, 'user_location')); ?></strong><br>
       </div>
       <?php } else { ?>
       <div  style="text-align: center;">
