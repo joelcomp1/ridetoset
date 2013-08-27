@@ -46,7 +46,7 @@ $facebook = new Facebook(array(
   'sharedSession' => true,
   'trustForwarded' => true,
 ));
-
+$appid = AppInfo::appID();
 $user_id = $facebook->getUser();
 if ($user_id) {
   try {
@@ -64,7 +64,7 @@ if ($user_id) {
     // here we redirect for authentication:
     // This is the code you should be looking at:
     $url =   "https://graph.facebook.com/oauth/authorize?"
-            ."client_id=AppInfo::appID()&"
+            ."client_id=$appid&"
             ."redirect_uri=http://apps.facebook.com/APP_SLUG/&"
             ."scope=user_location";
     ?>
