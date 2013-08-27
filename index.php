@@ -394,7 +394,10 @@ $(document).ready(function() {
 				var hour = d.getMonth();
 				document.getElementById("header_show_time").innerHTML = formatAMPM(d);
 				s = s.substring(0, s.indexOf(d.getHours()));
-				s = s.substring(0, s.indexOf(" 0"));
+				if(d.getHours() < 10)
+				{
+					s = s.substring(0, s.indexOf(" 0"));
+				}
 				document.getElementById("header_show_time").innerHTML = s;
 				document.getElementById("header_show_time").innerHTML += " at ";
 				document.getElementById("header_show_time").innerHTML += formatAMPM(d);
