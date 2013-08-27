@@ -46,7 +46,7 @@ function clean($str) {
 		if($add_event == true)
 		{
 			$concat = $row['call_date'] . ' ' . $row['call_time'];
-			$datetimeoldformat = date("Y/m/d g:i", strtotime($concat)); 
+			$datetimeoldformat = date("Y/m/d G:i", strtotime($concat)); 
 			$datetime = new DateTime($datetimeoldformat);
 			$endtime = new DateTime($datetimeoldformat);
 			$endtime->modify("+30 minutes");

@@ -55,7 +55,7 @@ function clean($str) {
 			if($show['title'] == $row['show_name'])
 			{
 				$concat = $row['call_date'] . ' ' . $row['call_time'];
-				$datetimeoldformat = date("Y/m/d g:i", strtotime($concat)); 
+				$datetimeoldformat = date("Y/m/d G:i", strtotime($concat)); 
 				$datetime = new DateTime($datetimeoldformat);
 				$firstDate = date_format(new DateTime($show['start']), 'Ymd');
 				$secondDate = date_format($datetime, 'Ymd');
