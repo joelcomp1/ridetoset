@@ -36,6 +36,7 @@
 		}
 		if($call_city == '') {
 			$errmsg_arr[] = 'City Missing';
+			$errmsg_arr[] = $call_state;
 			$errflag = true;
 		}
 		if($call_state == 'Select a State') {
