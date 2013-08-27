@@ -394,7 +394,9 @@ $(document).ready(function() {
 				var hour = d.getMonth();
 				document.getElementById("header_show_time").innerHTML = formatAMPM(d);
 				s = s.substring(0, s.indexOf(d.getHours()));
-				document.getElementById("header_show_time").innerHTML += s;
+				document.getElementById("header_show_time").innerHTML = s;
+				document.getElementById("header_show_time").innerHTML += "  ";
+				document.getElementById("header_show_time").innerHTML += formatAMPM(d);
 					$('#timewhosgoing').show();	
 					$('#add_time_to_show').hide();	
 					$('#daycalendar').fullCalendar('gotoDate', calEvent.start);
