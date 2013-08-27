@@ -82,7 +82,7 @@ if ($user_id) {
   
   $_SESSION['user_id'] = $basic['username'];
   
-  $_SESSION['user_location'] = $basic['user_location'];
+  
 
 }
 
@@ -405,7 +405,7 @@ $(document).ready(function() {
 					s = s.substring(0, s.indexOf(" 0"));
 				}
 				document.getElementById("header_show_time").innerHTML = s;
-				document.getElementById("header_show_time").innerHTML += " at ";
+				document.getElementById("header_show_time").innerHTML += ", Call Time: ";
 				document.getElementById("header_show_time").innerHTML += formatAMPM(d);
 					$('#timewhosgoing').show();	
 					$('#add_time_to_show').hide();	
