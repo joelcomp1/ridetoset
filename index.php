@@ -541,7 +541,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
                 <form id="sign_up_form" method="post" action="add-show.php">
                     <label><strong>Show Name:</strong> <input class="sprited" id="showname" name="showname" ></label>
 					<label><strong>City:</strong> <input class="sprited" id="city" name="city" >
-					<strong>State:</strong> <select id="state" name="State"> 
+					<strong>State:</strong> <select id="state" name="state"> 
 <option value="" selected="selected">Select a State</option> 
 <option value="AL">Alabama</option> 
 <option value="AK">Alaska</option> 
@@ -594,7 +594,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 <option value="WV">West Virginia</option> 
 <option value="WI">Wisconsin</option> 
 <option value="WY">Wyoming</option>
-</select>
+</select></label>
 
                     <label><strong>Date:</strong> <input class="sprited" type="text" id="showdate" name="showdate"></label>
 					<label><strong>Call Time:</strong> <input id="calltime" class="time sprited"  name="calltime" type="text"></label>
