@@ -64,7 +64,7 @@ if ($user_id) {
     // here we redirect for authentication:
     // This is the code you should be looking at:
     $url =   "https://graph.facebook.com/oauth/authorize?"
-            ."client_id=$appid&"
+            ."client_id=AppInfo::appID()&"
             ."redirect_uri=http://apps.facebook.com/APP_SLUG/&"
             ."scope=user_location";
     ?>
