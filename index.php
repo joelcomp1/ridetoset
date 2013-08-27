@@ -98,11 +98,12 @@ if ($user_id) {
   // using this app
   $app_using_friends = $facebook->api(array(
     'method' => 'fql.query',
-    'query' => 'SELECT uid, name, username FROM user WHERE uid IN(SELECT uid2 FROM friend WHERE uid1 = me()) AND is_app_user = 1'
+    'query' => 'SELECT uid, name, username, user_location FROM user WHERE uid IN(SELECT uid2 FROM friend WHERE uid1 = me()) AND is_app_user = 1'
   ));
   $_SESSION['facebook'] = $app_using_friends;
   
   $_SESSION['user_id'] = $basic['username'];
+
 }
 
 // Fetch the basic info of the app that they are using
