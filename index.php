@@ -330,10 +330,7 @@ $(document).ready(function() {
 			  eventClick: function(calEvent, jsEvent, view) {
 			  $('#daycalendar').show();
 			  $('#timewhosgoing').hide();
-			  var s = new String (calEvent.start);
-			  s = s.substring(0, s.indexOf('GMT'));
-				$('#daycalendar').fullCalendar('gotoDate',
-                    2013, 7, 6);
+			 
 					
 				document.getElementById("header_show_name").innerHTML = calEvent.title;
 				 jQuery.ajax({
