@@ -249,6 +249,7 @@ $app_name = idx($app_info, 'name', '');
 	}  
 
 	$(function() {
+	var firstTime = true;
             function launch() {
                  $('#addshow').lightbox_me({centered: true, onLoad: function() { $('#addshow').find('input:first').focus()}});
 				 $('#specificShow').lightbox_me({centered: true, onLoad: function() { $('#specificShow').find('input:first').focus()}});
@@ -271,7 +272,12 @@ $app_name = idx($app_info, 'name', '');
                 $("#specificShow").lightbox_me({centered: true, onLoad: function() {
 					$("#specificShow").find("input:first").focus();
 					$('#daycalendar').fullCalendar('render');
-					$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
+					
+					if($firstTime == true)
+					{
+						$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
+						$firstTime = false;
+					}
 
 					
 				}});
