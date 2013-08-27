@@ -377,7 +377,10 @@ $(document).ready(function() {
 				 $('#daycalendar').hide();
 				 var s = new String (calEvent.start);
 				s = s.substring(0, s.indexOf('GMT'));
-				document.getElementById("header_show_time").innerHTML = s;
+				
+				var d = new Date(s);
+				var hour = d.getMonth();
+				document.getElementById("header_show_time").innerHTML = hour;
 					$('#timewhosgoing').show();	
 					$('#add_time_to_show').hide();	
 					$('#daycalendar').fullCalendar('gotoDate', calEvent.start);
