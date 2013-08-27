@@ -60,7 +60,7 @@ if ($user_id) {
       exit();
     }
   }
-  if(!$basic) {
+ 
     // here we redirect for authentication:
     // This is the code you should be looking at:
     $url =   "https://graph.facebook.com/oauth/authorize?"
@@ -82,9 +82,7 @@ if ($user_id) {
     </html>
 
     <?php
-    exit;
-} else {
-}
+  
 
   // This fetches some things that you like . 'limit=*" only returns * values.
   // To see the format of the data you are retrieving, use the "Graph API
