@@ -393,6 +393,8 @@ $(document).ready(function() {
 				var d = new Date(s);
 				var hour = d.getMonth();
 				document.getElementById("header_show_time").innerHTML = formatAMPM(d);
+				s = s.substring(0, s.indexOf(d.getHours()));
+				document.getElementById("header_show_time").innerHTML += s;
 					$('#timewhosgoing').show();	
 					$('#add_time_to_show').hide();	
 					$('#daycalendar').fullCalendar('gotoDate', calEvent.start);
