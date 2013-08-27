@@ -349,13 +349,13 @@ $(document).ready(function() {
 				error: function(xhr, textStatus, errorThrown) {
 					console.log(textStatus.reponseText);
 				}
-				$('#daycalendar').fullCalendar('render');
+				
     });
 	  $(".ui-datepicker a").each(function(index, elem) {
 						$(elem).attr("onclick", "$(this).closest(\".ui-datepicker\").fadeOut(\"fast\");");
 					});
 				$('#try-2').trigger('click');
-				
+				$('#daycalendar').fullCalendar('render');
 
 			}
 		});
