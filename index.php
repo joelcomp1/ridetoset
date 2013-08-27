@@ -288,6 +288,18 @@ $app_name = idx($app_info, 'name', '');
 
         });
 	
+	  function formatAMPM(date) {
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var strTime = hours + ':' + minutes + ' ' + ampm;
+  return strTime;
+}
+	  
+	  
 	  
 $(document).ready(function() {
 	
@@ -380,7 +392,7 @@ $(document).ready(function() {
 				
 				var d = new Date(s);
 				var hour = d.getMonth();
-				document.getElementById("header_show_time").innerHTML = hour;
+				document.getElementById("header_show_time").innerHTML = formatAMPM(d);
 					$('#timewhosgoing').show();	
 					$('#add_time_to_show').hide();	
 					$('#daycalendar').fullCalendar('gotoDate', calEvent.start);
