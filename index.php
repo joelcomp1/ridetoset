@@ -329,7 +329,7 @@ $(document).ready(function() {
 			events: "populate-calendar.php",
 			  eventClick: function(calEvent, jsEvent, view) {
 			  $('#daycalendar').show();
-			  $('#daycalendar').fullCalendar('render');
+			  
 			  $('#timewhosgoing').hide();
 			  var s = new String (calEvent.start);
 			  s = s.substring(0, s.indexOf('GMT'));
@@ -349,6 +349,7 @@ $(document).ready(function() {
 				error: function(xhr, textStatus, errorThrown) {
 					console.log(textStatus.reponseText);
 				}
+				$('#daycalendar').fullCalendar('render');
     });
 	  $(".ui-datepicker a").each(function(index, elem) {
 						$(elem).attr("onclick", "$(this).closest(\".ui-datepicker\").fadeOut(\"fast\");");
