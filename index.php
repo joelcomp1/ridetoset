@@ -469,7 +469,7 @@ $(document).ready(function() {
       <p id="picture" style="background-image: url(https://graph.facebook.com/<?php echo he($user_id); ?>/picture?type=normal)"></p>
 
       <div>
-        <h1>Welcome, <strong><?php echo he(idx($basic, 'user_location')); ?></strong><br>
+        <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong><br>
       </div>
       <?php } else { ?>
       <div  style="text-align: center;">
