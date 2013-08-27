@@ -271,6 +271,8 @@ $app_name = idx($app_info, 'name', '');
                 $("#specificShow").lightbox_me({centered: true, onLoad: function() {
 					$("#specificShow").find("input:first").focus();
 					$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});
+					$('#daycalendar').fullCalendar('render');
+
 					
 				}});
 				
@@ -292,7 +294,7 @@ $(document).ready(function() {
 		var d = date.getDate();
 		var m = date.getMonth();
 		var y = date.getFullYear();
-		
+			
 		$('#calendar').fullCalendar({
 			header: {
 				left: 'prev,next today',
@@ -355,7 +357,6 @@ $(document).ready(function() {
 						$(elem).attr("onclick", "$(this).closest(\".ui-datepicker\").fadeOut(\"fast\");");
 					});
 				$('#try-2').trigger('click');
-				$('#daycalendar').fullCalendar('render');
 
 			}
 		});
