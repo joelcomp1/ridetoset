@@ -46,8 +46,8 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	<?php
 	     echo $result->city . ', ' . $result->state;          
 	?>
-	</h1><br><br>
-	<label style="font-weight: bold; font-size: 26px;"><b>Who's Going:</b></label>
+	</h1><br>
+	<label style="font-size: 26px;"><b>Who's Going:</b></label>
 	<div style="clear:both; font-weight: bold;">
 	
 	<?php

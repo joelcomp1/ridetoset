@@ -477,6 +477,7 @@ header .tagline {
 	#imagegoing
 	{
 			text-align:center; 
+			width: 300px;
 			font-family: "Helvetica Neue", Arial, sans-serif; 
 			font-size: 18px;
 	
