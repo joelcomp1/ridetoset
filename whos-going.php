@@ -48,7 +48,7 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	?>
 	</div><br>
 	<label style="font-size: 26px;"><b>Who's Going:</b></label>
-	<div style="clear:both; font-weight: bold; text-align:center; width: 300px; margin-left: 100px;">
+	<div style="clear:both; font-weight: bold; text-align:center; width: 300px; margin-left: 120px;">
 	
 	<?php
 		
