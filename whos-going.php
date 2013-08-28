@@ -28,7 +28,7 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	
 		    $show_name = clean($_SESSION['show_name']);
 			$query = mysql_query("SELECT * FROM shows WHERE show_name='$show_name' and call_date='$dt'");
-				
+			$imgoing = false;
 				if($query) 
 				{
 					$first = true;
@@ -103,10 +103,15 @@ PhpConsole::start(true, true, dirname(__FILE__));
 					
 					    if($result->user_id == clean($_SESSION['user_id']))
 						{
-					//	debug($result->user_id);
 							echo '<div style="clear:both; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: bold;">Your Going!</div>';
-							?>
+							$imgoing = true;
 							
+					}
+				}
+				
+						if($imgoing)
+						{
+						?>
 							<form id="im_out" method="post" action="not-going.php" style="margin-top: 20px;">
 							<div id="actions">
 								<input type="submit" id="imout" class="try sprited" value="I'm Out!">
@@ -126,8 +131,9 @@ PhpConsole::start(true, true, dirname(__FILE__));
 							</form>
 						<?php
 						}
-					}
-					
+				
+				
+				
 				}							
 				else {
 					echo 'ERROR: There was a problem with the query.';
