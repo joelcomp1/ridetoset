@@ -43,9 +43,7 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	</head>
 	</body>
 	 <h1 id="header_show_location" style="font-size: 30px;">
-	<?php
-	     echo $result->$city . ', ' . $result->$state;          
-	?>
+	
 	</h1><br>
 	<div style="clear:both; font-weight: bold;">
 	
