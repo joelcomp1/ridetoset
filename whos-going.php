@@ -42,11 +42,11 @@ PhpConsole::start(true, true, dirname(__FILE__));
     <meta charset="utf-8" />
 	</head>
 	</body>
-	 <h1 id="header_show_location" style="font-size: 26px;">
+	 <div style="font-size: 26px;">
 	<?php
-	     echo $result->city . ', ' . $result->state;          
+	     echo 'Location: '.$result->city . ', ' . $result->state;          
 	?>
-	</h1><br>
+	</div><br>
 	<label style="font-size: 26px;"><b>Who's Going:</b></label>
 	<div style="clear:both; font-weight: bold;">
 	
