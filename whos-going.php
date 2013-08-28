@@ -44,7 +44,11 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	</body>
 	 <div style="font-size: 20px;">
 	<?php
-	     echo 'Location: '.$result->city . ', ' . $result->state;          
+	     echo 'Location: '.$result->city . ', ' . $result->state;  
+	     $_SESSION['city'] = $result->city;
+		 $_SESSION['calltime'] = $result->call_time;
+	     $_SESSION['showdate'] = $result->call_date;
+		 $_SESSION['state'] = $result->state;
 	?>
 	</div><br>
 	<label style="font-size: 26px;"><b>Who's Going:</b></label>
