@@ -106,10 +106,10 @@ PhpConsole::start(true, true, dirname(__FILE__));
 							echo '<div style="clear:both; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: bold;">Your Going!</div>';
 							$imgoing = true;
 							
-					}
+						}
 				}
 				
-						if($imgoing)
+						if($imgoing == true)
 						{
 						?>
 							<form id="im_out" method="post" action="not-going.php" style="margin-top: 20px;">
@@ -118,7 +118,7 @@ PhpConsole::start(true, true, dirname(__FILE__));
 							</div>
 							</form>
 							<?php
-							break;
+							
 						}
 						else
 						{
