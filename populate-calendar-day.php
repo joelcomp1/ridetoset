@@ -56,11 +56,12 @@ function clean($str) {
 				/*see if the existing show is later or eariler*/
 				if($firstDate == $secondDate)
 				{
-					
-					$firstTime = date_format($datetime->format(DateTime::ISO8601), 'H:i:s');
-					$secondTime = date_format($show['start'],  'H:i:s');
-					
-					if($firstTime == $secondTime)
+		
+		
+					$start_time = date("Y/m/d G:i", strtotime($show['start']));
+								debug($start_time);
+					debug($datetimeoldformat);
+					if($datetimeoldformat == $start_time )
 					{
 						$add_event = false;
 					}
