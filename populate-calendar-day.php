@@ -56,10 +56,8 @@ function clean($str) {
 				/*see if the existing show is later or eariler*/
 				if($firstDate == $secondDate)
 				{
-		
-		
 					$start_time = date("Y/m/d G:i", strtotime($show['start']));
-								debug($start_time);
+					debug($start_time);
 					debug($datetimeoldformat);
 					if($datetimeoldformat == $start_time )
 					{

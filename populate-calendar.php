@@ -63,13 +63,9 @@ function clean($str) {
 				if($firstDate == $secondDate)
 				{
 					
-					$firstTime = date_format($datetime->format(DateTime::ISO8601), 'H:i:s');
-					$secondTime = date_format($show['start'],  'H:i:s');
 					$add_event = false;
 		
 					$start_time = date("Y/m/d G:i", strtotime($show['start']));
-								debug($start_time);
-					debug($datetimeoldformat);
 					if($datetimeoldformat <= $start_time )
 					{
 						$show['start'] = $datetime->format(DateTime::ISO8601);
