@@ -60,7 +60,7 @@ function clean($str) {
 					$firstTime = date_format($datetime->format(DateTime::ISO8601), 'H:i:s');
 					$secondTime = date_format($show['start'],  'H:i:s');
 					
-					if(firstTime == $secondTime)
+					if($firstTime == $secondTime)
 					{
 						$add_event = false;
 					}
