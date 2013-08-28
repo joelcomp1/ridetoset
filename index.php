@@ -542,12 +542,12 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
                     <label><strong>Show Name:</strong> <input class="sprited" id="showname" name="showname" ></label>
 					<label><strong>City:</strong> <input class="sprited" id="city" name="city" >
 					<strong>State:</strong> <select id="state" name="state"> 
-<option value="" selected="selected">Select a State</option> 
+<option value="" >Select a State</option> 
 <option value="AL">Alabama</option> 
 <option value="AK">Alaska</option> 
 <option value="AZ">Arizona</option> 
 <option value="AR">Arkansas</option> 
-<option value="CA">California</option> 
+<option value="CA" selected="selected">California</option> 
 <option value="CO">Colorado</option> 
 <option value="CT">Connecticut</option> 
 <option value="DE">Delaware</option> 
