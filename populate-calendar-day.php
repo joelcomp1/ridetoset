@@ -61,8 +61,6 @@ function clean($str) {
 				if($firstDate == $secondDate)
 				{
 					$start_time = date("Y/m/d G:i", strtotime($show['start']));
-					debug($start_time);
-					debug($datetimeoldformat);
 					if($datetimeoldformat == $start_time )
 					{
 						$add_event = false;

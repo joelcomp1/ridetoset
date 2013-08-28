@@ -31,9 +31,11 @@ PhpConsole::start(true, true, dirname(__FILE__));
 				
 				if($query) 
 				{
-			
+					$first = true;
 					// While there are results loop through them - fetching an Object (i like PHP5 btw!).
 					while ($result = mysql_fetch_object($query)) {
+					if($first)
+					{
 	?>
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
@@ -55,6 +57,8 @@ PhpConsole::start(true, true, dirname(__FILE__));
 	<div style="clear:both; font-weight: bold; text-align:center; width: 300px; margin-left: 140px;">
 	
 	<?php
+		$first = false;
+	}
 		
 					foreach($facebook as $value)
 					{
