@@ -4,6 +4,10 @@
 	session_start();
 	include("AppInfo.php");
 	include('utils.php');
+require_once('PhpConsole.php');
+PhpConsole::start(true, true, dirname(__FILE__));
+
+
 
 $facebook = $_SESSION['facebook'];
 		
