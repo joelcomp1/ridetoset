@@ -494,6 +494,7 @@ $(document).ready(function() {
 		unset($_SESSION['ERRMSG_ARR']);
 	}
 ?>
+<a href="http://forum.ridetoset.com" style="float:right;"><img src="images/forum_banner.png"></a>
 	<div style="text-align:center;">
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
