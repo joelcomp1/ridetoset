@@ -495,7 +495,7 @@ $(document).ready(function() {
 	}
 ?>
 <a href="http://forum.ridetoset.com" style="float:right;"><img src="images/forum_banner.png" height=150px width=300px></a>
-	<div style="text-align:center;">
+	<div style="text-align:center; float:right;">
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
 	<div id="searchshows" style="text-align:center; display:none;">
