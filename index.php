@@ -629,9 +629,11 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
               </a>
             </li-->
             <li>
-              <a href="#" class="apprequests" id="sendRequest" data-message="Check out Ride To Set! Bringing background actors together.">
-                <!--span class="apprequests"-->Invite Friends!<!--/span-->
-              </a>
+					<input type="button" id="sendRequest" class="try sprited" value="Invite Friends!">
+
+              <!--sa href="#" class="apprequests" id="sendRequest" data-message="Check out Ride To Set! Bringing background actors together.">
+                <pan class="apprequests">Invite Friends!</span>
+              </a-->
             </li>
           </ul>
         </div>
