@@ -629,8 +629,8 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
               </a>
             </li-->
             <li>
-              <a href="#" class="facebook-button apprequests" id="sendRequest" data-message="Check out Ride To Set! Bringing background actors together.">
-                <span class="apprequests">Invite Friends!</span>
+              <a href="#" class="apprequests" id="sendRequest" data-message="Check out Ride To Set! Bringing background actors together.">
+                <!--span class="apprequests"-->Invite Friends!<!--/span-->
               </a>
             </li>
           </ul>
