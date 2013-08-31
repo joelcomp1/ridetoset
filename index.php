@@ -498,7 +498,7 @@ $(document).ready(function() {
 	<div style="text-align:center; float:right; margin-top:100px;">
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
-	<div id="searchshows" style="text-align:center; display:none;">
+	<div id="searchshows" style="text-align:center; display:none;clear:both;">
 <input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags();" 
 value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" />
 <div class="suggestionsBox" id="suggestions" style="display: none; text: font:bold 0.4em 'TeXGyreAdventor', Arial, sans-serif!important;">
