@@ -350,7 +350,7 @@ $(document).ready(function() {
 			events: "populate-calendar.php",
 			  eventClick: function(calEvent, jsEvent, view) {
 			  $('#daycalendar').show();
-			  
+			  $('#add_time_to_show').show();	
 			  $('#timewhosgoing').hide();
 			  var s = new String (calEvent.start);
 			  s = s.substring(0, s.indexOf('GMT'));
