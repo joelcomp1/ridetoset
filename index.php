@@ -455,7 +455,15 @@ $(document).ready(function() {
 		width: 500px;
 		margin: 20px auto;
 		}
-.fc-event-time{
+.fc-view-month .fc-event-time{
+   display : none;
+}
+
+.fc-view-week .fc-event-time{
+   display : none;
+}
+
+.fc-view-basicday .fc-event-time{
    display : none;
 }
 
