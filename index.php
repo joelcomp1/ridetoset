@@ -400,7 +400,7 @@ $(document).ready(function() {
         // your event source
         {
             url: '/populate-calendar-day.php', // use the `url` property
-        }
+        },
 		
 		{
             events: function(start, end, callback) {
