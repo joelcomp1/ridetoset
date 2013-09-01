@@ -400,14 +400,7 @@ $(document).ready(function() {
         // your event source
         {
             url: '/populate-calendar-day.php', // use the `url` property
-        },
-		
-		
-            events: function(start, end, callback) {
-              document.getElementById("hiddendate").innerHTML = start;
-				$("[name='hiddendate']").val(start);
-            }
-        
+        }    
 
 		],
 			//events: "populate-calendar-day.php",
@@ -437,26 +430,7 @@ $(document).ready(function() {
 
 			}
 		});
-			
-			
-
-
-			/*jQuery.ajax({
-					url: 'whos-going.php',
-					type: 'GET',
-					dataType: 'text/html',
-					success: function(data, textStatus, xhr) {
-						 $('#pageContent').html(''); // remove what was before
-						 $('#pageContent').fadeOut("slow");
-						 $('#pageContent').html(data);
-						 $('#pageContent').fadeIn("slow");
-					},
-					error: function(xhr, textStatus, errorThrown) {
-						console.log(textStatus.reponseText);
-					}
-				});*/
-		
-	   
+			   
 	  
 	});
 	function getDate()
