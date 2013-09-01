@@ -360,7 +360,10 @@ $(document).ready(function() {
 					
 				document.getElementById("header_show_name").innerHTML = calEvent.title;
 				document.getElementById("hiddenname").innerHTML = calEvent.title;
+				$("[name='hiddenname']").val(calEvent.title);
 				document.getElementById("hiddendate").innerHTML = calEvent.start;
+								$("[name='hiddendate']").val(calEvent.starts);
+
 				 jQuery.ajax({
 				url: 'session-start.php',
 				type: 'POST',
