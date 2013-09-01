@@ -78,9 +78,10 @@ function clean($str) {
 		if($add_event == true)
 		{
 			$concat = $row['call_date'] . ' ' . $row['call_time'];
-			$datetimeoldformat = date("Y/m/d", strtotime($concat)); 
+			$datetimeoldformat = date("Y/m/d G:i", strtotime($concat)); 
 			$datetime = new DateTime($datetimeoldformat);
 			$endtime = new DateTime($datetimeoldformat);
+			$endtime->modify("+30 minutes");
 			$totalPrograms[$index]['id'] = $index;
 			$totalPrograms[$index]['title'] = $row['show_name'];
 			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);

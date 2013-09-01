@@ -455,7 +455,9 @@ $(document).ready(function() {
 		width: 500px;
 		margin: 20px auto;
 		}
-
+.fc-event-time{
+   display : none;
+}
 
 </style>
     <header class="clearfix">
