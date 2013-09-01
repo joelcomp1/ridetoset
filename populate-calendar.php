@@ -81,7 +81,7 @@ function clean($str) {
 			$datetimeoldformat = date("Y/m/d", strtotime($concat)); 
 			$datetime = new DateTime($datetimeoldformat);
 			$endtime = new DateTime($datetimeoldformat);
-			$endtime->modify("+30 minutes");
+			$endtime->modify("+1 day");
 			$totalPrograms[$index]['id'] = $index;
 			$totalPrograms[$index]['title'] = $row['show_name'];
 			$totalPrograms[$index]['start'] = $datetime->format(DateTime::ISO8601);
