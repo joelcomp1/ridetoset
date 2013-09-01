@@ -21,7 +21,9 @@
 	$user_id = clean($_SESSION['user_id']);
 	$show_name = clean($_POST['hiddenname']);
 	$call_time = clean($_POST['calltimeinday']);
-	$call_date = clean($_POST['hiddendate']);
+	$dateFromCal = clean($_POST['hiddendate']);
+	$dateFromCal = substr($dateFromCal, 0, strpos($dateFromCal, "GMT"));
+	$call_date = date('D M d Y', strtotime($dateFromCal));
 	$call_city = clean($_POST['city']);
 	$call_state = clean($_POST['state']);
 	
