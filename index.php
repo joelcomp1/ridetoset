@@ -339,6 +339,9 @@ $(document).ready(function() {
 					date = view.start.toDateString(); /*day view so should just be the single date*/
 					var elem = document.getElementById("showdate");
 					elem.value = date;
+					$("#calendar").css({
+						height: $(document).height() * 0.6
+					}); 
 				}
 				else
 				{
