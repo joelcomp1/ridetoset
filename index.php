@@ -459,11 +459,11 @@ $(document).ready(function() {
    display : none;
 }
 
-.fc-view-week .fc-event-time{
+.fc-view-basicWeek .fc-event-time{
    display : none;
 }
 
-.fc-view-basicday .fc-event-time{
+.fc-view-basicDay .fc-event-time{
    display : none;
 }
 
