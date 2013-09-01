@@ -362,7 +362,7 @@ $(document).ready(function() {
 				document.getElementById("hiddenname").innerHTML = calEvent.title;
 				$("[name='hiddenname']").val(calEvent.title);
 				document.getElementById("hiddendate").innerHTML = calEvent.start;
-								$("[name='hiddendate']").val(calEvent.starts);
+				$("[name='hiddendate']").val(calEvent.start);
 
 				 jQuery.ajax({
 				url: 'session-start.php',
@@ -395,8 +395,13 @@ $(document).ready(function() {
 				right: 'agendaDay'
 			},
 			defaultView: "agendaDay",
-			
-			events: "populate-calendar-day.php",
+			 eventSources: [
+
+        // your event source
+        {
+            url: '/populate-calendar-day.php', // use the `url` property
+        }],
+			//events: "populate-calendar-day.php",
 			eventClick: function(calEvent, jsEvent, view) {
 				 $('#daycalendar').hide();
 				 var s = new String (calEvent.start);
