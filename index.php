@@ -400,7 +400,14 @@ $(document).ready(function() {
         // your event source
         {
             url: '/populate-calendar-day.php', // use the `url` property
-        }
+        },
+		
+		
+            events: function(start, end, callback) {
+              document.getElementById("hiddendate").innerHTML = start;
+				$("[name='hiddendate']").val(start);
+            }
+        
 
 		],
 			//events: "populate-calendar-day.php",
