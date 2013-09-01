@@ -402,6 +402,11 @@ $(document).ready(function() {
             url: '/populate-calendar-day.php', // use the `url` property
         }],
 		events: function(start, end, callback) {
+		$.ajax({
+            url: 'populate-calendar-day.php'
+        });
+		
+		
 				document.getElementById("hiddendate").innerHTML = start;
 				$("[name='hiddendate']").val(start);
 		},
