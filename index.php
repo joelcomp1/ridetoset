@@ -339,9 +339,7 @@ $(document).ready(function() {
 					date = view.start.toDateString(); /*day view so should just be the single date*/
 					var elem = document.getElementById("showdate");
 					elem.value = date;
-					$("#calendar").css({
-						height: $(document).height() * 0.6
-					}); 
+
 				}
 				else
 				{
@@ -698,7 +696,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
               </a>
             </li-->
             <li>
-					<input type="button" id="sendRequest" class="try sprited" value="Invite Friends!">
+					<input type="button" id="sendRequest" class="apprequests try sprited" value="Invite Friends!">
 
               <!--sa href="#" class="apprequests" id="sendRequest" data-message="Check out Ride To Set! Bringing background actors together.">
                 <pan class="apprequests">Invite Friends!</span>
