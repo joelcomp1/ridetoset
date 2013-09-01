@@ -19,11 +19,11 @@
 		return  mysql_escape_string($str);
 	}
 	$user_id = clean($_SESSION['user_id']);
-	$show_name = clean($_SESSION['hiddenname']);
-	$call_time = clean($_SESSION['calltimeinday']);
-	$call_date = clean($_SESSION['hiddendate']);
-	$call_city = clean($_SESSION['city']);
-	$call_state = clean($_SESSION['state']);
+	$show_name = clean($_POST['hiddenname']);
+	$call_time = clean($_POST['calltimeinday']);
+	$call_date = clean($_POST['hiddendate']);
+	$call_city = clean($_POST['city']);
+	$call_state = clean($_POST['state']);
 	
 	$qry = "INSERT INTO shows(user_id, show_name, call_date, call_time, city, state) 
 	    				VALUES('$user_id','$show_name','$call_date','$call_time', '$call_city', '$call_state')";
