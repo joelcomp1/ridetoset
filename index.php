@@ -519,13 +519,69 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 
 			<div id="specificShow" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px; background-color:white; text-align:center;">
                 <h1 id="header_show_name" style="font-size: 35px;"></h1><br>
-                 <div id='daycalendar'></div>
-				<form id="add_time_to_show" method="post" action="add-time.php">
-    					<label><strong>Call Time:</strong> <input id="calltimeinday" class="time sprited"  name="calltimeinday" type="text"></label>
-                    <div id="actions">
+					<form id="add_time_to_show" method="post" action="add-time.php">
+    				<label><strong>Call Time:</strong> <input id="calltimeinday" class="time sprited"  name="calltimeinday" type="text"></label>
+                    <label><strong>City:</strong> <input class="sprited" id="city" name="city" >
+					<strong>State:</strong> <select id="state" name="state"> 
+<option value="" >Select a State</option> 
+<option value="AL">Alabama</option> 
+<option value="AK">Alaska</option> 
+<option value="AZ">Arizona</option> 
+<option value="AR">Arkansas</option> 
+<option value="CA" selected="selected">California</option> 
+<option value="CO">Colorado</option> 
+<option value="CT">Connecticut</option> 
+<option value="DE">Delaware</option> 
+<option value="DC">District Of Columbia</option> 
+<option value="FL">Florida</option> 
+<option value="GA">Georgia</option> 
+<option value="HI">Hawaii</option> 
+<option value="ID">Idaho</option> 
+<option value="IL">Illinois</option> 
+<option value="IN">Indiana</option> 
+<option value="IA">Iowa</option> 
+<option value="KS">Kansas</option> 
+<option value="KY">Kentucky</option> 
+<option value="LA">Louisiana</option> 
+<option value="ME">Maine</option> 
+<option value="MD">Maryland</option> 
+<option value="MA">Massachusetts</option> 
+<option value="MI">Michigan</option> 
+<option value="MN">Minnesota</option> 
+<option value="MS">Mississippi</option> 
+<option value="MO">Missouri</option> 
+<option value="MT">Montana</option> 
+<option value="NE">Nebraska</option> 
+<option value="NV">Nevada</option> 
+<option value="NH">New Hampshire</option> 
+<option value="NJ">New Jersey</option> 
+<option value="NM">New Mexico</option> 
+<option value="NY">New York</option> 
+<option value="NC">North Carolina</option> 
+<option value="ND">North Dakota</option> 
+<option value="OH">Ohio</option> 
+<option value="OK">Oklahoma</option> 
+<option value="OR">Oregon</option> 
+<option value="PA">Pennsylvania</option> 
+<option value="RI">Rhode Island</option> 
+<option value="SC">South Carolina</option> 
+<option value="SD">South Dakota</option> 
+<option value="TN">Tennessee</option> 
+<option value="TX">Texas</option> 
+<option value="UT">Utah</option> 
+<option value="VT">Vermont</option> 
+<option value="VA">Virginia</option> 
+<option value="WA">Washington</option> 
+<option value="WV">West Virginia</option> 
+<option value="WI">Wisconsin</option> 
+<option value="WY">Wyoming</option>
+</select></label>
+					<div id="actions">
 						<input type="submit" id="try-2" class="try sprited" value="Add">
                     </div>
 					</form>
+                 <div id='daycalendar'></div>
+	
 					<div id='timewhosgoing' style="display:none;">
 					
 						<h2 id="header_show_time" style="font-weight: bold;"></h2><br>
