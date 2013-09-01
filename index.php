@@ -359,6 +359,8 @@ $(document).ready(function() {
 
 					
 				document.getElementById("header_show_name").innerHTML = calEvent.title;
+				document.getElementById("hiddenname").innerHTML = calEvent.title;
+				document.getElementById("hiddendate").innerHTML = calEvent.start;
 				 jQuery.ajax({
 				url: 'session-start.php',
 				type: 'POST',
@@ -533,6 +535,8 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 					<form id="add_time_to_show" method="post" action="add-time.php">
     				<label><strong>Call Time:</strong> <input id="calltimeinday" class="time sprited"  name="calltimeinday" type="text"></label>
                     <label><strong>City:</strong> <input class="sprited" id="city" name="city" >
+					<input type="hidden" id="hiddendate" name="hiddendate">
+					<input type="hidden" id="hiddenname" name="hiddenname">
 					<strong>State:</strong> <select id="state" name="state"> 
 <option value="" >Select a State</option> 
 <option value="AL">Alabama</option> 
