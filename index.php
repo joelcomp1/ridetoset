@@ -251,7 +251,7 @@ $app_name = idx($app_info, 'name', '');
 	
 	function fillTags(thisValue) {
 		$('#inputString').val(thisValue);
-		$('#header_show_name').val(thisValue);
+		$('#header_show_name').innerHTML(thisValue);
 		setTimeout("$('#suggestions').hide();", 200);
 		$('#try-2').show();
 		
