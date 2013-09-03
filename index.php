@@ -200,6 +200,12 @@ $app_name = idx($app_info, 'name', '');
     <script type="text/javascript">
 	var date;
 	var show;
+	function update()
+	{
+		document.getElementById("header_show_name").innerHTML = document.getElementById("inputString").innerHTML;
+	
+	}
+	
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '<?php echo AppInfo::appID(); ?>', // App ID
@@ -511,7 +517,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 		&nbsp;
 	</div>
 	</div>
-	<input type="button" id="try-2" class="try sprited" value="Go" onclick="$('#daycalendar').fullCalendar('refetchEvents'); " style="">
+	<input type="button" id="try-2" class="try sprited" value="Go" onclick="$('#daycalendar').fullCalendar('refetchEvents'); update(); " style="">
 
 	
 
