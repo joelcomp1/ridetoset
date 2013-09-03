@@ -506,7 +506,7 @@ $(document).ready(function() {
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
 	<div id="searchshows" style="text-align:center;clear:both;">
-<input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags();" 
+<input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags(this.value);" 
 value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" />
 <div class="suggestionsBox" id="suggestions" style="display: none; text: font:bold 0.4em 'TeXGyreAdventor', Arial, sans-serif!important;">
 	<img src="images/upArrow.png" style="position: relative; top: -12px; left: 0px;" alt="upArrow" />
