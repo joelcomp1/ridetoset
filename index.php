@@ -382,7 +382,7 @@ $(document).ready(function() {
 	  $(".ui-datepicker a").each(function(index, elem) {
 						$(elem).attr("onclick", "$(this).closest(\".ui-datepicker\").fadeOut(\"fast\");");
 					});
-				$('#try-2').trigger('click');
+				//$('#try-2').trigger('click');
 
 			}
 		});
@@ -511,7 +511,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 		&nbsp;
 	</div>
 	</div>
-	<input type="button" id="try-2" class="try sprited" value="Go" onclick="$('#daycalendar').fullCalendar('refetchEvents'); " style="display: none;">
+	<input type="button" id="try-2" class="try sprited" value="Go" onclick="$('#daycalendar').fullCalendar('refetchEvents'); " style="">
 
 	
 
