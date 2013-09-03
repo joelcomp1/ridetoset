@@ -379,10 +379,10 @@ $(document).ready(function() {
 				}
 				
     });
-	  $(".ui-datepicker a").each(function(index, elem) {
+				$(".ui-datepicker a").each(function(index, elem) {
 						$(elem).attr("onclick", "$(this).closest(\".ui-datepicker\").fadeOut(\"fast\");");
 					});
-				//$('#try-2').trigger('click');
+				$('#try-2').trigger('click');
 
 			}
 		});
