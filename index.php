@@ -200,11 +200,7 @@ $app_name = idx($app_info, 'name', '');
     <script type="text/javascript">
 	var date;
 	var show;
-	function update()
-	{
-		document.getElementById("header_show_name").innerHTML = document.getElementById("inputString").innerHTML;
-	
-	}
+
 	
       window.fbAsyncInit = function() {
         FB.init({
@@ -255,6 +251,7 @@ $app_name = idx($app_info, 'name', '');
 	
 	function fillTags(thisValue) {
 		$('#inputString').val(thisValue);
+		$('#header_show_name').val(thisValue);
 		setTimeout("$('#suggestions').hide();", 200);
 		$('#try-2').show();
 		
