@@ -421,6 +421,10 @@ $(document).ready(function() {
         }    
 
 		],
+		viewDisplay: function (element) {
+		document.getElementById("hiddendate").innerHTML = element.start;
+				$("[name='hiddendate']").val(element.start);
+		},
 			//events: "populate-calendar-day.php",
 			eventClick: function(calEvent, jsEvent, view) {
 				 $('#daycalendar').hide();
@@ -529,7 +533,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 		&nbsp;
 	</div>
 	</div>
-	<input type="button" id="try-2" class="try sprited" value="Go" onclick="$('#daycalendar').fullCalendar('refetchEvents'); update(); " style="">
+	<input type="button" id="try-2" class="try sprited" value="Go" onclick="$('#daycalendar').fullCalendar('refetchEvents');" style="">
 
 	
 
