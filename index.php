@@ -252,6 +252,21 @@ $app_name = idx($app_info, 'name', '');
 	function fillTags(thisValue) {
 		$('#inputString').val(thisValue);
 		document.getElementById('header_show_name').innerHTML = thisValue;
+				 jQuery.ajax({
+				url: 'session-start.php',
+				type: 'POST',
+				data: {
+					txt: thisValue,
+				},
+				dataType : 'json',
+				success: function(data, textStatus, xhr) {
+					console.log(data); // do with data e.g success message
+				},
+				error: function(xhr, textStatus, errorThrown) {
+					console.log(textStatus.reponseText);
+				}
+				
+    });
 		setTimeout("$('#suggestions').hide();", 200);
 		$('#try-2').show();
 		
