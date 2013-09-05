@@ -40,6 +40,7 @@ require_once('utils.php');
 
 require_once('sdk/src/facebook.php');
 
+
 $facebook = new Facebook(array(
   'appId'  => AppInfo::appID(),
   'secret' => AppInfo::appSecret(),
