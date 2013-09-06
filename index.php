@@ -130,6 +130,7 @@ $app_name = idx($app_info, 'name', '');
 <script src='javascript/gcal.js'></script>
 <script src='javascript/jquery.lightbox_me.js'></script>
   <script type="text/javascript" src="javascript/jquery.timepicker.js"></script>
+  <script src="//ads.lfstmedia.com/getad?site=197028" type="text/javascript"></script>
   <link rel="stylesheet" type="text/css" href="stylesheets/jquery.timepicker.css" />
 
     <script type="text/javascript">
@@ -486,6 +487,7 @@ $(document).ready(function() {
 
 </style>
     <header class="clearfix">
+	
     <section id="get-started">
       <!--p>Welcome to your Facebook app, running on <span>heroku</span>!</p>
       <a href="https://devcenter.heroku.com/articles/facebook" target="_top" class="button">Learn How to Edit This App</a>
@@ -521,6 +523,17 @@ $(document).ready(function() {
 		unset($_SESSION['ERRMSG_ARR']);
 	}
 ?>
+<div style="float:left;">
+<script type="text/javascript">
+    //<![CDATA[
+        LSM_Slot({
+            adkey: 'ca6',
+            ad_size: '300x250',
+            slot: 'slot76634'
+        });
+    //]]>
+</script>
+</div>
 <a href="http://forum.ridetoset.com" style="float:right;"><img src="images/forum_banner.png" height=150px width=300px></a>
 	<div style="text-align:center; float:right; margin-top:100px;">
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
