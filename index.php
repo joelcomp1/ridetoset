@@ -547,16 +547,16 @@ $(document).ready(function() {
   position:absolute;
   left:0;
   top:0;
-  width:440px;
-  height:200px;
+  width:500px;
+  height:400px;
   display:none;
   z-index:9999;
   padding:20px;
 }
 #boxes #dialog {
-  width:375px; 
-  height:203px;
+
   padding:10px;
+  text-align:center;
   background-color:#ffffff;
 }
 
