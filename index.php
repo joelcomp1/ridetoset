@@ -375,6 +375,11 @@ $(document).ready(function() {
 				{
 					$('#try-1').trigger('click');
 				}
+				  $('#calendar')
+                .fullCalendar('changeView', 'basicDay'/* or 'basicDay' */)
+                .fullCalendar('gotoDate',
+                    date.getFullYear(), date.getMonth(), date.getDate());
+				$('#searchshows').show();
 			},
 			  eventClick: function(calEvent, jsEvent, view) {
 			  $('#daycalendar').show();
