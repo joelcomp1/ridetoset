@@ -371,8 +371,10 @@ $(document).ready(function() {
 			events: "populate-calendar.php",
 			dayClick:  function(date, allDay, jsEvent, view)
 			{
+				if(view.name == "basicDay")
+				{
 					$('#try-1').trigger('click');
-
+				}
 			},
 			  eventClick: function(calEvent, jsEvent, view) {
 			  $('#daycalendar').show();
