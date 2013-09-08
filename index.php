@@ -532,7 +532,7 @@ $(document).ready(function() {
 ?>
 <a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner.png" height=150px width=300px style="margin-top: 50px;></a>
 
-<div style="text-align:center; float:left; margin-top:100px; margin-right: 25px; margin-left: 25px;">
+<div style="text-align:center; float:left; margin-top:0px; margin-right: 25px; margin-left: 25px;">
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
 	
@@ -541,7 +541,7 @@ $(document).ready(function() {
     //<![CDATA[
         LSM_Slot({
             adkey: 'ca6',
-            ad_size: '300x250',
+            ad_size: '300x150',
             slot: 'slot76634'
         });
     //]]>
