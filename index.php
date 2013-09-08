@@ -633,8 +633,16 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 </div>
 <div id="boxes">
 <div style="top: 199.5px; left: 551.5px; display: none;" id="dialog" class="window">
-Simple Modal Window | 
-<a href="#" class="close">Close it</a>
+<script type="text/javascript">
+    //<![CDATA[
+        LSM_Slot({
+            adkey: 'ca6',
+            ad_size: '300x250',
+            slot: 'slot76634'
+        });
+    //]]>
+</script>
+<a href="#" class="close" style="float:right;">X</a>
 </div>
 <!-- Mask to cover the whole screen -->
 <div style="width: 1478px; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
