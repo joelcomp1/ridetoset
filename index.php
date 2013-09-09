@@ -581,6 +581,15 @@ $(document).ready(function() {
         <div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="5"  data-size="large" data-scope="user_likes,user_photos"></div>
       </div>
       <?php } ?>
+	  <script type="text/javascript">
+    //<![CDATA[
+        LSM_Slot({
+            adkey: '1a1',
+            ad_size: '728x90',
+            slot: 'slot76860'
+        });
+    //]]>
+</script>
     </header>
     <?php
       if ($user_id) {
