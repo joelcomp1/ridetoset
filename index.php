@@ -607,7 +607,9 @@ $(document).ready(function() {
 		unset($_SESSION['ERRMSG_ARR']);
 	}
 ?>
+<div style="text-align:center;">
 <a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner.png" height=150px width=300px ></a>
+<a href="" style="float:left;"><img src="images/tutvideobanner.png" height=100px width=300px></a>
 
 	
 	<div style="float:left;">
@@ -622,8 +624,7 @@ $(document).ready(function() {
 </script>
 
 </div>
-
-<a href="" style="float:left;"><img src="images/tutvideobanner.png" height=100px width=300px></a>
+</div>
 <div style="text-align:center; clear:both;margin-top:100px;">
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
