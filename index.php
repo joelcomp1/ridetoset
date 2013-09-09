@@ -626,6 +626,7 @@ $(document).ready(function() {
 <a href="" style="float:left;"><img src="images/tutvideobanner.png" height=100px width=300px></a>
 
 </div>
+<br><br>
 <div style="text-align:center; clear:both;margin-top:100px;">
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
