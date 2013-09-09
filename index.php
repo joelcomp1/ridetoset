@@ -608,10 +608,8 @@ $(document).ready(function() {
 	}
 ?>
 <a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner.png" height=150px width=300px style="margin-top: 50px;"></a>
+<a href="" style="float:left;"><img src="images/tutvideobanner.png" height=100px width=300px></a>
 
-<div style="text-align:center; float:left; margin-top:100px;">
-		<input type="button" id="try-1" class="try sprited" value="Add Show!">
-	</div>
 	
 	<div style="float:left;">
 <script type="text/javascript">
@@ -624,6 +622,9 @@ $(document).ready(function() {
     //]]>
 </script>
 </div>
+<div style="text-align:center; margin-top:100px;">
+		<input type="button" id="try-1" class="try sprited" value="Add Show!">
+	</div>
 	<div id="searchshows" style="text-align:center;clear:both;">
 <input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags(this.value);" 
 value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" />
