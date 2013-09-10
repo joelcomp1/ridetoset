@@ -636,7 +636,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 
 </div>
 <div id="boxes">
-<div style="top: 199.5px; left: 551.5px; display: none;" id="dialog" class="window">
+<div style="top: 199.5px; left: 551.5px; display: none;clear:both;" id="dialog" class="window">
 <script type="text/javascript">
     //<![CDATA[
         LSM_Slot({
@@ -646,8 +646,9 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
         });
     //]]>
 </script>
-<a href="#" class="close" style="float:right;">X</a>
+
 </div>
+<a href="#" class="close" style="text-align:center;">Close</a>
 <!-- Mask to cover the whole screen -->
 <div style="width: 1478px; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
 </div>
