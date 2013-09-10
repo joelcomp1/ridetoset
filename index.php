@@ -607,7 +607,7 @@ $(document).ready(function() {
 		unset($_SESSION['ERRMSG_ARR']);
 	}
 ?>
-<div style="text-align:center; clear:both;" height=150px>
+<div style="text-align:center; clear:both; height:150px;" >
 <a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner.png" height=150px width=300px ></a>
 
 	
@@ -616,7 +616,7 @@ $(document).ready(function() {
 
 </div>
 
-<div style="text-align:center; clear:both;margin-top:100px;">
+<div style="text-align:center; clear:both;margin-top:25px;">
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
 	<div id="searchshows" style="text-align:center;clear:both;">
