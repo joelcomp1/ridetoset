@@ -607,26 +607,15 @@ $(document).ready(function() {
 		unset($_SESSION['ERRMSG_ARR']);
 	}
 ?>
-<div style="text-align:center;">
+<div style="text-align:center; clear:both;">
 <a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner.png" height=150px width=300px ></a>
 
 	
-	<div style="float:right;">
-<script type="text/javascript">
-    //<![CDATA[
-        LSM_Slot({
-            adkey: 'ca6',
-            ad_size: '300x250',
-            slot: 'slot76634'
-        });
-    //]]>
-</script>
+	
+<a href="" style="float:right;"><img src="images/tutvideobanner.png" height=100px width=300px></a>
 
 </div>
-<a href="" style="float:left;"><img src="images/tutvideobanner.png" height=100px width=300px></a>
 
-</div>
-<br><br>
 <div style="text-align:center; clear:both;margin-top:100px;">
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
@@ -862,7 +851,15 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
           ?>
         </ul>
       </div>
-
+  <script type="text/javascript">
+    //<![CDATA[
+        LSM_Slot({
+            adkey: '1a1',
+            ad_size: '728x90',
+            slot: 'slot76860'
+        });
+    //]]>
+</script>
 	
     <?php
       }
