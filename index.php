@@ -547,8 +547,8 @@ $(document).ready(function() {
   position:absolute;
   left:0;
   top:0;
-  width:500px;
-  height:400px;
+  width:300px;
+  height:275px;
   display:none;
   z-index:9999;
   padding:20px;
@@ -607,7 +607,7 @@ $(document).ready(function() {
 		unset($_SESSION['ERRMSG_ARR']);
 	}
 ?>
-<div style="text-align:center; clear:both;">
+<div style="text-align:center; clear:both;" height=150px>
 <a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner.png" height=150px width=300px ></a>
 
 	
@@ -851,12 +851,12 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
           ?>
         </ul>
       </div>
-  <script type="text/javascript">
+<script type="text/javascript">
     //<![CDATA[
         LSM_Slot({
-            adkey: '1a1',
-            ad_size: '728x90',
-            slot: 'slot76860'
+            adkey: '316',
+            ad_size: '720x300',
+            slot: 'slot77006'
         });
     //]]>
 </script>
