@@ -646,8 +646,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
         });
     //]]>
 </script>
-<br><br>
-
+<br>
 <a href="#" class="close" id="close" style="text-align:center;">Close</a>
 
 </div>
@@ -811,6 +810,15 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 				<a id="close_x" class="close sprited" href="#">close</a>
 			</div-->	
 <br><br>
+<script type="text/javascript">
+    //<![CDATA[
+        LSM_Slot({
+            adkey: '272',
+            ad_size: '728x90',
+            slot: 'slot77011'
+        });
+    //]]>
+</script>
       <div class="list" style="text-align:center;">
         <h1 style="float:left; position:relative; left: 40%;">Friends using this app</h1>
        <div id="share-app">
