@@ -646,9 +646,10 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
         });
     //]]>
 </script>
+<br><br>
+<a href="#" class="close" style="text-align:center;">Close</a>
 
 </div>
-<a href="#" class="close" style="text-align:center;">Close</a>
 <!-- Mask to cover the whole screen -->
 <div style="width: 1478px; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
 </div>
