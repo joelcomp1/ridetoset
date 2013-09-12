@@ -612,7 +612,7 @@ $(document).ready(function() {
 
 	
 	
-<a href="" style="float:right;"><img src="images/tutvideobanner.png" height=100px width=300px></a>
+<a href="" style="float:right;"><img src="images/tutvideobanner.png" height=150px width=300px></a>
 
 </div>
 
