@@ -223,8 +223,8 @@ $app_name = idx($app_info, 'name', '');
           // post made to this page and a reload will trigger a message to the
           // user asking if they want to send data again.
           //window.location = window.location;
-		  window.location.reload();
-        });
+			location.reload();
+		});
 
 		
         FB.Canvas.setAutoGrow();
