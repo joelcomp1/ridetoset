@@ -136,7 +136,7 @@ $app_name = idx($app_info, 'name', '');
     <script type="text/javascript">
       function logResponse(response) {
         if (console && console.log) {
-          console.log('The response was', response);
+          //console.log('The response was', response);
         }
       }
 
