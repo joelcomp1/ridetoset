@@ -135,9 +135,9 @@ $app_name = idx($app_info, 'name', '');
 
     <script type="text/javascript">
       function logResponse(response) {
-        if (console && console.log) {
+       // if (console && console.log) {
           //console.log('The response was', response);
-        }
+        //}
       }
 
       $(function(){
@@ -262,10 +262,10 @@ $app_name = idx($app_info, 'name', '');
 				},
 				dataType : 'json',
 				success: function(data, textStatus, xhr) {
-					console.log(data); // do with data e.g success message
+					//console.log(data); // do with data e.g success message
 				},
 				error: function(xhr, textStatus, errorThrown) {
-					console.log(textStatus.reponseText);
+					//console.log(textStatus.reponseText);
 				}
 				
     });
@@ -442,10 +442,10 @@ $(document).ready(function() {
 				},
 				dataType : 'json',
 				success: function(data, textStatus, xhr) {
-					console.log(data); // do with data e.g success message
+				//	console.log(data); // do with data e.g success message
 				},
 				error: function(xhr, textStatus, errorThrown) {
-					console.log(textStatus.reponseText);
+					//console.log(textStatus.reponseText);
 				}
 				
     });
