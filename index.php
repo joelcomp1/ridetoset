@@ -635,13 +635,13 @@ if($deviceType == 'computer')
 else
 {
 ?>
-<div style="text-align:center; clear:both;margin-top:25px;">
+<div>
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
-<div style="text-align:center; clear:both; height:150px;" >
+<div style="clear:both; height:150px;" >
 
-<a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner_mobile.png" height=150px width=300px ></a>
-<a href="" style="float:right;"><img src="images/tutvideobannermobile.png" height=150px width=300px></a>
+<a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner_mobile.png"></a>
+<a href="" style="float:right;"><img src="images/tutvideobannermobile.png" ></a>
 
 </div>
 
