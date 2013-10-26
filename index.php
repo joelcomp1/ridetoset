@@ -651,7 +651,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 else
 {
 ?>
-<div id="searchshows" style="text-align:center;clear:both;">
+<div id="searchshows" style="text-align:center;clear:both;width:728px">
 <input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags(this.value);" 
 value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" />
 <div class="suggestionsBox" id="suggestions" style="display: none; text: font:bold 0.4em 'TeXGyreAdventor', Arial, sans-serif!important;">
@@ -668,7 +668,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 
 </div>
 <div style="height:150px; width:728px" >
-<input type="button" id="try-1" class="try sprited" value="Add Show!" style="width:200px; height: 60px;>
+<input type="button" id="try-1" class="try sprited" value="Add Show!" style="width:200px; height: 60px; float:left;>
 <a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner_mobile.png" width=200 height=60></a>
 <a href="" style="float:left;"><img src="images/tutvideobannermobile.png" width=200 height=60></a>
 </div>
