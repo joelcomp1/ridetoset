@@ -14,6 +14,11 @@
 require_once('AppInfo.php');
 
 
+require_once 'Mobile_Detect.php';
+$detect = new Mobile_Detect;
+$deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
+$scriptVersion = $detect->getScriptVersion();
+
 // Enforce https on production
 if (substr(AppInfo::getUrl(), 0, 8) != 'https://' && $_SERVER['REMOTE_ADDR'] != '127.0.0.1') {
   header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
@@ -611,11 +616,13 @@ $(document).ready(function() {
 		unset($_SESSION['ERRMSG_ARR']);
 	}
 ?>
+<?php
+if($deviceType == 'computer')
+{
+?>
 <div style="text-align:center; clear:both; height:150px;" >
-<a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner.png" height=150px width=300px ></a>
 
-	
-	
+<a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner.png" height=150px width=300px ></a>
 <a href="" style="float:right;"><img src="images/tutvideobanner.png" height=150px width=300px></a>
 
 </div>
@@ -623,6 +630,27 @@ $(document).ready(function() {
 <div style="text-align:center; clear:both;margin-top:25px;">
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
+<?php 
+}
+else
+{
+?>
+<div style="text-align:center; clear:both;margin-top:25px;">
+		<input type="button" id="try-1" class="try sprited" value="Add Show!">
+	</div>
+<div style="text-align:center; clear:both; height:150px;" >
+
+<a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner_mobile.png" height=150px width=300px ></a>
+<a href="" style="float:right;"><img src="images/tutvideobannermobile.png" height=150px width=300px></a>
+
+</div>
+
+
+
+
+<?php 
+}
+?>
 	<div id="searchshows" style="text-align:center;clear:both;">
 <input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags(this.value);" 
 value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" />
