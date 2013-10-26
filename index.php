@@ -669,8 +669,8 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 </div>
 <div style="text-align:center;clear:both;width:728px">
 <input type="button" id="try-1" class="try sprited" value="Add Show!" style="width:200px; height: 60px;">
-<a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner_mobile.png" width=200 height=60></a>
-<a href="" style="float:left;"><img src="images/tutvideobannermobile.png" width=200 height=60></a>
+<a href="http://forum.ridetoset.com" style=""><img src="images/forum_banner_mobile.png" width=200 height=60></a>
+<a href="" style=""><img src="images/tutvideobannermobile.png" width=200 height=60></a>
 </div>
 
 
