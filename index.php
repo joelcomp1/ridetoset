@@ -630,24 +630,6 @@ if($deviceType == 'computer')
 <div style="text-align:center; clear:both;margin-top:25px;">
 		<input type="button" id="try-1" class="try sprited" value="Add Show!">
 	</div>
-<?php 
-}
-else
-{
-?>
-
-<div style="height:150px; width:728px" >
-<input type="button" id="try-1" class="try sprited" value="Add Show!">
-<a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner_mobile.png" width=200 height=60></a>
-<a href="" style="float:left;"><img src="images/tutvideobannermobile.png" width=200 height=60></a>
-</div>
-
-
-
-
-<?php 
-}
-?>
 	<div id="searchshows" style="text-align:center;clear:both;">
 <input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags(this.value);" 
 value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" />
@@ -664,6 +646,40 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 	<!--a href="#" id="try-2" class="try sprited"><img src="../images/help.png" style="padding: 0px 0px 0px 20px;"></a-->
 
 </div>
+<?php 
+}
+else
+{
+?>
+<div id="searchshows" style="text-align:center;clear:both;">
+<input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags(this.value);" 
+value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" />
+<div class="suggestionsBox" id="suggestions" style="display: none; text: font:bold 0.4em 'TeXGyreAdventor', Arial, sans-serif!important;">
+	<img src="images/upArrow.png" style="position: relative; top: -12px; left: 0px;" alt="upArrow" />
+<div class="suggestionList" id="autoSuggestionsList">
+		&nbsp;
+	</div>
+	</div>
+	<input type="button" id="try-2" class="try sprited" value="Go" onclick="$('#daycalendar').fullCalendar('refetchEvents');" style="">
+
+	
+
+	<!--a href="#" id="try-2" class="try sprited"><img src="../images/help.png" style="padding: 0px 0px 0px 20px;"></a-->
+
+</div>
+<div style="height:150px; width:728px" >
+<input type="button" id="try-1" class="try sprited" value="Add Show!" style="width:200px; height: 60px;>
+<a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner_mobile.png" width=200 height=60></a>
+<a href="" style="float:left;"><img src="images/tutvideobannermobile.png" width=200 height=60></a>
+</div>
+
+
+
+
+<?php 
+}
+?>
+	
 <div id="boxes">
 <div style="top: 199.5px; left: 551.5px; display: none;clear:both;" id="dialog" class="window">
 <script type="text/javascript">
