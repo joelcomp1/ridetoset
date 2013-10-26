@@ -696,7 +696,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 
 </div>
 <!-- Mask to cover the whole screen -->
-<div style="width: 1478px; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
+<div style="width: 1478px; height: 1487px; display: none; opacity: 0.8;" id="mask"></div>
 </div>
 	<br>
     <div id='calendar'></div>
