@@ -636,10 +636,10 @@ else
 {
 ?>
 
-<div style="clear:both; height:150px;" >
+<div style="clear:both; height:150px; width:728" >
 <input type="button" id="try-1" class="try sprited" value="Add Show!">
-<a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner_mobile.png" width=120 height=35></a>
-<a href="" style="float:left;"><img src="images/tutvideobannermobile.png" width=120 height=35></a>
+<a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner_mobile.png" width=200 height=60></a>
+<a href="" style="float:left;"><img src="images/tutvideobannermobile.png" width=200 height=60></a>
 </div>
 
 
