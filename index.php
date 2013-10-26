@@ -229,7 +229,7 @@ $app_name = idx($app_info, 'name', '');
           // user asking if they want to send data again.
 			if (navigator.appName != 'Microsoft Internet Explorer')
 			{
-				window.location = window.location;
+				//window.location = window.location;
 			}
 		});
 
