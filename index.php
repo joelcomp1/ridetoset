@@ -647,9 +647,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 
 </div>
 <?php 
-}
-else
-{
+
 ?>
 <div id="searchshows" style="text-align:center;clear:both;width:728px">
 <input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags(this.value);" 
