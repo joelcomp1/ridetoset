@@ -623,7 +623,7 @@ if($deviceType == 'computer')
 <div style="text-align:center; clear:both; height:150px;" >
 
 <a href="http://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner.png" height=150px width=300px ></a>
-<a href="" style="float:right;"><img src="images/tutvideobanner.png" height=150px width=300px></a>
+<a href="http://ridetoset.com/video.html" style="float:right;"><img src="images/tutvideobanner.png" height=150px width=300px></a>
 
 </div>
 
@@ -671,7 +671,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
     display: block;">
 <a href="http://forum.ridetoset.com" style="float: left;padding-top: 25px;margin-left: 10%;"><img src="images/forum_banner_mobile.png" width=200 height=60 ></a>
 <input type="button" id="try-1" class="try sprited" value="Add Show!" style="width:200px; height: 60px; float: left;margin-top: 25px;">
-<a href="" style="float: left;padding-top: 25px;"><img src="images/tutvideobannermobile.png" width=200 height=60></a>
+<a href="http://ridetoset.com/video.html" style="float: left;padding-top: 25px;"><img src="images/tutvideobannermobile.png" width=200 height=60></a>
 </div>
 
 
