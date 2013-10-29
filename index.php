@@ -856,7 +856,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 				<a id="close_x" class="close sprited" href="#">close</a>
 			</div-->	
 <br><br>
-<script type="text/javascript">
+<!--script type="text/javascript">
     //<![CDATA[
         LSM_Slot({
             adkey: '272',
@@ -864,7 +864,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
             slot: 'slot77011'
         });
     //]]>
-</script>
+</script-->
       <div class="list" style="text-align:center; margin-top: 20px;">
         <h1 style="float:left; position:relative; left: 40%;">Friends using this app</h1>
        <div id="share-app">
