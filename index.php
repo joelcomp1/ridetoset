@@ -622,8 +622,8 @@ if($deviceType == 'computer')
 ?>
 <div style="text-align:center; clear:both; height:150px;" >
 
-<a href="https://forum.ridetoset.com" style="float:left;"><img src="images/forum_banner.png" height=150px width=300px ></a>
-<a href="https://ridetoset.com/video.html" style="float:right;"><img src="images/tutvideobanner.png" height=150px width=300px></a>
+<a href="http://forum.ridetoset.com" target="_blank" style="float:left;"><img src="images/forum_banner.png" height=150px width=300px ></a>
+<a href="http://ridetoset.com/video.html" target="_blank" style="float:right;"><img src="images/tutvideobanner.png" height=150px width=300px></a>
 
 </div>
 
