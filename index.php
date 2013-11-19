@@ -776,7 +776,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 						<div id="pageContent"></div>
 						
 					</div>
-				 
+				 <a id="close_x" class="close sprited" href="#">close</a>
                 </div>
 	
 	
