@@ -469,6 +469,7 @@ header .tagline {
         display: block;
         position: absolute; top: 5px; right: 5px;
         background-position: -387px -102px;
+		background-image:url("images/close-x.png");
     }
     #usage { background-position: -323px -172px; width: 67px; height: 22px;}
 	
