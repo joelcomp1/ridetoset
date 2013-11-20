@@ -849,7 +849,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 
 					</form>
                
-                <a id="close_x" class="close sprited" href="#">close</a>
+				 <a id="close_x" class="close sprited" href="#" style="background:url('images/close-x.png');  background-size:24px 23px;">close</a>
             </div>
 			<!--div id="moreinfo" style="display: none; left: 50%; margin-left: -223px; z-index: 1002; position: fixed; top: 50%; margin-top: -159px; text-align:center;">
 				Don't see your show? Click the "Add Show!" button to add your show and call time for that day.
