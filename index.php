@@ -776,7 +776,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 						<div id="pageContent"></div>
 						
 					</div>
-				 <a id="close_x" class="close sprited" href="#" style="background:url('images/close-x.png');">close</a>
+				 <a id="close_x" class="close sprited" href="#" style="background:url('images/close-x.png');  background-size:24px 23px;">close</a>
                 </div>
 	
 	
