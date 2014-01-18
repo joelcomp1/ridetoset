@@ -99,16 +99,10 @@ $app_name = idx($app_info, 'name', '');
 
 ?>
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
 
     <title><?php echo he($app_name); ?></title>
     <link rel="stylesheet" href="stylesheets/screen.css" media="Screen" type="text/css" />
@@ -140,10 +134,6 @@ $app_name = idx($app_info, 'name', '');
 <script src='javascript/fullcalendar.min.js'></script>
 <script src='javascript/gcal.js'></script>
 <script src='javascript/jquery.lightbox_me.js'></script>
-        <script src="javascript/plugins.js"></script>
-        <script src="javascript/main.js"></script>
-		      <link rel="stylesheet" href="stylesheets/normalize.css">
-        <link rel="stylesheet" href="stylesheets/main.css">
   <script type="text/javascript" src="javascript/jquery.timepicker.js"></script>
   <script src="//ads.lfstmedia.com/getad?site=197028" type="text/javascript"></script>
   <link rel="stylesheet" type="text/css" href="stylesheets/jquery.timepicker.css" />
