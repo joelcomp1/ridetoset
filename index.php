@@ -912,10 +912,11 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
           ?>
         </ul>
       </div>
-	  <div class="module-inner2"><a href="https://www.facebook.com/ridetoset">
-<img border="0" src="index_files/images/facebook.png" alt="RideToSet on Facebook" width="32" height="32" style="margin-left: 30px;"></a>
-<a href="https://twitter.com/RideToSet">
-<img border="0" src="index_files/images/twitter.png" alt="RideToSet on Facebook" width="32" height="32" style="margin-left: 20px;"></a><p></p></div>
+	  <div class="module-inner2" style="text-align:center; display:block;">
+	  <a href="https://www.facebook.com/ridetoset">
+			<img border="0" src="images/facebook.png" alt="RideToSet on Facebook" width="32" height="32" style="margin-left: 30px;"></a>
+		<a href="https://twitter.com/RideToSet">
+<img border="0" src="images/twitter.png" alt="RideToSet on Facebook" width="32" height="32" style="margin-left: 20px;"></a><p></p></div>
 <script type="text/javascript">
     //<![CDATA[
         LSM_Slot({
