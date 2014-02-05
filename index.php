@@ -587,6 +587,11 @@ $(document).ready(function() {
 
       <div>
         <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong><br>
+			  <div class="module-inner2" style="float:right;">
+	  <a href="https://www.facebook.com/ridetoset">
+			<img border="0" src="images/facebook.png" alt="RideToSet on Facebook" width="32" height="32" style="margin-left: 30px;"></a>
+		<a href="https://twitter.com/RideToSet">
+<img border="0" src="images/twitter.png" alt="RideToSet on Facebook" width="32" height="32" style="margin-left: 20px;"></a><p></p></div>
       </div>
       <?php } else { ?>
       <div  style="text-align: center;">
@@ -912,11 +917,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
           ?>
         </ul>
       </div>
-	  <div class="module-inner2" style="text-align:center; display:block;">
-	  <a href="https://www.facebook.com/ridetoset">
-			<img border="0" src="images/facebook.png" alt="RideToSet on Facebook" width="32" height="32" style="margin-left: 30px;"></a>
-		<a href="https://twitter.com/RideToSet">
-<img border="0" src="images/twitter.png" alt="RideToSet on Facebook" width="32" height="32" style="margin-left: 20px;"></a><p></p></div>
+
 <script type="text/javascript">
     //<![CDATA[
         LSM_Slot({
