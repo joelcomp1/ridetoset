@@ -586,7 +586,7 @@ $(document).ready(function() {
       <p id="picture" style="background-image: url(https://graph.facebook.com/<?php echo he($user_id); ?>/picture?type=normal)"></p>
 
       <div>
-        <h1>Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong>
+        <h1 style="height: 32px;">Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong>
 			  <div class="module-inner2" style="float:right;">
 	  <a href="https://www.facebook.com/ridetoset">
 			<img border="0" src="images/facebook.png" alt="RideToSet on Facebook" width="32" height="32" style="margin-left: 30px;"></a>
