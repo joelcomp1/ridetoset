@@ -500,12 +500,13 @@ $(document).ready(function() {
 				var hour = d.getMonth();
 				document.getElementById("header_show_time").innerHTML = formatAMPM(d);
 				//s = s.substring(0, s.indexOf(d.getHours()));
-				s = Date('Y', s);
+				var split = s.split();
+				var newString = s[0] + " " + s[1] + " " + s[2] + " " + s[3];
 				if(d.getHours() < 10)
 				{
 					//s = s.substring(0, s.indexOf(" 0"));
 				}
-				document.getElementById("header_show_time").innerHTML = s;
+				document.getElementById("header_show_time").innerHTML = newString;
 				document.getElementById("header_show_time").innerHTML += ", Call Time: ";
 				document.getElementById("header_show_time").innerHTML += formatAMPM(d);
 					$('#timewhosgoing').show();	
