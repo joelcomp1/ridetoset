@@ -500,7 +500,7 @@ $(document).ready(function() {
 				var hour = d.getMonth();
 				document.getElementById("header_show_time").innerHTML = formatAMPM(d);
 				//s = s.substring(0, s.indexOf(d.getHours()));
-				var split = s.split();
+				var split = s.split(" ");
 				var newString = s[0] + " " + s[1] + " " + s[2] + " " + s[3];
 				if(d.getHours() < 10)
 				{
