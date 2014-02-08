@@ -499,10 +499,10 @@ $(document).ready(function() {
 				var d = new Date(s);
 				var hour = d.getMonth();
 				document.getElementById("header_show_time").innerHTML = formatAMPM(d);
-				s = s.substring(0, s.indexOf(d.getHours()));
+				//s = s.substring(0, s.indexOf(d.getHours()));
 				if(d.getHours() < 10)
 				{
-					s = s.substring(0, s.indexOf(" 0"));
+					//s = s.substring(0, s.indexOf(" 0"));
 				}
 				document.getElementById("header_show_time").innerHTML = s;
 				document.getElementById("header_show_time").innerHTML += ", Call Time: ";
@@ -590,7 +590,7 @@ $(document).ready(function() {
 			  <div class="module-inner2" style="float:right;">
 	  <a href="https://www.facebook.com/ridetoset" target=_blank >
 			<img border="0" src="images/facebook.png" alt="RideToSet on Facebook" width="32" height="32" style="margin-left: 30px;"></a>
-		<a href="https://twitter.com/RideToSet" target=_blank>
+		<a href="https://twitter.com/RideToSet" target=_blank >
 <img border="0" src="images/twitter.png" alt="RideToSet on Twitter" width="32" height="32" style="margin-left: 20px;"></a><p></p></div>
 <br>
       </div>
