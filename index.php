@@ -588,10 +588,10 @@ $(document).ready(function() {
       <div>
         <h1 style="height: 32px;">Welcome, <strong><?php echo he(idx($basic, 'name')); ?></strong>
 			  <div class="module-inner2" style="float:right;">
-	  <a href="https://www.facebook.com/ridetoset">
+	  <a href="https://www.facebook.com/ridetoset" target=_blank >
 			<img border="0" src="images/facebook.png" alt="RideToSet on Facebook" width="32" height="32" style="margin-left: 30px;"></a>
-		<a href="https://twitter.com/RideToSet">
-<img border="0" src="images/twitter.png" alt="RideToSet on Facebook" width="32" height="32" style="margin-left: 20px;"></a><p></p></div>
+		<a href="https://twitter.com/RideToSet" target=_blank>
+<img border="0" src="images/twitter.png" alt="RideToSet on Twitter" width="32" height="32" style="margin-left: 20px;"></a><p></p></div>
 <br>
       </div>
       <?php } else { ?>
