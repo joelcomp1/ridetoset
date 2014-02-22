@@ -1,5 +1,4 @@
 <?php
-header('P3P: CP="CAO PSA OUR"');	
 
 /**
  * This sample app is provided to kickstart your experience using Facebook's
