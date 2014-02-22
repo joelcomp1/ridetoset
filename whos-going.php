@@ -136,11 +136,11 @@ xmlhttp.onreadystatechange=function()
 						if($imgoing == true)
 						{
 						?>
-							<form id="im_out" method="post" style="margin-top: 20px;">
-							<div id="actions">
+							<!--form id="im_out" method="post" style="margin-top: 20px;"-->
+							<div id="im_out">
 								<input type="submit" id="imout" class="try sprited" value="I'm Out!" onclick="notGoing()">
 							</div>
-							</form>
+							<!--/form-->
 							<?php
 							
 						}
