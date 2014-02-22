@@ -159,6 +159,13 @@ xmlhttp.onreadystatechange=function()
 							$imgoing = true;
 							
 						}
+						else
+						{
+							echo '<div style="clear:both; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: bold !important; display:none;" id="goingtext"><b>Your Going!<b></div>';
+							$imgoing = false;
+							
+						}
+						
 				}
 				
 						if($imgoing == true)
