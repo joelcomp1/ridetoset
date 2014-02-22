@@ -86,6 +86,30 @@ PhpConsole::start(true, true, dirname(__FILE__));
         });
     });
 });
+
+function notGoing()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+{// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+}
+else
+{// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.onreadystatechange=function()
+{
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+		$("#im_out").hide();
+		$("#im_going").show();
+    }
+}
+	xmlhttp.open("GET","not-going.php",true);
+	xmlhttp.send();
+	
+}
 	  </script>
 					<?php
 					
@@ -103,7 +127,7 @@ PhpConsole::start(true, true, dirname(__FILE__));
 					
 					    if($result->user_id == clean($_SESSION['user_id']))
 						{
-							echo '<div style="clear:both; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: bold;">Your Going!</div>';
+							echo '<div style="clear:both; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: bold;"><b>Your Going!<b></div>';
 							$imgoing = true;
 							
 						}
@@ -112,9 +136,9 @@ PhpConsole::start(true, true, dirname(__FILE__));
 						if($imgoing == true)
 						{
 						?>
-							<form id="im_out" method="post" action="not-going.php" style="margin-top: 20px;">
+							<form id="im_out" method="post" style="margin-top: 20px;">
 							<div id="actions">
-								<input type="submit" id="imout" class="try sprited" value="I'm Out!">
+								<input type="submit" id="imout" class="try sprited" value="I'm Out!" onclick="notGoing()">
 							</div>
 							</form>
 							<?php

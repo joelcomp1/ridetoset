@@ -32,12 +32,13 @@
 	
 	//Check whether the query was successful or not
 	if($result) {
+		echo "Success";
 			//create program part 1 Successful
-			session_regenerate_id();
+			//ession_regenerate_id();
 		
-			//header("location: index.php");
+			//header("location: whos-going.php");
 			
-			session_write_close();
+			//session_write_close();
 			//exit();
 			//exit();
 	}else {
