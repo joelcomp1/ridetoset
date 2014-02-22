@@ -611,6 +611,38 @@ $(document).ready(function() {
 	}
 
     </script>
+	<?php
+	if($deviceType == 'computer')
+	{
+	?>
+<style>
+	#calendar {
+		width: 720px;
+		margin: 0 auto;
+		}
+	#daycalendar {
+		width: 500px;
+		margin: 20px auto;
+		}
+</style>	
+	<?php
+	}
+	else
+	{
+	?>
+<style>
+	#calendar {
+		width: 500px;
+		margin: 0 auto;
+		}
+	#daycalendar {
+		width: 500px;
+		margin: 20px auto;
+		}
+</style>
+	<?php
+	}
+	?>
 <style>
 
 	#calendar {
@@ -685,6 +717,7 @@ $(document).ready(function() {
         <div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="5"  data-size="large" data-scope="user_likes,user_photos"></div>
       </div>
       <?php } ?>
+	  <div style="text-align:center;">
 		<?php
 		if($deviceType == 'computer')
 		{
@@ -716,7 +749,7 @@ $(document).ready(function() {
 		<?php 
 		}
 		?>
-
+</div>
     </header>
     <?php
       if ($user_id) {
@@ -769,7 +802,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 else
 {
 ?>
-<div id="searchshows" style="text-align:center;clear:both;width:728px">
+<div id="searchshows" style="text-align:center;clear:both;width:500px">
 <input name="inputString" type="text" size="30" id="inputString" autocomplete="off" onkeyup="lookup(this.value);" onblur="fillTags(this.value);" 
 value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typing Shows here...' ? '' : this.value; this.style.color='#000';" />
 <div class="suggestionsBox" id="suggestions" style="display: none; text: font:bold 0.4em 'TeXGyreAdventor', Arial, sans-serif!important;">
@@ -785,7 +818,7 @@ value="Start Typing Shows here..." onfocus="this.value = this.value=='Start Typi
 	<!--a href="#" id="try-2" class="try sprited"><img src="../images/help.png" style="padding: 0px 0px 0px 20px;"></a-->
 
 </div>
-<div style="text-align:center;clear:both;width:728px;   margin: 0 auto;
+<div style="text-align:center;clear:both;width:500px;   margin: 0 auto;
     display: block;">
 <a href="http://forum.ridetoset.com" target="_blank"  style="float: left;padding-top: 25px;margin-left: 10%;"><img src="images/forum_banner_mobile.png" width=200 height=60 ></a>
 <input type="button" id="try-1" class="try sprited" value="Add Show!" style="width:200px; height: 60px; float: left;margin-top: 25px;">
