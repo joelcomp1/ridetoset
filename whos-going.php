@@ -155,13 +155,13 @@ xmlhttp.onreadystatechange=function()
 					
 					    if($result->user_id == clean($_SESSION['user_id']))
 						{
-							echo '<div style="clear:both; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: bold !important;" id="goingtext"><b>Your Going!<b></div>';
+							echo '<div style="clear:both; font-size: 18px; font-weight: bold !important;" id="goingtext"><b>Your Going!<b></div>';
 							$imgoing = true;
 							
 						}
 						else
 						{
-							echo '<div style="clear:both; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: bold !important; display:none;" id="goingtext"><b>Your Going!<b></div>';
+							echo '<div style="clear:both; font-size: 18px; font-weight: bold !important; display:none;" id="goingtext"><b>Your Going!<b></div>';
 							$imgoing = false;
 							
 						}
