@@ -159,12 +159,7 @@ xmlhttp.onreadystatechange=function()
 							$imgoing = true;
 							
 						}
-						else
-						{
-							echo '<div style="clear:both; font-size: 18px; font-weight: bold !important; display:none;" id="goingtext"><b>Your Going!<b></div>';
-							$imgoing = false;
-							
-						}
+
 						
 				}
 				
@@ -186,6 +181,7 @@ xmlhttp.onreadystatechange=function()
 						}
 						else
 						{
+							echo '<div style="clear:both; font-size: 18px; font-weight: bold !important; display:none;" id="goingtext"><b>Your Going!<b></div>';
 						?>
 						<div id="im_out" style="display:none;">
 							<input type="button" id="imout" class="try sprited" value="I'm Out!" onclick="notGoing()">
@@ -197,6 +193,10 @@ xmlhttp.onreadystatechange=function()
 							</div>
 							<!--/form-->
 						<?php
+				
+							
+							
+					
 						}
 				
 				
