@@ -35,10 +35,11 @@
 			//create program part 1 Successful
 			session_regenerate_id();
 		
-			header("location: index.php");
+			//header("location: index.php");
 			
 			session_write_close();
-			exit();
+			//exit();
+			//exit();
 	}else {
 	echo 	$user_id;
 	echo 	$show_name;
