@@ -707,9 +707,9 @@ $(document).ready(function() {
 <script type="text/javascript">
     //<![CDATA[
         LSM_Slot({
-            adkey: 'ca6',
-            ad_size: '300x250',
-            slot: 'slot76634'
+            adkey: '24f',
+            ad_size: '320x50',
+            slot: 'slot91100'
         });
     //]]>
 </script>
