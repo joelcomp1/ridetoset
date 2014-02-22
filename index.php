@@ -308,7 +308,7 @@ $app_name = idx($app_info, 'name', '');
                 e.preventDefault();
             });
             $('#try-2').click(function(e) {
-                $("#specificShow").lightbox_me({centered: true, onLoad: function() {
+                    $("#specificShow").lightbox_me({centered: true, onLoad: function() {
 					$("#specificShow").find("input:first").focus();
 					$('#daycalendar').fullCalendar('render');
 					$('#calltimeinday').timepicker({'step':'5', 'minTime':'5:00am'});

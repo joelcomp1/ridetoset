@@ -104,13 +104,41 @@ xmlhttp.onreadystatechange=function()
     {
 		$("#im_out").hide();
 		$("#im_going").show();
+		$("#goingtext").hide();
     }
 }
 	xmlhttp.open("GET","not-going.php",true);
 	xmlhttp.send();
 	
 }
-	  </script>
+
+
+function imgoing()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+{// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+}
+else
+{// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.onreadystatechange=function()
+{
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+		$("#im_out").show();
+		$("#im_going").hide();
+		$("#goingtext").show();
+    }
+}
+	xmlhttp.open("GET","add-going.php",true);
+	xmlhttp.send();
+	
+}
+	
+	</script>
 					<?php
 					
 							echo '<div id="imagegoing"><p id="picture" style="background-image: url(https://graph.facebook.com/'. idx($value, 'uid') . '/picture?type=normal); width:64px; height:64px; margin-right: 20px; float:left; background-position: center 25%;background-repeat: no-repeat;background-size: 64px;"></p>';
@@ -127,7 +155,7 @@ xmlhttp.onreadystatechange=function()
 					
 					    if($result->user_id == clean($_SESSION['user_id']))
 						{
-							echo '<div style="clear:both; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: bold;"><b>Your Going!<b></div>';
+							echo '<div style="clear:both; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 18px; font-weight: bold !important;" id="goingtext"><b>Your Going!<b></div>';
 							$imgoing = true;
 							
 						}
@@ -138,7 +166,7 @@ xmlhttp.onreadystatechange=function()
 						?>
 							<!--form id="im_out" method="post" style="margin-top: 20px;"-->
 							<div id="im_out">
-								<input type="submit" id="imout" class="try sprited" value="I'm Out!" onclick="notGoing()">
+								<input type="button" id="imout" class="try sprited" value="I'm Out!" onclick="notGoing()">
 							</div>
 							<!--/form-->
 							<?php
@@ -148,11 +176,11 @@ xmlhttp.onreadystatechange=function()
 						{
 						?>
 						<div style="clear:both;"></div>
-							<form id="im_going" method="post" action="add-going.php" style="margin-top: 20px;">
-							<div id="actions">
-								<input type="submit" id="imgoing" class="try sprited" value="I'm Going!">
+							<!--form id="im_going" method="post" action="add-going.php" style="margin-top: 20px;"-->
+							<div id="im_going">
+								<input type="button" id="imgoing" class="try sprited" value="I'm Going!" onclick="imgoing()">
 							</div>
-							</form>
+							<!--/form-->
 						<?php
 						}
 				

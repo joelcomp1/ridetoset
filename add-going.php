@@ -33,12 +33,12 @@
 	//Check whether the query was successful or not
 	if($result) {
 			//create program part 1 Successful
-			session_regenerate_id();
+		//	session_regenerate_id();
 		
-			header("location: index.php");
-			
-			session_write_close();
-			exit();
+		//	header("location: index.php");
+			echo "Success";
+		//	session_write_close();
+			//exit();
 	}else {
 	echo 	$user_id;
 	echo 	$show_name;
