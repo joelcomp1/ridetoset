@@ -1,5 +1,5 @@
 <?php
-	
+header('P3P: CP="CAO PSA OUR"');	
 
 /**
  * This sample app is provided to kickstart your experience using Facebook's
@@ -60,7 +60,7 @@ if ($user_id) {
     // cleared if the error is because of an invalid accesstoken
     if (!$facebook->getUser()) {
       header('Location: '. AppInfo::getUrl($_SERVER['REQUEST_URI']));
-     // exit();
+      exit();
     }
   }
  
