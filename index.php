@@ -40,7 +40,7 @@ require_once('utils.php');
  *
  ****************************************************************************/
 
-require_once('sdk/src/facebook.php');
+require_once('facebook.php');
 
 
 $facebook = new Facebook(array(
