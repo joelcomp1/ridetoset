@@ -168,6 +168,11 @@ xmlhttp.onreadystatechange=function()
 							<div id="im_out">
 								<input type="button" id="imout" class="try sprited" value="I'm Out!" onclick="notGoing()">
 							</div>
+							<div style="clear:both;"></div>
+							<!--form id="im_going" method="post" action="add-going.php" style="margin-top: 20px;"-->
+							<div id="im_going" style="display:none;">
+								<input type="button" id="imgoing" class="try sprited" value="I'm Going!" onclick="imgoing()">
+							</div>
 							<!--/form-->
 							<?php
 							
@@ -175,6 +180,9 @@ xmlhttp.onreadystatechange=function()
 						else
 						{
 						?>
+						<div id="im_out" style="display:none;">
+							<input type="button" id="imout" class="try sprited" value="I'm Out!" onclick="notGoing()">
+						</div>
 						<div style="clear:both;"></div>
 							<!--form id="im_going" method="post" action="add-going.php" style="margin-top: 20px;"-->
 							<div id="im_going">
